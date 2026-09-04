@@ -330,25 +330,25 @@
           </p>
 
           <!-- 1-Click Coupon Code (Free Shipping > 296 SAR) & Countdown Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 max-w-xl">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 max-w-2xl">
             
             <!-- Coupon Box -->
             <div 
               onclick="copyCouponCode()"
-              class="p-3.5 rounded-xl bg-slate-900/90 border border-emerald-400/50 hover:border-amber-400 shadow-xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group"
+              class="p-4 sm:p-5 rounded-2xl bg-slate-900/95 border border-emerald-400/50 hover:border-amber-400 shadow-2xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group"
             >
-              <div class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-2xl group-hover:scale-110 transition shrink-0">
                   🚚
                 </div>
                 <div>
-                  <div class="text-[10px] text-emerald-300 font-bold">شحن مجاني للطلبات فوق 296 ريال</div>
-                  <div class="font-numbers font-black text-lg text-white tracking-wider" id="heroCouponCode">KSA96</div>
+                  <div class="text-xs text-emerald-300 font-bold">شحن مجاني للطلبات فوق 296 ريال</div>
+                  <div class="font-numbers font-black text-xl sm:text-2xl text-white tracking-wider" id="heroCouponCode">KSA96</div>
                 </div>
               </div>
               <button 
                 type="button" 
-                class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-xs font-black h-8 px-3 shadow"
+                class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-black h-9 px-3.5 shadow-md shrink-0"
                 id="heroCopyBtn"
               >
                 نسخ الكود
@@ -356,29 +356,29 @@
             </div>
 
             <!-- Countdown Box -->
-            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 shadow-xl backdrop-blur-md flex flex-col justify-center items-center gap-1">
-              <div class="text-[10px] text-amber-300 font-bold flex items-center gap-1">
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/95 border border-slate-700 shadow-2xl backdrop-blur-md flex flex-col justify-center items-center gap-2">
+              <div class="text-xs sm:text-sm text-amber-300 font-black flex items-center gap-1.5">
                 <span>⏱️ ينتهي العرض الاستثنائي خلال:</span>
               </div>
-              <div class="flex items-center gap-1.5">
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
-                  <span class="font-numbers font-black text-base text-amber-400" id="cdDays">00</span>
-                  <span class="text-[8px] text-slate-400">يوم</span>
+              <div class="flex items-center gap-2">
+                <div class="flex flex-col items-center bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 min-w-[46px] sm:min-w-[52px] shadow-inner">
+                  <span class="font-numbers font-black text-xl sm:text-2xl text-amber-400" id="cdDays">00</span>
+                  <span class="text-[9px] sm:text-[10px] text-slate-300 font-bold">يوم</span>
                 </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
-                  <span class="font-numbers font-black text-base text-amber-400" id="cdHours">00</span>
-                  <span class="text-[8px] text-slate-400">ساعة</span>
+                <span class="text-amber-500 font-black text-base sm:text-lg">:</span>
+                <div class="flex flex-col items-center bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 min-w-[46px] sm:min-w-[52px] shadow-inner">
+                  <span class="font-numbers font-black text-xl sm:text-2xl text-amber-400" id="cdHours">00</span>
+                  <span class="text-[9px] sm:text-[10px] text-slate-300 font-bold">ساعة</span>
                 </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
-                  <span class="font-numbers font-black text-base text-amber-400" id="cdMins">00</span>
-                  <span class="text-[8px] text-slate-400">دقيقة</span>
+                <span class="text-amber-500 font-black text-base sm:text-lg">:</span>
+                <div class="flex flex-col items-center bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 min-w-[46px] sm:min-w-[52px] shadow-inner">
+                  <span class="font-numbers font-black text-xl sm:text-2xl text-amber-400" id="cdMins">00</span>
+                  <span class="text-[9px] sm:text-[10px] text-slate-300 font-bold">دقيقة</span>
                 </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
-                  <span class="font-numbers font-black text-base text-emerald-400" id="cdSecs">00</span>
-                  <span class="text-[8px] text-slate-400">ثانية</span>
+                <span class="text-amber-500 font-black text-base sm:text-lg">:</span>
+                <div class="flex flex-col items-center bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 min-w-[46px] sm:min-w-[52px] shadow-inner">
+                  <span class="font-numbers font-black text-xl sm:text-2xl text-emerald-400" id="cdSecs">00</span>
+                  <span class="text-[9px] sm:text-[10px] text-slate-300 font-bold">ثانية</span>
                 </div>
               </div>
             </div>
