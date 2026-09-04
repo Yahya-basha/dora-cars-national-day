@@ -124,14 +124,14 @@
   <!-- ─── 1. TOP CAMPAIGN ANNOUNCEMENT BAR ─────────────────────────────────── -->
   <div class="bg-gradient-to-r from-[#00381B] via-[#006C35] to-[#00381B] border-b border-emerald-400/30 px-3 py-2 text-center text-xs sm:text-sm font-bold text-white flex items-center justify-center gap-2 sm:gap-4 flex-wrap sticky top-0 z-50 shadow-md">
     <div class="flex items-center gap-2">
-      <span class="inline-flex items-center justify-center bg-amber-400 text-slate-950 text-[11px] font-black px-2.5 py-0.5 rounded-full shadow">
+      <span class="inline-flex items-center justify-center bg-amber-400 text-slate-950 text-[11px] font-black px-2.5 py-0.5 rounded-md shadow">
         🇸🇦 عروض اليوم الوطني 96
       </span>
       <span>خصومات تصل إلى <span class="text-amber-300 font-black text-sm sm:text-base font-numbers">25%</span> | كود شحن مجاني للطلبات فوق <span class="font-numbers text-amber-300 font-black">296</span> ريال:</span>
     </div>
     <button
       onclick="copyCouponCode()"
-      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black transition active:scale-95 shadow"
+      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black transition active:scale-95 shadow"
       title="انقر لنسخ كود الشحن المجاني"
     >
       <span>🚚 كود الشحن المجاني: <strong id="topCouponText" class="font-numbers">KSA96</strong></span>
@@ -150,7 +150,7 @@
         <div class="flex items-center gap-2">
           <button
             onclick="openDirectWhatsApp('store')"
-            class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-black shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-black shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <span class="text-sm">💬</span>
             <span class="hidden sm:inline">واتساب المتجر</span>
@@ -176,11 +176,11 @@
           
           <!-- Specialization & Slogan Subtitle -->
           <div class="mt-1 flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-xs font-bold text-slate-600">
-            <span class="text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full text-[11px]">
+            <span class="text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-md text-[11px]">
               متخصصون في قطع غيار سيارات هيونداي وكيا (بنزين أو ديزل)
             </span>
             <span class="hidden sm:inline text-slate-300">•</span>
-            <span class="text-amber-800 font-extrabold text-[11px] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
+            <span class="text-amber-800 font-extrabold text-[11px] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-md">
               نهتم بأدق تفاصيل سيارتك 🛡️
             </span>
           </div>
@@ -190,7 +190,7 @@
         <div class="flex items-center gap-2">
           <a
             href="#vin-quote"
-            class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow-sm transition"
+            class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow-sm transition"
           >
             <span>⚡ تسعير VIN</span>
           </a>
@@ -200,22 +200,22 @@
 
       <!-- Bottom Nav Row (Desktop Quick Section Jumps) -->
       <nav class="hidden lg:flex items-center justify-center gap-3 pt-3 mt-3 border-t border-slate-100 text-xs font-bold text-slate-700">
-        <a href="#hyundai-branch" class="px-3 py-1.5 rounded-xl hover:bg-sky-50 hover:text-sky-700 border border-transparent hover:border-sky-300 transition flex items-center gap-1.5">
+        <a href="#hyundai-branch" class="px-3 py-1.5 rounded-lg hover:bg-sky-50 hover:text-sky-700 border border-transparent hover:border-sky-300 transition flex items-center gap-1.5">
           <span class="w-2 h-2 rounded-full bg-sky-600"></span>
           فرع هيونداي (طريق الرواف)
         </a>
-        <a href="#kia-branch" class="px-3 py-1.5 rounded-xl hover:bg-purple-50 hover:text-purple-700 border border-transparent hover:border-purple-300 transition flex items-center gap-1.5">
+        <a href="#kia-branch" class="px-3 py-1.5 rounded-lg hover:bg-purple-50 hover:text-purple-700 border border-transparent hover:border-purple-300 transition flex items-center gap-1.5">
           <span class="w-2 h-2 rounded-full bg-purple-600"></span>
           فرع كيا (حي السليم)
         </a>
-        <a href="#bundles-section" class="px-3 py-1.5 rounded-xl hover:bg-amber-50 hover:text-amber-800 border border-transparent hover:border-amber-300 transition flex items-center gap-1.5">
+        <a href="#bundles-section" class="px-3 py-1.5 rounded-lg hover:bg-amber-50 hover:text-amber-800 border border-transparent hover:border-amber-300 transition flex items-center gap-1.5">
           <span>🎁 باقات اليوم الوطني الحصرية</span>
         </a>
-        <a href="https://www.doracars.com" target="_blank" class="px-3 py-1.5 rounded-xl hover:bg-emerald-50 hover:text-emerald-700 border border-transparent hover:border-emerald-300 transition flex items-center gap-1.5">
+        <a href="https://www.doracars.com" target="_blank" class="px-3 py-1.5 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 border border-transparent hover:border-emerald-300 transition flex items-center gap-1.5">
           <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
           المتجر الإلكتروني (doracars.com)
         </a>
-        <a href="#payment-methods" class="px-3 py-1.5 rounded-xl hover:bg-amber-50 hover:text-amber-800 border border-transparent hover:border-amber-300 transition flex items-center gap-1.5">
+        <a href="#payment-methods" class="px-3 py-1.5 rounded-lg hover:bg-amber-50 hover:text-amber-800 border border-transparent hover:border-amber-300 transition flex items-center gap-1.5">
           <span>💳 طرق الدفع والتقسيط</span>
         </a>
       </nav>
@@ -228,20 +228,20 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap">
       
       <div class="flex items-center gap-2 shrink-0">
-        <span class="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded">السيارات المدعومة</span>
+        <span class="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">السيارات المدعومة</span>
         <span class="text-xs text-slate-300 font-bold hidden sm:inline">نوفر قطع غيار أصلية ومطابقة 100% لجميع سيارات:</span>
       </div>
 
       <div class="flex items-center gap-3 text-xs font-semibold overflow-x-auto py-1 scrollbar-none">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-950/80 border border-sky-500/40 text-sky-300 shrink-0">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-950/80 border border-sky-500/40 text-sky-300 shrink-0">
           <strong class="font-black text-white">HYUNDAI :</strong> سوناتا • إلنترا • أكسنت • توسان • سنتافي • باليسيد • أزيرا • كونا • ستاريا • H100
         </span>
         
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-950/80 border border-purple-500/40 text-purple-300 shrink-0">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-950/80 border border-purple-500/40 text-purple-300 shrink-0">
           <strong class="font-black text-white">KIA :</strong> سبورتاج • سورينتو • تيلورايد • K5 • سيراتو • بيجاس • كارنيفال • سيلتوس • سونيت
         </span>
 
-        <span class="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 shrink-0 text-[11px] font-bold">
+        <span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 shrink-0 text-[11px] font-bold">
           ⛽ بنزين + 🛢️ ديزل CRDi
         </span>
       </div>
@@ -268,11 +268,11 @@
             <div 
               id="badge3dBox"
               onclick="triggerBadgeCelebration()"
-              class="badge-3d-box p-3 sm:p-4 rounded-3xl border border-amber-400/40 flex items-center gap-4 cursor-pointer select-none"
+              class="badge-3d-box p-3.5 sm:p-4 rounded-2xl border border-amber-400/40 flex items-center gap-4 cursor-pointer select-none"
               title="انقر هنا للاحتفال باليوم الوطني 96!"
             >
               <!-- Big Sculpted 3D 96 Number -->
-              <div class="flex flex-col items-center justify-center bg-slate-950/70 border border-amber-400/30 px-4 py-1.5 rounded-2xl shadow-inner">
+              <div class="flex flex-col items-center justify-center bg-slate-950/70 border border-amber-400/30 px-4 py-1.5 rounded-xl shadow-inner">
                 <span class="number-96-3d text-4xl sm:text-5xl font-black leading-none tracking-tight">96</span>
                 <span class="text-[9px] text-amber-300 font-bold uppercase tracking-wider mt-0.5">عاماً من المجد</span>
               </div>
@@ -311,10 +311,10 @@
             <!-- Coupon Box -->
             <div 
               onclick="copyCouponCode()"
-              class="p-3.5 rounded-2xl bg-slate-900/90 border border-emerald-400/50 hover:border-amber-400 shadow-xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group"
+              class="p-3.5 rounded-xl bg-slate-900/90 border border-emerald-400/50 hover:border-amber-400 shadow-xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group"
             >
               <div class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
+                <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
                   🚚
                 </div>
                 <div>
@@ -324,7 +324,7 @@
               </div>
               <button 
                 type="button" 
-                class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-black h-8 px-3 shadow"
+                class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-xs font-black h-8 px-3 shadow"
                 id="heroCopyBtn"
               >
                 نسخ الكود
@@ -332,27 +332,27 @@
             </div>
 
             <!-- Countdown Box -->
-            <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700 shadow-xl backdrop-blur-md flex flex-col justify-center items-center gap-1">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 shadow-xl backdrop-blur-md flex flex-col justify-center items-center gap-1">
               <div class="text-[10px] text-amber-300 font-bold flex items-center gap-1">
                 <span>⏱️ ينتهي العرض الاستثنائي خلال:</span>
               </div>
               <div class="flex items-center gap-1.5">
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-lg border border-slate-800 min-w-[38px]">
+                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
                   <span class="font-numbers font-black text-base text-amber-400" id="cdDays">00</span>
                   <span class="text-[8px] text-slate-400">يوم</span>
                 </div>
                 <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-lg border border-slate-800 min-w-[38px]">
+                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
                   <span class="font-numbers font-black text-base text-amber-400" id="cdHours">00</span>
                   <span class="text-[8px] text-slate-400">ساعة</span>
                 </div>
                 <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-lg border border-slate-800 min-w-[38px]">
+                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
                   <span class="font-numbers font-black text-base text-amber-400" id="cdMins">00</span>
                   <span class="text-[8px] text-slate-400">دقيقة</span>
                 </div>
                 <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-lg border border-slate-800 min-w-[38px]">
+                <div class="flex flex-col items-center bg-slate-950 px-2 py-0.5 rounded-md border border-slate-800 min-w-[38px]">
                   <span class="font-numbers font-black text-base text-emerald-400" id="cdSecs">00</span>
                   <span class="text-[8px] text-slate-400">ثانية</span>
                 </div>
@@ -365,14 +365,14 @@
           <div class="flex flex-wrap items-center gap-3 pt-2">
             <a
               href="#bundles-section"
-              class="px-6 py-3.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
+              class="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
             >
               <span>🎁 تصفح باقات اليوم الوطني الأربعة ➔</span>
             </a>
 
             <a
               href="#vin-quote"
-              class="px-6 py-3.5 rounded-2xl bg-emerald-700/90 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base border border-emerald-500 shadow-lg transition-all flex items-center gap-2"
+              class="px-6 py-3.5 rounded-xl bg-emerald-700/90 hover:bg-emerald-600 text-white font-bold text-sm sm:text-base border border-emerald-500 shadow-lg transition-all flex items-center gap-2"
             >
               <span>⚡ تسعير رقم الهيكل VIN</span>
             </a>
@@ -382,7 +382,7 @@
 
         <!-- Left Column: Cinematic Visual Showcase (5 cols) -->
         <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden border-2 border-emerald-500/40 bg-slate-950 shadow-2xl group">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-emerald-500/40 bg-slate-950 shadow-2xl group">
             <img
               src="images/hero-cars-flag.png"
               alt="سيارات هيونداي وكيا مع العلم السعودي في عروض اليوم الوطني"
@@ -393,16 +393,16 @@
             
             <!-- Floating Feature Pills -->
             <div class="absolute top-4 right-4 flex flex-col gap-2">
-              <span class="bg-emerald-700/90 backdrop-blur-md text-white border border-emerald-400 text-[11px] font-bold px-3 py-1 rounded-full shadow">
+              <span class="bg-emerald-700/90 backdrop-blur-md text-white border border-emerald-400 text-[11px] font-bold px-3 py-1 rounded-md shadow">
                 ✓ قطع أصلية وكورية معتمدة
               </span>
-              <span class="bg-sky-700/90 backdrop-blur-md text-white border border-sky-400 text-[11px] font-bold px-3 py-1 rounded-full shadow">
+              <span class="bg-sky-700/90 backdrop-blur-md text-white border border-sky-400 text-[11px] font-bold px-3 py-1 rounded-md shadow">
                 ✓ بنزين + ديزل CRDi
               </span>
             </div>
 
             <!-- Bottom Floating Caption -->
-            <div class="absolute bottom-4 inset-x-4 p-3.5 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-slate-700 text-right">
+            <div class="absolute bottom-4 inset-x-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-700 text-right">
               <div class="text-xs font-bold text-amber-400">نهتم بأدق تفاصيل سيارتك 🇸🇦</div>
               <div class="text-[11px] text-slate-300 mt-0.5">3 فروع معتمدة ومتجر إلكتروني معتمد مع شحن سريع لكافة مدن المملكة</div>
             </div>
@@ -419,7 +419,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="text-center space-y-2 mb-12">
-        <span class="inline-block bg-amber-100 text-amber-900 border border-amber-300 text-xs px-3.5 py-1 rounded-full font-black">
+        <span class="inline-block bg-amber-100 text-amber-900 border border-amber-300 text-xs px-3.5 py-1 rounded-md font-black">
           عروض اليوم الوطني 96 المعتمدة 🇸🇦
         </span>
         <h2 class="text-2xl sm:text-4xl font-heading font-black text-slate-900">
@@ -434,11 +434,11 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- ── BUNDLE 1: بكج الفلاتر الأصلي (196 بدل 250) ──────────── -->
-        <div class="rounded-3xl border-2 border-emerald-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-emerald-600 transition-all duration-300 relative group">
+        <div class="rounded-2xl border-2 border-emerald-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-emerald-600 transition-all duration-300 relative group">
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">أصلي وكالة ⭐</span>
-              <span class="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-700 text-white shadow">وفر 54 ر.س</span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">أصلي وكالة ⭐</span>
+              <span class="text-xs font-black px-2.5 py-1 rounded-md bg-emerald-700 text-white shadow">وفر 54 ر.س</span>
             </div>
             
             <div>
@@ -447,7 +447,7 @@
             </div>
 
             <!-- Pricing Box -->
-            <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
                 <div class="text-2xl font-black font-numbers text-emerald-800">196 <span class="text-xs font-sans font-bold">ر.س</span></div>
@@ -471,14 +471,14 @@
           <div class="pt-6 mt-6 border-t border-slate-100 space-y-2">
             <button
               onclick="orderBundleWhatsApp('بكج الفلاتر الأصلي (فلتر زيت + مكيف + هواء أصلي)', '196')"
-              class="w-full h-11 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
+              class="w-full h-11 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
             >
               <span>💬 طلب وتأكيد التوافق برقم الهيكل</span>
             </button>
             <a
               href="https://www.doracars.com"
               target="_blank"
-              class="block w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              class="block w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
             >
               طلب عبر المتجر الإلكتروني ➔
             </a>
@@ -486,11 +486,11 @@
         </div>
 
         <!-- ── BUNDLE 2: بكج الفلاتر الكوري (96 بدل 150) ───────────── -->
-        <div class="rounded-3xl border-2 border-amber-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-amber-500 transition-all duration-300 relative group">
+        <div class="rounded-2xl border-2 border-amber-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-amber-500 transition-all duration-300 relative group">
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-300">سعر رمزي 96 🇸🇦</span>
-              <span class="text-xs font-black px-2.5 py-1 rounded-full bg-amber-500 text-slate-950 shadow">وفر 54 ر.س</span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 border border-amber-300">سعر رمزي 96 🇸🇦</span>
+              <span class="text-xs font-black px-2.5 py-1 rounded-md bg-amber-500 text-slate-950 shadow">وفر 54 ر.س</span>
             </div>
             
             <div>
@@ -499,7 +499,7 @@
             </div>
 
             <!-- Pricing Box -->
-            <div class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-400 line-through font-numbers">150 ر.س</div>
                 <div class="text-2xl font-black font-numbers text-amber-800">96 <span class="text-xs font-sans font-bold">ر.س</span></div>
@@ -523,14 +523,14 @@
           <div class="pt-6 mt-6 border-t border-slate-100 space-y-2">
             <button
               onclick="orderBundleWhatsApp('بكج الفلاتر الكوري (فلتر زيت + مكيف + هواء كوري)', '96')"
-              class="w-full h-11 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
+              class="w-full h-11 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
             >
               <span>💬 طلب وتأكيد التوافق برقم الهيكل</span>
             </button>
             <a
               href="https://www.doracars.com"
               target="_blank"
-              class="block w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              class="block w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
             >
               طلب عبر المتجر الإلكتروني ➔
             </a>
@@ -538,11 +538,11 @@
         </div>
 
         <!-- ── BUNDLE 3: بكج الفحمات الأصلي (250 بدل 350) ──────────── -->
-        <div class="rounded-3xl border-2 border-sky-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-sky-500 transition-all duration-300 relative group">
+        <div class="rounded-2xl border-2 border-sky-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-sky-500 transition-all duration-300 relative group">
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-300">أصلي وكالة 🛡️</span>
-              <span class="text-xs font-black px-2.5 py-1 rounded-full bg-sky-700 text-white shadow">وفر 100 ر.س</span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-md bg-sky-100 text-sky-800 border border-sky-300">أصلي وكالة 🛡️</span>
+              <span class="text-xs font-black px-2.5 py-1 rounded-md bg-sky-700 text-white shadow">وفر 100 ر.س</span>
             </div>
             
             <div>
@@ -551,7 +551,7 @@
             </div>
 
             <!-- Pricing Box -->
-            <div class="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-400 line-through font-numbers">350 ر.س</div>
                 <div class="text-2xl font-black font-numbers text-sky-800">250 <span class="text-xs font-sans font-bold">ر.س</span></div>
@@ -575,14 +575,14 @@
           <div class="pt-6 mt-6 border-t border-slate-100 space-y-2">
             <button
               onclick="orderBundleWhatsApp('بكج الفحمات الأصلي (أمامي + خلفي أصلي)', '250')"
-              class="w-full h-11 rounded-2xl bg-sky-700 hover:bg-sky-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
+              class="w-full h-11 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
             >
               <span>💬 طلب وتأكيد التوافق برقم الهيكل</span>
             </button>
             <a
               href="https://www.doracars.com"
               target="_blank"
-              class="block w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              class="block w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
             >
               طلب عبر المتجر الإلكتروني ➔
             </a>
@@ -590,11 +590,11 @@
         </div>
 
         <!-- ── BUNDLE 4: بكج الفحمات الكوري (165 بدل 250) ──────────── -->
-        <div class="rounded-3xl border-2 border-purple-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-purple-500 transition-all duration-300 relative group">
+        <div class="rounded-2xl border-2 border-purple-300 bg-white p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-purple-500 transition-all duration-300 relative group">
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-100 text-purple-800 border border-purple-300">كوري ممتاز 🇰🇷</span>
-              <span class="text-xs font-black px-2.5 py-1 rounded-full bg-purple-700 text-white shadow">وفر 85 ر.س</span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-md bg-purple-100 text-purple-800 border border-purple-300">كوري ممتاز 🇰🇷</span>
+              <span class="text-xs font-black px-2.5 py-1 rounded-md bg-purple-700 text-white shadow">وفر 85 ر.س</span>
             </div>
             
             <div>
@@ -603,7 +603,7 @@
             </div>
 
             <!-- Pricing Box -->
-            <div class="p-3.5 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
                 <div class="text-2xl font-black font-numbers text-purple-800">165 <span class="text-xs font-sans font-bold">ر.س</span></div>
@@ -627,14 +627,14 @@
           <div class="pt-6 mt-6 border-t border-slate-100 space-y-2">
             <button
               onclick="orderBundleWhatsApp('بكج الفحمات الكوري (أمامي + خلفي كوري)', '165')"
-              class="w-full h-11 rounded-2xl bg-purple-700 hover:bg-purple-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
+              class="w-full h-11 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md transition"
             >
               <span>💬 طلب وتأكيد التوافق برقم الهيكل</span>
             </button>
             <a
               href="https://www.doracars.com"
               target="_blank"
-              class="block w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              class="block w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
             >
               طلب عبر المتجر الإلكتروني ➔
             </a>
@@ -644,14 +644,14 @@
       </div>
 
       <!-- Free Shipping Notice Banner -->
-      <div class="mt-8 p-4 rounded-2xl bg-amber-50 border border-amber-300 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+      <div class="mt-8 p-4 rounded-xl bg-amber-50 border border-amber-300 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
         <span class="text-xl">🚚</span>
         <span class="text-xs sm:text-sm font-bold text-amber-900">
           استخدم كود الخصم <strong class="font-mono text-base text-slate-900 bg-amber-200 px-2 py-0.5 rounded">KSA96</strong> للحصول على <strong>شحن مجاني لكافة مناطق المملكة</strong> للطلبات فوق <span class="font-numbers font-black">296</span> ريال!
         </span>
         <button
           onclick="copyCouponCode()"
-          class="px-3 py-1 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow-sm shrink-0"
+          class="px-3 py-1 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow-sm shrink-0"
         >
           نسخ كود الشحن المجاني
         </button>
@@ -666,7 +666,7 @@
       
       <!-- Section Header (Clean & Direct) -->
       <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
-        <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs px-3.5 py-1 rounded-full font-bold shadow-sm">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs px-3.5 py-1 rounded-md font-bold shadow-sm">
           <span>🛡️ وسائل دفع آمنة 100% ومعتمدة بالمملكة 🇸🇦</span>
         </span>
         <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-900">
@@ -681,8 +681,8 @@
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
         
         <!-- 1. Tamara (تمارا) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-[#FF5436] hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-[#FFF5ED]/60 group-hover:bg-[#FFF0E6] transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-[#FF5436] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-[#FFF5ED]/60 group-hover:bg-[#FFF0E6] transition">
             <img
               src="images/payments/tamara.png"
               alt="تمارا Tamara"
@@ -696,8 +696,8 @@
         </div>
 
         <!-- 2. Tabby (تابي) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-[#10B981] hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-[#F0FDF8]/60 group-hover:bg-[#E6FAF2] transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-[#10B981] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-[#F0FDF8]/60 group-hover:bg-[#E6FAF2] transition">
             <img
               src="images/payments/tabby.png"
               alt="تابي Tabby"
@@ -711,8 +711,8 @@
         </div>
 
         <!-- 3. Mada (مدى) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-emerald-50/50 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-emerald-50/50 transition">
             <img
               src="images/payments/mada.png"
               alt="مدى Mada"
@@ -726,8 +726,8 @@
         </div>
 
         <!-- 4. Apple Pay (أبل باي) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-slate-800 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-slate-100 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-slate-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-slate-100 transition">
             <img
               src="images/payments/apple-pay.png"
               alt="أبل باي Apple Pay"
@@ -741,8 +741,8 @@
         </div>
 
         <!-- 5. stc pay -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-purple-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-purple-50/50 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-purple-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-purple-50/50 transition">
             <img
               src="images/payments/stc-pay.png"
               alt="stc pay"
@@ -756,8 +756,8 @@
         </div>
 
         <!-- 6. VISA (فيزا) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-blue-50/50 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-blue-50/50 transition">
             <img
               src="images/payments/visa.png"
               alt="فيزا VISA"
@@ -771,8 +771,8 @@
         </div>
 
         <!-- 7. Mastercard (ماستركارد) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-amber-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-amber-50/50 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-amber-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-amber-50/50 transition">
             <img
               src="images/payments/mastercard.png"
               alt="ماستركارد Mastercard"
@@ -786,8 +786,8 @@
         </div>
 
         <!-- 8. Bank Transfer (التحويل البنكي) -->
-        <div class="p-5 rounded-3xl bg-white border border-slate-200 hover:border-sky-500 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
-          <div class="h-16 w-full flex items-center justify-center p-2 rounded-2xl bg-slate-50 group-hover:bg-sky-50/50 transition">
+        <div class="p-5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between text-center group cursor-pointer">
+          <div class="h-16 w-full flex items-center justify-center p-2 rounded-lg bg-slate-50 group-hover:bg-sky-50/50 transition">
             <img
               src="images/payments/bank-transfer.png"
               alt="التحويل البنكي الفوري"
@@ -803,7 +803,7 @@
       </div>
 
       <!-- Trust Bar -->
-      <div class="mt-8 p-4 rounded-2xl bg-slate-900 text-white flex items-center justify-around gap-4 flex-wrap text-center text-xs">
+      <div class="mt-8 p-4 rounded-xl bg-slate-900 text-white flex items-center justify-around gap-4 flex-wrap text-center text-xs">
         <div class="flex items-center gap-2">
           <span class="text-emerald-400 text-base">🔒</span>
           <span class="font-bold">تشفير بنكي 256-bit SSL</span>
@@ -828,37 +828,37 @@
     </div>
   </section>
 
-  <!-- ─── 7. THE 3-WAY CONVERSION DYNAMO ──────────────────────────────────── -->
-  <section id="conversion-dynamo" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+  <!-- ─── 7. BRANCHES & ONLINE STORE ─────────────────────────────────────── -->
+  <section id="branches-and-store" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <!-- Section Title -->
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-        <span class="inline-block bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs px-3.5 py-1 rounded-full font-bold">
-          بوابات التحويل المباشر ⚡
+        <span class="inline-block bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs px-3.5 py-1 rounded-md font-bold">
+          📍 فروعنا والمتجر الإلكتروني
         </span>
         <h2 class="text-2xl sm:text-4xl font-heading font-black text-slate-900">
-          محرك التحويلات: اختر وجهتك المفضلة للتسوق
+          تفضل بزيارة فروعنا أو اطلب قطع غيارك أونلاين
         </h2>
         <p class="text-xs sm:text-base text-slate-600">
-          تفضل بزيارة فرع هيونداي (الرواف)، أو فرع كيا (السليم)، أو اطلب مباشرة عبر المتجر الإلكتروني مع شحن فوري لباب منزلك.
+          يسعدنا خدمتكم في فرع هيونداي (طريق الرواف)، فرع كيا (حي السليم)، أو عبر متجرنا الإلكتروني مع توصيل سريع وشحن لباب منزلك.
         </p>
       </div>
 
-      <!-- 3 Dynamo Cards Grid -->
+      <!-- 3 Branch Cards Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- ── CARD 1: HYUNDAI BRANCH (طريق الرواف) ────────────────── -->
         <div 
           id="hyundai-branch"
-          class="rounded-3xl border-2 border-sky-200 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-sky-500 transition-all duration-300 relative overflow-hidden group"
+          class="rounded-2xl border-2 border-sky-200 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-sky-500 transition-all duration-300 relative overflow-hidden group"
         >
           <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-sky-600 to-blue-700"></div>
           
           <div class="space-y-6">
             <div class="flex items-start justify-between gap-3">
               <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-300 text-xs font-bold mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-sky-100 text-sky-800 border border-sky-300 text-xs font-bold mb-2">
                   🚗 مبيعات وقطع غيار هيونداي
                 </span>
                 <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900">
@@ -868,7 +868,7 @@
                   القصيم - بريدة - طريق الرواف
                 </p>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
+              <div class="w-12 h-12 rounded-xl bg-sky-600 text-white flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
                 H
               </div>
             </div>
@@ -887,12 +887,12 @@
             </div>
 
             <!-- Phone & Quick Info -->
-            <div class="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-500">رقم الهاتف / الواتساب:</div>
                 <div class="font-numbers font-black text-lg text-sky-800">0530051360</div>
               </div>
-              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
                 مفتوح الآن 🟢
               </span>
             </div>
@@ -901,7 +901,7 @@
             <div class="space-y-2.5 pt-2">
               <button
                 onclick="openDirectWhatsApp('hyundai')"
-                class="w-full py-3.5 px-4 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                class="w-full py-3.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
               >
                 <span>💬 تواصل واتساب مع فرع هيونداي (0530051360)</span>
               </button>
@@ -910,13 +910,13 @@
                 <a
                   href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8"
                   target="_blank"
-                  class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
+                  class="py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
                 >
                   <span>📍 موقع الفرع</span>
                 </a>
                 <a
                   href="tel:0530051360"
-                  class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
+                  class="py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
                 >
                   <span>📞 اتصال هاتفي</span>
                 </a>
@@ -929,14 +929,14 @@
         <!-- ── CARD 2: KIA BRANCH (حي السليم) ──────────────────────── -->
         <div 
           id="kia-branch"
-          class="rounded-3xl border-2 border-purple-200 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-purple-500 transition-all duration-300 relative overflow-hidden group"
+          class="rounded-2xl border-2 border-purple-200 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-purple-500 transition-all duration-300 relative overflow-hidden group"
         >
           <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-purple-600 to-indigo-700"></div>
           
           <div class="space-y-6">
             <div class="flex items-start justify-between gap-3">
               <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-800 border border-purple-300 text-xs font-bold mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-purple-100 text-purple-800 border border-purple-300 text-xs font-bold mb-2">
                   🚙 مبيعات وقطع غيار كيا
                 </span>
                 <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900">
@@ -946,7 +946,7 @@
                   القصيم - بريدة - حي السليم
                 </p>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-md">
+              <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-md">
                 KIA
               </div>
             </div>
@@ -965,12 +965,12 @@
             </div>
 
             <!-- Phone & Quick Info -->
-            <div class="p-3.5 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-500">رقم الهاتف / الواتساب:</div>
                 <div class="font-numbers font-black text-lg text-purple-800">0539454377</div>
               </div>
-              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
                 مفتوح الآن 🟢
               </span>
             </div>
@@ -979,7 +979,7 @@
             <div class="space-y-2.5 pt-2">
               <button
                 onclick="openDirectWhatsApp('kia')"
-                class="w-full py-3.5 px-4 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                class="w-full py-3.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
               >
                 <span>💬 تواصل واتساب مع فرع كيا (0539454377)</span>
               </button>
@@ -988,13 +988,13 @@
                 <a
                   href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7"
                   target="_blank"
-                  class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
+                  class="py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
                 >
                   <span>📍 موقع الفرع</span>
                 </a>
                 <a
                   href="tel:0539454377"
-                  class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
+                  class="py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-300 transition flex items-center justify-center gap-1.5"
                 >
                   <span>📞 اتصال هاتفي</span>
                 </a>
@@ -1006,14 +1006,14 @@
 
         <!-- ── CARD 3: ONLINE STORE (www.doracars.com) ─────────────── -->
         <div 
-          class="rounded-3xl border-2 border-emerald-300 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-emerald-600 transition-all duration-300 relative overflow-hidden group"
+          class="rounded-2xl border-2 border-emerald-300 bg-white p-6 sm:p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl hover:border-emerald-600 transition-all duration-300 relative overflow-hidden group"
         >
           <div class="absolute top-0 inset-x-0 h-2.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-500"></div>
           
           <div class="space-y-6">
             <div class="flex items-start justify-between gap-3">
               <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold mb-2">
                   🛒 المتجر الإلكتروني المعتمد 24/7
                 </span>
                 <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900">
@@ -1023,7 +1023,7 @@
                   شحن سريع وتوصيل لباب بيتك بكافة مناطق المملكة
                 </p>
               </div>
-              <div class="w-12 h-12 rounded-2xl bg-emerald-700 text-white flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
+              <div class="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
                 🛒
               </div>
             </div>
@@ -1042,12 +1042,12 @@
             </div>
 
             <!-- Phone & Quick Info -->
-            <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
               <div>
                 <div class="text-[10px] text-slate-500">خدمة عملاء المتجر / الواتساب:</div>
                 <div class="font-numbers font-black text-lg text-emerald-800">0538834212</div>
               </div>
-              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold font-numbers">
+              <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold font-numbers">
                 doracars.com
               </span>
             </div>
@@ -1057,14 +1057,14 @@
               <a
                 href="https://www.doracars.com"
                 target="_blank"
-                class="w-full py-3.5 px-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-center"
+                class="w-full py-3.5 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-center"
               >
                 <span>🛒 تصفح المتجر واطلب أونلاين الآن (doracars.com) ➔</span>
               </a>
 
               <button
                 onclick="openDirectWhatsApp('store')"
-                class="w-full py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-emerald-900 text-xs font-bold text-center border border-emerald-300 transition flex items-center justify-center gap-1.5"
+                class="w-full py-2.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-emerald-900 text-xs font-bold text-center border border-emerald-300 transition flex items-center justify-center gap-1.5"
               >
                 <span>💬 واتساب مبيعات المتجر (0538834212)</span>
               </button>
@@ -1083,7 +1083,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
-        <span class="inline-block bg-amber-100 text-amber-900 border border-amber-300 text-xs px-3.5 py-1 rounded-full font-bold">
+        <span class="inline-block bg-amber-100 text-amber-900 border border-amber-300 text-xs px-3.5 py-1 rounded-md font-bold">
           أصالة وعراقة ورؤية مستقبلية 🇸🇦
         </span>
         <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-900">
@@ -1097,7 +1097,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         
         <!-- Heritage Showcase Card -->
-        <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-lg group">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-lg group">
           <div class="relative h-64 sm:h-72 overflow-hidden">
             <img
               src="images/saudi-heritage-collage.jpg"
@@ -1107,7 +1107,7 @@
             >
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
             <div class="absolute bottom-4 right-4 left-4 text-white text-right">
-              <span class="text-xs font-bold text-amber-300 bg-amber-950/70 border border-amber-500/40 px-3 py-1 rounded-full inline-block mb-1">
+              <span class="text-xs font-bold text-amber-300 bg-amber-950/70 border border-amber-500/40 px-3 py-1 rounded-md inline-block mb-1">
                 أصالة المسيرة وعراقة الإنجاز
               </span>
               <h3 class="text-lg sm:text-xl font-black">أكثر من 25,000 عميل يثقون بجودتنا</h3>
@@ -1118,15 +1118,15 @@
               نلتزم بأعلى معايير المصداقية والجودة في توريد وتوزيع قطع غيار هيونداي وكيا، مع ضمان الأصالة والمطابقة الهيكلية الدقيقة لراحة بالك وسلامة مركبتك.
             </p>
             <div class="grid grid-cols-3 gap-2 pt-2 text-center">
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-emerald-700 text-base">100%</div>
                 <div class="text-[10px] text-slate-500 font-bold">أصلي ومضمون</div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-sky-700 text-base">VIN</div>
                 <div class="text-[10px] text-slate-500 font-bold">مطابقة الهيكل</div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-amber-700 text-base">KSA</div>
                 <div class="text-[10px] text-slate-500 font-bold">شحن شامل</div>
               </div>
@@ -1135,7 +1135,7 @@
         </div>
 
         <!-- Vision Showcase Card -->
-        <div class="rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 shadow-lg group">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-lg group">
           <div class="relative h-64 sm:h-72 overflow-hidden">
             <img
               src="images/riyadh-tower-night.jpg"
@@ -1145,7 +1145,7 @@
             >
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
             <div class="absolute bottom-4 right-4 left-4 text-white text-right">
-              <span class="text-xs font-bold text-emerald-300 bg-emerald-950/70 border border-emerald-500/40 px-3 py-1 rounded-full inline-block mb-1">
+              <span class="text-xs font-bold text-emerald-300 bg-emerald-950/70 border border-emerald-500/40 px-3 py-1 rounded-md inline-block mb-1">
                 عزّنا برؤيتنا ومجدنا
               </span>
               <h3 class="text-lg sm:text-xl font-black">3 فروع معتمدة ومتجر إلكتروني متكامل</h3>
@@ -1156,15 +1156,15 @@
               نواكب التطور الرقمي عبر متجر إلكتروني فوري يلبي احتياجات عملائنا في كافة مدن المملكة، مع خيارات دفع مرنة (مدى، أبل باي، stc pay، تمارا، تابي) وتوصيل سريع لباب المنزل.
             </p>
             <div class="grid grid-cols-3 gap-2 pt-2 text-center">
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-purple-700 text-base">+15,000</div>
                 <div class="text-[10px] text-slate-500 font-bold">قطعة متوفرة</div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-emerald-700 text-base">24/7</div>
                 <div class="text-[10px] text-slate-500 font-bold">تسوق إلكتروني</div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+              <div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-sm">
                 <div class="font-numbers font-black text-sky-700 text-base">+45</div>
                 <div class="text-[10px] text-slate-500 font-bold">مدينة ومحافظة</div>
               </div>
@@ -1177,13 +1177,13 @@
     </div>
   </section>
 
-  <!-- ─── 9. INTERACTIVE VIN DIRECT QUOTE ENGINE ──────────────────────────── -->
+  <!-- ─── 9. VIN DIRECT QUOTE FORM ───────────────────────────────────────── -->
   <section id="vin-quote" class="py-16 sm:py-20 bg-slate-900 text-white relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
       <div class="text-center space-y-2 mb-10">
-        <span class="inline-block bg-amber-400 text-slate-950 text-xs px-3.5 py-1 rounded-full font-black">
-          مطابقة فورية 100% 🎯
+        <span class="inline-block bg-amber-400 text-slate-950 text-xs px-3.5 py-1 rounded-md font-black">
+          مطابقة فورية ومجانية 100% 🎯
         </span>
         <h2 class="text-2xl sm:text-4xl font-heading font-black text-white">
           اطلب تسعير قطع غيارك برقم الهيكل (VIN)
@@ -1194,7 +1194,7 @@
       </div>
 
       <!-- Form Card -->
-      <div class="p-6 sm:p-10 rounded-3xl border border-slate-700 bg-slate-950/90 shadow-2xl backdrop-blur-xl">
+      <div class="p-6 sm:p-10 rounded-2xl border border-slate-700 bg-slate-950/90 shadow-2xl backdrop-blur-xl">
         <form id="vinQuoteForm" onsubmit="handleVinFormSubmit(event)" class="space-y-6">
           
           <!-- Branch Selector Tabs -->
@@ -1205,7 +1205,7 @@
                 type="button"
                 id="tabBtnHyundai"
                 onclick="setTargetBranch('hyundai')"
-                class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-sky-600/30 border-sky-400 text-white shadow-md"
+                class="py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-sky-600/30 border-sky-400 text-white shadow-md"
               >
                 <span>🚗 فرع هيونداي</span>
                 <span class="text-[10px] text-sky-400 font-normal">طريق الرواف (0530051360)</span>
@@ -1215,7 +1215,7 @@
                 type="button"
                 id="tabBtnKia"
                 onclick="setTargetBranch('kia')"
-                class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-900 border-slate-800 text-slate-400 hover:text-white"
+                class="py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-900 border-slate-800 text-slate-400 hover:text-white"
               >
                 <span>🚙 فرع كيا</span>
                 <span class="text-[10px] text-purple-400 font-normal">حي السليم (0539454377)</span>
@@ -1225,7 +1225,7 @@
                 type="button"
                 id="tabBtnStore"
                 onclick="setTargetBranch('store')"
-                class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-900 border-slate-800 text-slate-400 hover:text-white"
+                class="py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-900 border-slate-800 text-slate-400 hover:text-white"
               >
                 <span>🛒 المتجر الإلكتروني</span>
                 <span class="text-[10px] text-emerald-400 font-normal">شحن للمنزل (0538834212)</span>
@@ -1240,7 +1240,7 @@
               <label class="text-xs font-bold text-slate-300">الشركة الصانعة *</label>
               <select
                 id="carMake"
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
               >
                 <option value="هيونداي (Hyundai)">هيونداي (Hyundai)</option>
                 <option value="كيا (Kia)">كيا (Kia)</option>
@@ -1254,7 +1254,7 @@
                 type="text"
                 id="carModel"
                 placeholder="مثال: سوناتا، سبورتاج، إلنترا..."
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
                 required
               >
             </div>
@@ -1263,7 +1263,7 @@
               <label class="text-xs font-bold text-slate-300">سنة الصنع *</label>
               <select
                 id="modelYear"
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-numbers focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-numbers focus:outline-none focus:border-emerald-400"
               >
                 <option value="2026">2026</option>
                 <option value="2025">2025</option>
@@ -1297,7 +1297,7 @@
                   type="button"
                   id="engineBtnPetrol"
                   onclick="setEngineType('بنزين ⛽')"
-                  class="h-11 rounded-2xl text-xs font-bold transition border bg-amber-500/20 border-amber-400 text-amber-300 font-black flex items-center justify-center gap-1.5"
+                  class="h-11 rounded-xl text-xs font-bold transition border bg-amber-500/20 border-amber-400 text-amber-300 font-black flex items-center justify-center gap-1.5"
                 >
                   <span>⛽ بنزين (Petrol)</span>
                 </button>
@@ -1305,7 +1305,7 @@
                   type="button"
                   id="engineBtnDiesel"
                   onclick="setEngineType('ديزل 🛢️')"
-                  class="h-11 rounded-2xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5"
+                  class="h-11 rounded-xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5"
                 >
                   <span>🛢️ ديزل (Diesel CRDi)</span>
                 </button>
@@ -1321,7 +1321,7 @@
                 type="text"
                 id="vinNumber"
                 placeholder="مثال: KMHD841B..."
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-mono uppercase tracking-wider focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-mono uppercase tracking-wider focus:outline-none focus:border-emerald-400"
               >
             </div>
 
@@ -1333,7 +1333,7 @@
             <textarea
               id="partsNeeded"
               placeholder="اكتب القطع التي تحتاجها (مثال: طقم فحمات أمامية وخلفية، فلتر هواء وزيت، مساعدات أمامية، طرمبة ديزل...)"
-              class="w-full rounded-2xl bg-slate-900 border border-slate-700 p-3 text-xs text-white min-h-[90px] focus:outline-none focus:border-emerald-400"
+              class="w-full rounded-xl bg-slate-900 border border-slate-700 p-3 text-xs text-white min-h-[90px] focus:outline-none focus:border-emerald-400"
               required
             ></textarea>
           </div>
@@ -1346,7 +1346,7 @@
                 type="text"
                 id="customerName"
                 placeholder="الاسم"
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
               >
             </div>
             <div class="space-y-1.5">
@@ -1355,7 +1355,7 @@
                 type="text"
                 id="customerPhone"
                 placeholder="05xxxxxxxx"
-                class="w-full h-11 rounded-2xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-numbers focus:outline-none focus:border-emerald-400"
+                class="w-full h-11 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-numbers focus:outline-none focus:border-emerald-400"
               >
             </div>
           </div>
@@ -1363,7 +1363,7 @@
           <!-- Submit Button -->
           <button
             type="submit"
-            class="w-full h-14 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2"
+            class="w-full h-14 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2"
           >
             <span>⚡ إرسال طلب التسعير والحصول على خصم اليوم الوطني 🚀</span>
           </button>
@@ -1383,7 +1383,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
       <div class="text-center space-y-2 mb-12">
-        <span class="inline-block bg-sky-100 text-sky-800 border border-sky-300 text-xs px-3.5 py-1 rounded-full font-bold">
+        <span class="inline-block bg-sky-100 text-sky-800 border border-sky-300 text-xs px-3.5 py-1 rounded-md font-bold">
           فروعنا ومواقعنا المعتمدة 📍
         </span>
         <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-900">
@@ -1394,60 +1394,60 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Hyundai Branch -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-sky-200 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-sky-200 flex flex-col justify-between space-y-4">
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="text-2xl">🚗</span>
-              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">مبيعات هيونداي</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">مبيعات هيونداي</span>
             </div>
             <h3 class="font-heading font-black text-lg text-slate-900">فرع هيونداي (طريق الرواف)</h3>
             <p class="text-xs text-slate-500 mt-1">القصيم - بريدة - طريق الرواف</p>
             <div class="text-xs text-sky-700 font-numbers font-bold mt-2">📞 0530051360</div>
           </div>
           <div class="pt-4 border-t border-slate-200 flex gap-2">
-            <a href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8" target="_blank" class="flex-1 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs text-center transition">
+            <a href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8" target="_blank" class="flex-1 py-2.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs text-center transition">
               فتح الخريطة 📍
             </a>
-            <a href="tel:0530051360" class="px-3 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold transition">
+            <a href="tel:0530051360" class="px-3 py-2.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold transition">
               اتصال 📞
             </a>
           </div>
         </div>
 
         <!-- Kia Branch -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-purple-200 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-purple-200 flex flex-col justify-between space-y-4">
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="text-2xl">🚙</span>
-              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">مبيعات كيا</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-purple-100 text-purple-800">مبيعات كيا</span>
             </div>
             <h3 class="font-heading font-black text-lg text-slate-900">فرع كيا (حي السليم)</h3>
             <p class="text-xs text-slate-500 mt-1">القصيم - بريدة - حي السليم</p>
             <div class="text-xs text-purple-700 font-numbers font-bold mt-2">📞 0539454377</div>
           </div>
           <div class="pt-4 border-t border-slate-200 flex gap-2">
-            <a href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7" target="_blank" class="flex-1 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs text-center transition">
+            <a href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7" target="_blank" class="flex-1 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs text-center transition">
               فتح الخريطة 📍
             </a>
-            <a href="tel:0539454377" class="px-3 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold transition">
+            <a href="tel:0539454377" class="px-3 py-2.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold transition">
               اتصال 📞
             </a>
           </div>
         </div>
 
         <!-- Headquarters (Strictly Display/Map only, No WhatsApp) -->
-        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-300 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-300 flex flex-col justify-between space-y-4">
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="text-2xl">🏢</span>
-              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">المقر الرئيسي</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-slate-200 text-slate-700">المقر الرئيسي</span>
             </div>
             <h3 class="font-heading font-black text-lg text-slate-900">المركز الرئيسي والإدارة العامة</h3>
             <p class="text-xs text-slate-500 mt-1">القصيم - بريدة - المملكة العربية السعودية</p>
             <div class="text-xs text-slate-600 font-numbers mt-2">السجل التجاري: 7016475555</div>
           </div>
           <div class="pt-4 border-t border-slate-200">
-            <a href="https://maps.app.goo.gl/Z6ST11v91KPAFQ8s9" target="_blank" class="block w-full py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs text-center transition">
+            <a href="https://maps.app.goo.gl/Z6ST11v91KPAFQ8s9" target="_blank" class="block w-full py-2.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs text-center transition">
               موقع الإدارة على الخريطة 📍
             </a>
           </div>
@@ -1462,10 +1462,10 @@
   <section class="py-16 sm:py-20 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
-      <div class="p-8 sm:p-12 rounded-3xl bg-slate-800/80 border border-slate-700 shadow-2xl mb-12">
+      <div class="p-8 sm:p-12 rounded-2xl bg-slate-800/80 border border-slate-700 shadow-2xl mb-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div class="space-y-4">
-            <span class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs px-3 py-1 rounded-full font-bold">
+            <span class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs px-3 py-1 rounded-md font-bold">
               ضمان واعتماد رسمي ✓
             </span>
             <h3 class="text-2xl sm:text-3xl font-heading font-black text-white">
@@ -1475,11 +1475,11 @@
               شركة درة السيارة منشأة سعودية رسمية مسجلة متخصصة في استيراد وتوزيع قطع غيار هيونداي وكيا الأصلية والمعتمدة، مع التزام تام بالمعايير والمواصفات القياسية.
             </p>
             <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-              <div class="p-3 rounded-2xl bg-slate-900 border border-slate-700">
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-700">
                 <span class="text-slate-400 block text-[10px]">السجل التجاري:</span>
                 <strong class="text-amber-400 font-numbers font-bold text-sm">7016475555</strong>
               </div>
-              <div class="p-3 rounded-2xl bg-slate-900 border border-slate-700">
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-700">
                 <span class="text-slate-400 block text-[10px]">الرقم الضريبي:</span>
                 <strong class="text-amber-400 font-numbers font-bold text-sm">311861381500003</strong>
               </div>
@@ -1487,19 +1487,19 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4 text-center">
-            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-700">
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-700">
               <div class="text-2xl sm:text-3xl font-black font-numbers text-amber-400">+15,000</div>
               <div class="text-xs font-bold text-slate-200 mt-1">صنف وقطعة أصلية</div>
             </div>
-            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-700">
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-700">
               <div class="text-2xl sm:text-3xl font-black font-numbers text-emerald-400">100%</div>
               <div class="text-xs font-bold text-slate-200 mt-1">مطابقة رقم الهيكل</div>
             </div>
-            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-700">
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-700">
               <div class="text-2xl sm:text-3xl font-black font-numbers text-sky-400">+45</div>
               <div class="text-xs font-bold text-slate-200 mt-1">مدينة ومحافظة</div>
             </div>
-            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-700">
+            <div class="p-5 rounded-xl bg-slate-900 border border-slate-700">
               <div class="text-2xl sm:text-3xl font-black font-numbers text-purple-400">3 فروع + متجر</div>
               <div class="text-xs font-bold text-slate-200 mt-1">الرواف + السليم + الإدارة + أونلاين</div>
             </div>
@@ -1514,35 +1514,35 @@
         </div>
         <div class="flex items-center gap-3 flex-wrap justify-center">
           <!-- Mada Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/mada.png" alt="مدى Mada" class="h-5 w-auto object-contain">
           </div>
           <!-- Apple Pay Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/apple-pay.png" alt="أبل باي Apple Pay" class="h-4.5 w-auto object-contain invert">
           </div>
           <!-- Tamara Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/tamara.png" alt="تمارا Tamara" class="h-5 w-auto object-contain">
           </div>
           <!-- Tabby Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/tabby.png" alt="تابي Tabby" class="h-5 w-auto object-contain">
           </div>
           <!-- stc pay Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/stc-pay.png" alt="stc pay" class="h-4.5 w-auto object-contain">
           </div>
           <!-- VISA Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/visa.png" alt="فيزا VISA" class="h-4.5 w-auto object-contain">
           </div>
           <!-- Mastercard Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/mastercard.png" alt="ماستركارد Mastercard" class="h-5 w-auto object-contain">
           </div>
           <!-- Bank Transfer Mini -->
-          <div class="h-8 px-3 py-1 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
+          <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
             <img src="images/payments/bank-transfer.png" alt="تحويل بنكي" class="h-5 w-auto object-contain invert opacity-90">
           </div>
         </div>
@@ -1576,7 +1576,7 @@
     <div class="grid grid-cols-4 gap-1.5 text-center">
       <button
         onclick="openDirectWhatsApp('hyundai')"
-        class="flex flex-col items-center justify-center p-2 rounded-xl bg-sky-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
+        class="flex flex-col items-center justify-center p-2 rounded-lg bg-sky-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
       >
         <span class="text-base mb-0.5">🚗</span>
         <span>فرع هيونداي</span>
@@ -1584,7 +1584,7 @@
 
       <button
         onclick="openDirectWhatsApp('kia')"
-        class="flex flex-col items-center justify-center p-2 rounded-xl bg-purple-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
+        class="flex flex-col items-center justify-center p-2 rounded-lg bg-purple-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
       >
         <span class="text-base mb-0.5">🚙</span>
         <span>فرع كيا</span>
@@ -1593,7 +1593,7 @@
       <a
         href="https://www.doracars.com"
         target="_blank"
-        class="flex flex-col items-center justify-center p-2 rounded-xl bg-emerald-700 text-white text-[10px] font-black active:scale-95 transition shadow-sm"
+        class="flex flex-col items-center justify-center p-2 rounded-lg bg-emerald-700 text-white text-[10px] font-black active:scale-95 transition shadow-sm"
       >
         <span class="text-base mb-0.5">🛒</span>
         <span>المتجر أونلاين</span>
@@ -1601,7 +1601,7 @@
 
       <a
         href="#vin-quote"
-        class="flex flex-col items-center justify-center p-2 rounded-xl bg-amber-400 text-slate-950 text-[10px] font-black active:scale-95 transition shadow-sm"
+        class="flex flex-col items-center justify-center p-2 rounded-lg bg-amber-400 text-slate-950 text-[10px] font-black active:scale-95 transition shadow-sm"
       >
         <span class="text-base mb-0.5">⚡</span>
         <span>تسعير VIN</span>
@@ -1723,9 +1723,9 @@
       const btnS = document.getElementById('tabBtnStore');
       const carMake = document.getElementById('carMake');
 
-      btnH.className = 'py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'hyundai' ? 'bg-sky-600/30 border-sky-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
-      btnK.className = 'py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'kia' ? 'bg-purple-600/30 border-purple-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
-      btnS.className = 'py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'store' ? 'bg-emerald-600/30 border-emerald-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
+      btnH.className = 'py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'hyundai' ? 'bg-sky-600/30 border-sky-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
+      btnK.className = 'py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'kia' ? 'bg-purple-600/30 border-purple-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
+      btnS.className = 'py-3 px-2 rounded-xl text-xs font-bold transition flex flex-col items-center gap-1 border ' + (branch === 'store' ? 'bg-emerald-600/30 border-emerald-400 text-white shadow-md' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white');
 
       if (branch === 'hyundai') carMake.value = 'هيونداي (Hyundai)';
       if (branch === 'kia') carMake.value = 'كيا (Kia)';
@@ -1737,11 +1737,11 @@
       const btnP = document.getElementById('engineBtnPetrol');
       const btnD = document.getElementById('engineBtnDiesel');
       if (type.includes('بنزين')) {
-        btnP.className = 'h-11 rounded-2xl text-xs font-bold transition border bg-amber-500/20 border-amber-400 text-amber-300 font-black flex items-center justify-center gap-1.5';
-        btnD.className = 'h-11 rounded-2xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5';
+        btnP.className = 'h-11 rounded-xl text-xs font-bold transition border bg-amber-500/20 border-amber-400 text-amber-300 font-black flex items-center justify-center gap-1.5';
+        btnD.className = 'h-11 rounded-xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5';
       } else {
-        btnD.className = 'h-11 rounded-2xl text-xs font-bold transition border bg-sky-500/20 border-sky-400 text-sky-300 font-black flex items-center justify-center gap-1.5';
-        btnP.className = 'h-11 rounded-2xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5';
+        btnD.className = 'h-11 rounded-xl text-xs font-bold transition border bg-sky-500/20 border-sky-400 text-sky-300 font-black flex items-center justify-center gap-1.5';
+        btnP.className = 'h-11 rounded-xl text-xs font-bold transition border bg-slate-900 border-slate-800 text-slate-400 flex items-center justify-center gap-1.5';
       }
     }
 
