@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عروض اليوم الوطني السعودي 🇸🇦 | درة السيارة لقطع غيار هيونداي وكيا</title>
-  <meta name="description" content="أقوى عروض اليوم الوطني على قطع غيار هيونداي وكيا (بنزين وديزل) - فرع هيونداي الرواف، فرع كيا السليم، والمتجر الإلكتروني مع شحن لكافة مدن المملكة.">
+  <title>عروض اليوم الوطني السعودي 🇸🇦 | شركة درة السيارة لقطع غيار هيونداي وكيا</title>
+  <meta name="description" content="أقوى عروض وتخفيضات اليوم الوطني على قطع غيار هيونداي وكيا الأصلية (بنزين وديزل) - فرع هيونداي (طريق الرواف)، فرع كيا (حي السليم)، والمتجر الإلكتروني www.doracars.com مع شحن فوري لكافة مدن المملكة.">
   
-  <!-- Open Graph / Meta for Ads & Social Sharing -->
-  <meta property="og:title" content="عروض اليوم الوطني السعودي | درة السيارة لقطع غيار هيونداي وكيا">
-  <meta property="og:description" content="خصومات تصل إلى 50% على قطع غيار هيونداي وكيا الأصلية (بنزين وديزل) ومطابقة رقم الهيكل 100%.">
-  <meta property="og:image" content="public/company-logo.png">
+  <!-- Open Graph / Meta for Ads (Snapchat, TikTok, Google, Meta) -->
+  <meta property="og:title" content="عروض اليوم الوطني السعودي 🇸🇦 | شركة درة السيارة">
+  <meta property="og:description" content="خصومات كبرى تصل إلى 50% على قطع غيار هيونداي وكيا (بنزين وديزل) ومطابقة رقم الهيكل VIN 100%.">
+  <meta property="og:image" content="company-logo.png">
+  <meta property="og:url" content="https://www.doracars.com">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="public/company-logo.png">
+  <link rel="icon" type="image/png" href="company-logo.png">
 
-  <!-- Google Fonts: Cairo -->
+  <!-- Google Fonts: Cairo & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900;1000&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
@@ -63,12 +64,11 @@
       -webkit-text-fill-color: transparent;
     }
     .glow-emerald {
-      box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.3);
+      box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.35);
     }
     .glow-gold {
-      box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.35);
     }
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -86,36 +86,36 @@
 </head>
 <body class="selection:bg-emerald-500 selection:text-slate-950">
 
-  <!-- ─── 1. TOP TICKER / CAMPAIGN BAR ────────────────────────────────────── -->
+  <!-- ─── 1. TOP TICKER / CAMPAIGN ANNOUNCEMENT BAR ────────────────────────── -->
   <div class="bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 border-b border-emerald-500/30 px-3 py-2 text-center text-xs sm:text-sm font-bold text-emerald-200 flex items-center justify-center gap-2 sm:gap-4 flex-wrap sticky top-0 z-50 backdrop-blur-md">
     <span class="flex items-center gap-1.5 text-white">
       <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
-      🇸🇦 عروض اليوم الوطني الكبرى | تخفيضات تصل إلى <span class="text-amber-400 font-black text-sm sm:text-base">50%</span>
+      🇸🇦 عروض اليوم الوطني الكبرى | تخفيضات استثنائية حتى <span class="text-amber-400 font-black text-sm sm:text-base">50%</span>
     </span>
     <span class="hidden md:inline text-emerald-400/60">•</span>
     <span class="hidden md:inline text-slate-200">
-      على قطع غيار هيونداي وكيا (بنزين وديزل) + شحن مجاني لكافة مدن المملكة
+      قطع غيار هيونداي وكيا الأصلية (بنزين وديزل) + شحن مجاني لكافة مدن المملكة للطلبات فوق 300 ريال
     </span>
     <button
       onclick="copyCouponCode()"
       class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/40 text-xs font-black transition active:scale-95 shadow-sm"
     >
-      <span>🏷️ كود: <strong id="topCouponText">KSA96</strong></span>
-      <span id="copyTopBtnLabel" class="text-[10px] bg-amber-500/30 px-1.5 py-0.5 rounded">نسخ</span>
+      <span>🏷️ كود إضافي: <strong id="topCouponText">KSA96</strong></span>
+      <span id="copyTopBtnLabel" class="text-[10px] bg-amber-500/30 px-1.5 py-0.5 rounded font-mono">نسخ</span>
     </button>
   </div>
 
   <!-- ─── 2. MAIN HEADER & BRAND NAVIGATION ──────────────────────────────── -->
-  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl sticky top-[37px] z-40">
+  <header class="border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-xl sticky top-[37px] z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
       
-      <!-- Logo: Free-Floating, NO BOXES, Crisp 3D Metallic -->
-      <a href="#" class="flex items-center gap-3 group">
+      <!-- Brand Logo: Free-Floating, NO Containers, Crisp 3D Metallic -->
+      <a href="https://www.doracars.com" class="flex items-center gap-3 group">
         <img
-          src="public/company-logo.png"
-          alt="درة السيارة لقطع غيار السيارات"
+          src="company-logo.png"
+          alt="شركة درة السيارة لقطع غيار السيارات"
           class="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105"
-          onerror="this.src='../public/company-logo.png'"
+          onerror="this.src='public/company-logo.png'"
         >
         <div class="flex flex-col">
           <span class="font-heading font-black text-lg sm:text-xl text-white tracking-tight leading-tight">
@@ -144,7 +144,8 @@
           فرع كيا (السليم)
         </a>
         <a
-          href="#online-store"
+          href="https://www.doracars.com"
+          target="_blank"
           class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-emerald-500/10 border border-transparent hover:border-emerald-500/30 transition flex items-center gap-1.5"
         >
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -171,10 +172,10 @@
     </div>
   </header>
 
-  <!-- ─── 3. GRAND HERO SECTION ───────────────────────────────────────────── -->
+  <!-- ─── 3. GRAND HERO SECTION WITH SAUDI THEME ───────────────────────────── -->
   <section class="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-28 border-b border-emerald-500/20">
     
-    <!-- Ambient Lighting -->
+    <!-- Ambient Glows -->
     <div class="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute top-1/3 left-[-100px] w-[450px] h-[450px] bg-sky-600/15 rounded-full blur-[140px] pointer-events-none"></div>
     <div class="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-amber-600/15 rounded-full blur-[130px] pointer-events-none"></div>
@@ -182,14 +183,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       <div class="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
         
-        <!-- National Day Badge -->
+        <!-- Official Campaign Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-bold shadow-xl backdrop-blur-md">
           <span>✨ 🇸🇦 عروض اليوم الوطني السعودي | درة السيارة</span>
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          <span class="text-amber-400 font-black">خصومات حتى 50%</span>
+          <span class="text-amber-400 font-black">تخفيضات كبرى تصل إلى 50%</span>
         </div>
 
-        <!-- Grand Title -->
+        <!-- Grand Main Title -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-[1.2] text-white">
           عِزّنا بخدمتكم.. عروض اليوم الوطني الكبرى
           <span class="block mt-2 text-gold-gradient">
@@ -197,15 +198,15 @@
           </span>
         </h1>
 
-        <!-- Subtitle -->
+        <!-- Sub-headline -->
         <p class="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
-          احصل على أقوى تخفيضات العام على قطع الغيار الأصلية المعتمدة مع مطابقة رقم الهيكل (VIN) بنسبة 100%، وتوفر فوري بفرعينا في بريدة، أو عبر شحن سريع لكافة مدن ومحافظات المملكة.
+          احصل على أقوى خصومات العام على قطع الغيار الأصلية المعتمدة مع مطابقة رقم الهيكل (VIN) بنسبة 100%، وتوفر فوري بفرع هيونداي (الرواف)، فرع كيا (السليم)، أو عبر المتجر الإلكتروني <span class="text-emerald-400 font-bold font-mono">www.doracars.com</span> مع شحن سريع لكافة مدن المملكة.
         </p>
 
-        <!-- Coupon Copier & Live Countdown Grid -->
+        <!-- 1-Click Coupon Code & Countdown Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-2">
           
-          <!-- Coupon Box -->
+          <!-- Coupon Copier Card -->
           <div 
             onclick="copyCouponCode()"
             class="p-4 rounded-3xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400/60 shadow-xl backdrop-blur-md flex items-center justify-between gap-4 cursor-pointer transition group"
@@ -228,7 +229,7 @@
             </button>
           </div>
 
-          <!-- Countdown Box -->
+          <!-- Live Countdown Card -->
           <div class="p-4 rounded-3xl bg-slate-900/90 border border-amber-500/30 shadow-xl backdrop-blur-md flex flex-col justify-center items-center gap-1.5">
             <div class="text-[11px] text-amber-300 font-bold flex items-center gap-1">
               <span>⏱️ ينتهي العرض الاستثنائي خلال:</span>
@@ -275,7 +276,7 @@
           </a>
         </div>
 
-        <!-- Micro Trust Strip -->
+        <!-- Trust Features Strip -->
         <div class="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs text-slate-400">
           <span class="flex items-center gap-1.5">🛡️ قطع أصلية 100%</span>
           <span class="flex items-center gap-1.5">🎯 مطابقة برقم الهيكل</span>
@@ -300,14 +301,14 @@
           محرك التحويلات: اختر وجهتك المفضلة
         </h2>
         <p class="text-xs sm:text-base text-slate-400">
-          سواءً أردت الشراء المباشر من فرع هيونداي، فرع كيا، أو الطلب أونلاين والشحن لباب بيتك.. نحن في خدمتك بأقوى عروض اليوم الوطني.
+          سواءً أردت الشراء المباشر من فرع هيونداي (الرواف)، فرع كيا (السليم)، أو الطلب أونلاين والشحن لباب بيتك.. نحن في خدمتك بأقوى عروض اليوم الوطني.
         </p>
       </div>
 
       <!-- 3 Dynamo Cards Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
         
-        <!-- ── CARD 1: HYUNDAI BRANCH (الرواف) ─────────────────────── -->
+        <!-- ── CARD 1: HYUNDAI BRANCH (طريق الرواف) ────────────────── -->
         <div 
           id="hyundai-branch"
           class="rounded-3xl border border-sky-500/40 bg-gradient-to-b from-slate-900/90 via-slate-900/70 to-sky-950/40 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group hover:border-sky-400 transition-all duration-300 hover:shadow-sky-500/10"
@@ -320,7 +321,7 @@
                 🚗
               </div>
               <span class="bg-sky-500/20 text-sky-300 border border-sky-500/40 text-[11px] font-bold px-2.5 py-1 rounded-full">
-                وكالة مبيعات هيونداي
+                وكالة ومبيعات هيونداي
               </span>
             </div>
 
@@ -330,6 +331,9 @@
               </h3>
               <div class="text-xs text-sky-400 font-semibold mt-1 flex items-center gap-1.5">
                 <span>📍 القصيم - بريدة - طريق الرواف</span>
+              </div>
+              <div class="text-xs text-slate-300 font-mono mt-1 font-bold">
+                📞 0530051360
               </div>
               <p class="text-xs text-slate-300 mt-3 leading-relaxed">
                 قسم متخصص بالكامل لجميع موديلات هيونداي (أكسنت، إلنترا، سوناتا، سنتافي، توسان، أزيرا، ستاريا، H100) لمنظومات الديزل والبنزين.
@@ -353,18 +357,18 @@
               onclick="openDirectWhatsApp('hyundai')"
               class="w-full py-3.5 px-4 rounded-2xl bg-sky-600 hover:bg-sky-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-sky-600/20 transition active:scale-95"
             >
-              <span>💬 تواصل واتساب مع مبيعات هيونداي</span>
+              <span>💬 تواصل واتساب مع مبيعات هيونداي (0530051360)</span>
             </button>
 
             <div class="grid grid-cols-2 gap-2">
               <a
-                href="tel:0555138150"
+                href="tel:0530051360"
                 class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 transition"
               >
                 <span>📞 اتصال بالفرع</span>
               </a>
               <a
-                href="https://maps.google.com/?q=Dorat+Al+Sayarah+Hyundai+Buraidah"
+                href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8"
                 target="_blank"
                 rel="noreferrer"
                 class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 transition"
@@ -375,7 +379,7 @@
           </div>
         </div>
 
-        <!-- ── CARD 2: KIA BRANCH (السليم) ─────────────────────────── -->
+        <!-- ── CARD 2: KIA BRANCH (حي السليم) ───────────────────────── -->
         <div 
           id="kia-branch"
           class="rounded-3xl border border-purple-500/40 bg-gradient-to-b from-slate-900/90 via-slate-900/70 to-purple-950/40 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group hover:border-purple-400 transition-all duration-300 hover:shadow-purple-500/10"
@@ -388,7 +392,7 @@
                 🚙
               </div>
               <span class="bg-purple-500/20 text-purple-300 border border-purple-500/40 text-[11px] font-bold px-2.5 py-1 rounded-full">
-                وكالة مبيعات كيا
+                وكالة ومبيعات كيا
               </span>
             </div>
 
@@ -398,6 +402,9 @@
               </h3>
               <div class="text-xs text-purple-400 font-semibold mt-1 flex items-center gap-1.5">
                 <span>📍 القصيم - بريدة - حي السليم</span>
+              </div>
+              <div class="text-xs text-slate-300 font-mono mt-1 font-bold">
+                📞 0539454377
               </div>
               <p class="text-xs text-slate-300 mt-3 leading-relaxed">
                 مركز متكامل لقطع غيار كيا (سيراتو، K3، K5، سبورتاج، سورينتو، كارنفال، بيجاس، كادينزا، تيلورايد) الأصلية المعتمدة.
@@ -421,18 +428,18 @@
               onclick="openDirectWhatsApp('kia')"
               class="w-full py-3.5 px-4 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-purple-600/20 transition active:scale-95"
             >
-              <span>💬 تواصل واتساب مع مبيعات كيا</span>
+              <span>💬 تواصل واتساب مع مبيعات كيا (0539454377)</span>
             </button>
 
             <div class="grid grid-cols-2 gap-2">
               <a
-                href="tel:0555138151"
+                href="tel:0539454377"
                 class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 transition"
               >
                 <span>📞 اتصال بالفرع</span>
               </a>
               <a
-                href="https://maps.google.com/?q=Dorat+Al+Sayarah+Kia+Buraidah"
+                href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7"
                 target="_blank"
                 rel="noreferrer"
                 class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 transition"
@@ -465,10 +472,13 @@
                 متجر درة السيارة أونلاين
               </h3>
               <div class="text-xs text-emerald-400 font-semibold mt-1 flex items-center gap-1.5">
-                <span>🚚 شحن سريع لجميع مدن ومحافظات المملكة</span>
+                <span>🌐 www.doracars.com</span>
+              </div>
+              <div class="text-xs text-slate-300 font-mono mt-1 font-bold">
+                💬 واتساب المتجر: 0538834212
               </div>
               <p class="text-xs text-slate-300 mt-3 leading-relaxed">
-                تصفح أكثر من 15,000 قطعة غيار أصلية، ادفع بالتقسيط مع تمارا وتابي، واستمتع بتوصيل فوري لباب منزلك أو ورشتك.
+                تصفح أكثر من 15,000 قطعة غيار أصلية، ادفع بالتقسيط مع تمارا وتابي، واستمتع بتوصيل فوري وشحن سريع لكافة مدن المملكة.
               </p>
             </div>
 
@@ -486,12 +496,12 @@
 
           <div class="space-y-2.5 pt-6 mt-4 border-t border-slate-800">
             <a
-              href="https://dorat-cars.com"
+              href="https://www.doracars.com"
               target="_blank"
               rel="noreferrer"
               class="w-full py-3.5 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition active:scale-95"
             >
-              <span>🛍️ تسوق الآن بالمتجر الإلكتروني</span>
+              <span>🛍️ تسوق الآن بالمتجر (www.doracars.com)</span>
             </a>
 
             <div class="grid grid-cols-2 gap-2">
@@ -505,7 +515,7 @@
                 onclick="openDirectWhatsApp('store')"
                 class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 transition"
               >
-                <span>💬 استفسار المتجر</span>
+                <span>💬 واتساب المتجر (0538834212)</span>
               </button>
             </div>
           </div>
@@ -547,7 +557,7 @@
                 class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-sky-600/30 border-sky-400 text-white shadow-md"
               >
                 <span>🚗 فرع هيونداي</span>
-                <span class="text-[10px] text-sky-400 font-normal">طريق الرواف</span>
+                <span class="text-[10px] text-sky-400 font-normal">طريق الرواف (0530051360)</span>
               </button>
 
               <button
@@ -557,7 +567,7 @@
                 class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-950 border-slate-800 text-slate-400 hover:text-white"
               >
                 <span>🚙 فرع كيا</span>
-                <span class="text-[10px] text-purple-400 font-normal">حي السليم</span>
+                <span class="text-[10px] text-purple-400 font-normal">حي السليم (0539454377)</span>
               </button>
 
               <button
@@ -566,8 +576,8 @@
                 onclick="setTargetBranch('store')"
                 class="py-3 px-2 rounded-2xl text-xs font-bold transition flex flex-col items-center gap-1 border bg-slate-950 border-slate-800 text-slate-400 hover:text-white"
               >
-                <span>🛒 المتجر أونلاين</span>
-                <span class="text-[10px] text-emerald-400 font-normal">شحن للمنزل</span>
+                <span>🛒 المتجر الإلكتروني</span>
+                <span class="text-[10px] text-emerald-400 font-normal">شحن للمنزل (0538834212)</span>
               </button>
             </div>
           </div>
@@ -881,7 +891,87 @@
     </div>
   </section>
 
-  <!-- ─── 7. TRUST, AUTHENTICITY & FOOTER ─────────────────────────────────── -->
+  <!-- ─── 7. BRANCH LOCATIONS & HEADQUARTERS DIRECTORY ────────────────────── -->
+  <section class="py-16 sm:py-20 bg-slate-950/80 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center space-y-3 mb-12">
+        <span class="inline-block bg-sky-500/20 text-sky-300 border border-sky-500/40 text-xs px-3 py-1 rounded-full font-bold">
+          فروعنا ومواقعنا المعتمدة 📍
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-black text-white">
+          تفضل بزيارتنا في فروع شركة درة السيارة
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Hyundai Branch -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-sky-500/30 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-2xl">🚗</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300">مبيعات هيونداي</span>
+            </div>
+            <h3 class="font-heading font-black text-lg text-white">فرع هيونداي (طريق الرواف)</h3>
+            <p class="text-xs text-slate-400 mt-1">القصيم - بريدة - طريق الرواف</p>
+            <div class="text-xs text-sky-400 font-mono font-bold mt-2">📞 0530051360</div>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex gap-2">
+            <a href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8" target="_blank" class="flex-1 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs text-center transition">
+              فتح الخريطة 📍
+            </a>
+            <a href="tel:0530051360" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition">
+              اتصال 📞
+            </a>
+          </div>
+        </div>
+
+        <!-- Kia Branch -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-purple-500/30 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-2xl">🚙</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300">مبيعات كيا</span>
+            </div>
+            <h3 class="font-heading font-black text-lg text-white">فرع كيا (حي السليم)</h3>
+            <p class="text-xs text-slate-400 mt-1">القصيم - بريدة - حي السليم</p>
+            <div class="text-xs text-purple-400 font-mono font-bold mt-2">📞 0539454377</div>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex gap-2">
+            <a href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7" target="_blank" class="flex-1 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs text-center transition">
+              فتح الخريطة 📍
+            </a>
+            <a href="tel:0539454377" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition">
+              اتصال 📞
+            </a>
+          </div>
+        </div>
+
+        <!-- Headquarters -->
+        <div class="p-6 rounded-3xl bg-slate-900/90 border border-slate-700 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-2xl">🏢</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">المقر الرئيسي</span>
+            </div>
+            <h3 class="font-heading font-black text-lg text-white">المركز الرئيسي والإدارة العامة</h3>
+            <p class="text-xs text-slate-400 mt-1">القصيم - بريدة - المملكة العربية السعودية</p>
+            <div class="text-xs text-slate-400 font-mono mt-2">السجل التجاري: 7016475555</div>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <a href="https://maps.app.goo.gl/Z6ST11v91KPAFQ8s9" target="_blank" class="block w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs text-center transition">
+              موقع الإدارة على الخريطة 📍
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 8. TRUST, AUTHENTICITY & FOOTER ─────────────────────────────────── -->
   <section class="py-16 sm:py-20 bg-slate-950 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
@@ -934,14 +1024,14 @@
       <footer class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-400">
         <div class="flex items-center gap-3">
           <img
-            src="public/company-logo.png"
+            src="company-logo.png"
             alt="درة السيارة"
             class="h-10 w-auto object-contain"
-            onerror="this.src='../public/company-logo.png'"
+            onerror="this.src='public/company-logo.png'"
           >
           <div>
             <div class="font-heading font-black text-white text-sm">شركة درة السيارة لقطع غيار السيارات</div>
-            <div class="text-[11px] text-slate-500">الوكيل المتخصص لقطع غيار هيونداي وكيا (بنزين وديزل)</div>
+            <div class="text-[11px] text-slate-500">الوكيل المتخصص لقطع غيار هيونداي وكيا (بنزين وديزل) | <a href="https://www.doracars.com" target="_blank" class="text-emerald-400 font-mono">www.doracars.com</a></div>
           </div>
         </div>
 
@@ -953,7 +1043,7 @@
     </div>
   </section>
 
-  <!-- ─── 8. FLOATING STICKY MOBILE CONVERSION BAR ────────────────────────── -->
+  <!-- ─── 9. FLOATING STICKY MOBILE CONVERSION BAR ────────────────────────── -->
   <div class="fixed bottom-0 inset-x-0 z-50 bg-slate-950/95 border-t border-slate-800 p-2 sm:hidden backdrop-blur-xl shadow-2xl">
     <div class="grid grid-cols-4 gap-1.5 text-center">
       <button
@@ -973,7 +1063,7 @@
       </button>
 
       <a
-        href="https://dorat-cars.com"
+        href="https://www.doracars.com"
         target="_blank"
         class="flex flex-col items-center justify-center p-2 rounded-xl bg-emerald-600 text-slate-950 text-[10px] font-black active:scale-95 transition"
       >
@@ -1001,10 +1091,11 @@
     const utmSource = urlParams.get('utm_source') || 'Direct';
     const utmCampaign = urlParams.get('utm_campaign') || 'NationalDay-KSA96';
 
+    // Exact Verified Contact Details for Dora Cars
     const BRANCH_PHONES = {
-      hyundai: { name: 'فرع هيونداي (الرواف)', phone: '966555138150' },
-      kia: { name: 'فرع كيا (السليم)', phone: '966555138151' },
-      store: { name: 'المتجر الإلكتروني', phone: '966555138152' }
+      hyundai: { name: 'فرع هيونداي (طريق الرواف)', phone: '966530051360', maps: 'https://maps.app.goo.gl/Erq3RNUB7v3R34rA8' },
+      kia: { name: 'فرع كيا (حي السليم)', phone: '966539454377', maps: 'https://maps.app.goo.gl/2d3juqPeYEEmSgmP7' },
+      store: { name: 'المتجر الإلكتروني (www.doracars.com)', phone: '966538834212', url: 'https://www.doracars.com' }
     };
 
     let selectedBranch = 'hyundai';
