@@ -117,6 +117,25 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #004D25;
     }
+
+    /* Robust Image Constraints for Payment Badges */
+    .payment-logo-img {
+      max-height: 36px !important;
+      max-width: 120px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      display: inline-block;
+    }
+
+    .footer-payment-img {
+      max-height: 20px !important;
+      max-width: 70px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      display: inline-block;
+    }
   </style>
 </head>
 <body class="selection:bg-emerald-600 selection:text-white min-h-screen flex flex-col justify-between">
@@ -686,7 +705,8 @@
             <img
               src="images/payments/tamara.png"
               alt="تمارا Tamara"
-              class="h-9 max-h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 34px; max-width: 110px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -701,7 +721,8 @@
             <img
               src="images/payments/tabby.png"
               alt="تابي Tabby"
-              class="h-9 max-h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 34px; max-width: 110px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -716,7 +737,8 @@
             <img
               src="images/payments/mada.png"
               alt="مدى Mada"
-              class="h-8 max-h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 32px; max-width: 100px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -731,7 +753,8 @@
             <img
               src="images/payments/apple-pay.png"
               alt="أبل باي Apple Pay"
-              class="h-8 max-h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 32px; max-width: 100px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -746,7 +769,8 @@
             <img
               src="images/payments/stc-pay.png"
               alt="stc pay"
-              class="h-7 max-h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 28px; max-width: 100px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -761,7 +785,8 @@
             <img
               src="images/payments/visa.png"
               alt="فيزا VISA"
-              class="h-7 max-h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 28px; max-width: 90px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -776,7 +801,8 @@
             <img
               src="images/payments/mastercard.png"
               alt="ماستركارد Mastercard"
-              class="h-8 max-h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 32px; max-width: 80px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -791,7 +817,8 @@
             <img
               src="images/payments/bank-transfer.png"
               alt="التحويل البنكي الفوري"
-              class="h-8 max-h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              class="payment-logo-img transition-transform duration-300 group-hover:scale-110"
+              style="max-height: 32px; max-width: 80px;"
             >
           </div>
           <div class="mt-3.5 space-y-1">
@@ -1515,35 +1542,35 @@
         <div class="flex items-center gap-3 flex-wrap justify-center">
           <!-- Mada Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/mada.png" alt="مدى Mada" class="h-5 w-auto object-contain">
+            <img src="images/payments/mada.png" alt="مدى Mada" class="footer-payment-img" style="max-height: 20px; width: auto;">
           </div>
           <!-- Apple Pay Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/apple-pay.png" alt="أبل باي Apple Pay" class="h-4.5 w-auto object-contain invert">
+            <img src="images/payments/apple-pay.png" alt="أبل باي Apple Pay" class="footer-payment-img invert" style="max-height: 18px; width: auto;">
           </div>
           <!-- Tamara Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/tamara.png" alt="تمارا Tamara" class="h-5 w-auto object-contain">
+            <img src="images/payments/tamara.png" alt="تمارا Tamara" class="footer-payment-img" style="max-height: 18px; width: auto;">
           </div>
           <!-- Tabby Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/tabby.png" alt="تابي Tabby" class="h-5 w-auto object-contain">
+            <img src="images/payments/tabby.png" alt="تابي Tabby" class="footer-payment-img" style="max-height: 18px; width: auto;">
           </div>
           <!-- stc pay Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/stc-pay.png" alt="stc pay" class="h-4.5 w-auto object-contain">
+            <img src="images/payments/stc-pay.png" alt="stc pay" class="footer-payment-img" style="max-height: 18px; width: auto;">
           </div>
           <!-- VISA Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/visa.png" alt="فيزا VISA" class="h-4.5 w-auto object-contain">
+            <img src="images/payments/visa.png" alt="فيزا VISA" class="footer-payment-img" style="max-height: 16px; width: auto;">
           </div>
           <!-- Mastercard Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/mastercard.png" alt="ماستركارد Mastercard" class="h-5 w-auto object-contain">
+            <img src="images/payments/mastercard.png" alt="ماستركارد Mastercard" class="footer-payment-img" style="max-height: 20px; width: auto;">
           </div>
           <!-- Bank Transfer Mini -->
           <div class="h-8 px-3 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 flex items-center justify-center shadow-sm">
-            <img src="images/payments/bank-transfer.png" alt="تحويل بنكي" class="h-5 w-auto object-contain invert opacity-90">
+            <img src="images/payments/bank-transfer.png" alt="تحويل بنكي" class="footer-payment-img invert opacity-90" style="max-height: 20px; width: auto;">
           </div>
         </div>
       </div>
