@@ -737,172 +737,216 @@
         </h2>
       </div>
 
-      <!-- 3 Unified Cards Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-        <!-- CARD 1: HYUNDAI BRANCH -->
+      <!-- 3 Unified Cards Slider Container (Book Pages / Swipeable on Mobile, 3-Col Grid on Desktop) -->
+      <div class="relative">
         <div 
-          id="hyundai-branch"
-          class="rounded-2xl border-2 border-sky-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group h-full"
+          id="branchesTrack"
+          class="bundles-scroll-track flex lg:grid lg:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto lg:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
         >
-          <div class="space-y-4">
-            <!-- Header Row -->
-            <div class="flex items-center justify-between gap-3">
-              <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                فرع هيونداي
-              </h3>
-              <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
-                <img src="images/hyundai-logo.png" alt="هيونداي" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
+          
+          <!-- CARD 1: HYUNDAI BRANCH -->
+          <div 
+            id="hyundai-branch"
+            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-sky-200 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group h-full"
+          >
+            <div class="space-y-4">
+              <!-- Header Row -->
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                  فرع هيونداي
+                </h3>
+                <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                  <img src="images/hyundai-logo.png" alt="هيونداي" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
+                </div>
+              </div>
+
+              <!-- Phone & Dynamic Status Box -->
+              <div class="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-3 min-h-[64px]">
+                <div>
+                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                  <a href="tel:0530051360" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-sky-800 tracking-wide hover:underline block">
+                    0530051360
+                  </a>
+                </div>
+                <span id="hyundaiStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>مفتوح الآن</span>
+                </span>
               </div>
             </div>
 
-            <!-- Phone & Dynamic Status Box -->
-            <div class="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-3 min-h-[64px]">
-              <div>
-                <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
-                <a href="tel:0530051360" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-sky-800 tracking-wide hover:underline block">
-                  0530051360
+            <!-- Actions -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="openDirectWhatsApp('hyundai')"
+                class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
+              >
+                <span>💬 تواصل واتساب مع فرع هيونداي</span>
+              </button>
+              <div class="grid grid-cols-2 gap-2">
+                <a
+                  href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8"
+                  target="_blank"
+                  class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+                >
+                  <span>📍 الخريطة</span>
+                </a>
+                <a
+                  href="tel:0530051360"
+                  class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+                >
+                  <span>📞 اتصال</span>
                 </a>
               </div>
-              <span id="hyundaiStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>مفتوح الآن</span>
-              </span>
             </div>
           </div>
 
-          <!-- Actions -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="openDirectWhatsApp('hyundai')"
-              class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
-            >
-              <span>💬 تواصل واتساب مع فرع هيونداي</span>
-            </button>
-            <div class="grid grid-cols-2 gap-2">
+          <!-- CARD 2: KIA BRANCH -->
+          <div 
+            id="kia-branch"
+            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-purple-200 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group h-full"
+          >
+            <div class="space-y-4">
+              <!-- Header Row -->
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                  فرع كيا
+                </h3>
+                <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                  <img src="images/kia-logo.png" alt="كيا" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
+                </div>
+              </div>
+
+              <!-- Phone & Dynamic Status Box -->
+              <div class="p-3.5 rounded-xl bg-purple-50/80 border border-purple-200 flex items-center justify-between gap-3 min-h-[64px]">
+                <div>
+                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                  <a href="tel:0539454377" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-purple-800 tracking-wide hover:underline block">
+                    0539454377
+                  </a>
+                </div>
+                <span id="kiaStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>مفتوح الآن</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="openDirectWhatsApp('kia')"
+                class="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
+              >
+                <span>💬 تواصل واتساب مع فرع كيا</span>
+              </button>
+              <div class="grid grid-cols-2 gap-2">
+                <a
+                  href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7"
+                  target="_blank"
+                  class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+                >
+                  <span>📍 الخريطة</span>
+                </a>
+                <a
+                  href="tel:0539454377"
+                  class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+                >
+                  <span>📞 اتصال</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3: ONLINE STORE -->
+          <div 
+            id="online-store"
+            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group h-full"
+          >
+            <div class="space-y-4">
+              <!-- Header Row -->
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                  المتجر الإلكتروني
+                </h3>
+                <div class="w-14 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                  🛒
+                </div>
+              </div>
+
+              <!-- Phone & Time -->
+              <div class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-3 min-h-[64px]">
+                <div>
+                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
+                  <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-emerald-800 tracking-wide hover:underline block">
+                    0538834212
+                  </a>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>متاح 24/7 أونلاين</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
               <a
-                href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8"
+                href="https://www.doracars.com"
                 target="_blank"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+                class="w-full py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
               >
-                <span>📍 الخريطة</span>
+                <span>🛒 تسوق الآن عبر المتجر (doracars.com)</span>
               </a>
-              <a
-                href="tel:0530051360"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
+              <button
+                onclick="openDirectWhatsApp('store')"
+                class="w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1.5"
               >
-                <span>📞 اتصال</span>
-              </a>
+                <span>💬 واتساب المتجر (0538834212)</span>
+              </button>
             </div>
           </div>
+
         </div>
 
-        <!-- CARD 2: KIA BRANCH -->
-        <div 
-          id="kia-branch"
-          class="rounded-2xl border-2 border-purple-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group h-full"
-        >
-          <div class="space-y-4">
-            <!-- Header Row -->
-            <div class="flex items-center justify-between gap-3">
-              <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                فرع كيا
-              </h3>
-              <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
-                <img src="images/kia-logo.png" alt="كيا" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
-              </div>
-            </div>
+        <!-- Mobile Navigation Controls & Interactive Page Indicators (3 Pages) -->
+        <div class="flex lg:hidden items-center justify-between mt-3.5 px-2">
+          <!-- Prev Button (Right in RTL) -->
+          <button
+            type="button"
+            onclick="prevBranch()"
+            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-sky-50 active:scale-95 transition"
+            aria-label="الفرع السابق"
+            title="الفرع السابق"
+          >
+            <span class="text-sm font-black">➔</span>
+          </button>
 
-            <!-- Phone & Dynamic Status Box -->
-            <div class="p-3.5 rounded-xl bg-purple-50/80 border border-purple-200 flex items-center justify-between gap-3 min-h-[64px]">
-              <div>
-                <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
-                <a href="tel:0539454377" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-purple-800 tracking-wide hover:underline block">
-                  0539454377
-                </a>
-              </div>
-              <span id="kiaStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>مفتوح الآن</span>
-              </span>
-            </div>
+          <!-- Interactive Dots Indicator -->
+          <div class="flex items-center gap-1.5" id="branchesDots">
+            <button type="button" onclick="goToBranch(0)" class="branch-dot w-6 h-2 rounded-full bg-sky-600 transition-all duration-300" aria-label="فرع هيونداي"></button>
+            <button type="button" onclick="goToBranch(1)" class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="فرع كيا"></button>
+            <button type="button" onclick="goToBranch(2)" class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="المتجر الإلكتروني"></button>
           </div>
 
-          <!-- Actions -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="openDirectWhatsApp('kia')"
-              class="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
-            >
-              <span>💬 تواصل واتساب مع فرع كيا</span>
-            </button>
-            <div class="grid grid-cols-2 gap-2">
-              <a
-                href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7"
-                target="_blank"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
-              >
-                <span>📍 الخريطة</span>
-              </a>
-              <a
-                href="tel:0539454377"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
-              >
-                <span>📞 اتصال</span>
-              </a>
-            </div>
-          </div>
+          <!-- Next Button (Left in RTL) -->
+          <button
+            type="button"
+            onclick="nextBranch()"
+            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-sky-50 active:scale-95 transition"
+            aria-label="الفرع التالي"
+            title="الفرع التالي"
+          >
+            <span class="text-sm font-black">⬅</span>
+          </button>
         </div>
 
-        <!-- CARD 3: ONLINE STORE -->
-        <div 
-          id="online-store"
-          class="rounded-2xl border-2 border-emerald-300 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group h-full"
-        >
-          <div class="space-y-4">
-            <!-- Header Row -->
-            <div class="flex items-center justify-between gap-3">
-              <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                المتجر الإلكتروني
-              </h3>
-              <div class="w-14 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
-                🛒
-              </div>
-            </div>
-
-            <!-- Phone & Time -->
-            <div class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-3 min-h-[64px]">
-              <div>
-                <div class="text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
-                <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-emerald-800 tracking-wide hover:underline block">
-                  0538834212
-                </a>
-              </div>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>متاح 24/7 أونلاين</span>
-              </span>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <a
-              href="https://www.doracars.com"
-              target="_blank"
-              class="w-full py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
-            >
-              <span>🛒 تسوق الآن عبر المتجر (doracars.com)</span>
-            </a>
-            <button
-              onclick="openDirectWhatsApp('store')"
-              class="w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1.5"
-            >
-              <span>💬 واتساب المتجر (0538834212)</span>
-            </button>
-          </div>
+        <!-- Mobile Swipe Helper Hint -->
+        <div class="text-center lg:hidden mt-2 text-[11px] text-slate-500 flex items-center justify-center gap-1 font-medium">
+          <span>👈</span>
+          <span>اسحب لليمين واليسار للتنقل بين الفروع والمتجر</span>
+          <span>👉</span>
         </div>
-
       </div>
 
       <!-- Compact Headquarters Banner -->
@@ -1443,6 +1487,89 @@ ${partsNeeded}
         isScrolling = setTimeout(() => {
           if (window.innerWidth >= 768) return;
           const slides = track.querySelectorAll('.bundle-slide');
+          const trackRect = track.getBoundingClientRect();
+          const trackCenter = trackRect.left + trackRect.width / 2;
+
+          let closestIdx = 0;
+          let minDistance = Infinity;
+
+          slides.forEach((slide, idx) => {
+            const slideRect = slide.getBoundingClientRect();
+            const slideCenter = slideRect.left + slideRect.width / 2;
+            const dist = Math.abs(trackCenter - slideCenter);
+            if (dist < minDistance) {
+              minDistance = dist;
+              closestIdx = idx;
+            }
+          });
+
+          currentIndex = closestIdx;
+          updateDots(currentIndex);
+        }, 50);
+      }, { passive: true });
+    })();
+
+    // ─── BRANCHES CAROUSEL FOR MOBILE (Client-Driven Touch & Controls) ────────────
+    (function initBranchesCarousel() {
+      const track = document.getElementById('branchesTrack');
+      const dots = document.querySelectorAll('.branch-dot');
+      if (!track || !dots.length) return;
+
+      let currentIndex = 0;
+      const totalSlides = 3;
+
+      function updateDots(index) {
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('w-6', 'bg-sky-600');
+            dot.classList.remove('w-2', 'bg-slate-300');
+          } else {
+            dot.classList.remove('w-6', 'bg-sky-600');
+            dot.classList.add('w-2', 'bg-slate-300');
+          }
+        });
+      }
+
+      window.goToBranch = function(index) {
+        if (window.innerWidth >= 1024) return;
+        currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
+        const slides = track.querySelectorAll('.branch-slide');
+        const target = slides[currentIndex];
+        if (target) {
+          const trackRect = track.getBoundingClientRect();
+          const targetRect = target.getBoundingClientRect();
+          const deltaX = (targetRect.left + targetRect.width / 2) - (trackRect.left + trackRect.width / 2);
+          track.scrollBy({
+            left: deltaX,
+            behavior: 'smooth'
+          });
+        }
+        updateDots(currentIndex);
+      };
+
+      window.nextBranch = function() {
+        if (currentIndex < totalSlides - 1) {
+          goToBranch(currentIndex + 1);
+        } else {
+          goToBranch(0);
+        }
+      };
+
+      window.prevBranch = function() {
+        if (currentIndex > 0) {
+          goToBranch(currentIndex - 1);
+        } else {
+          goToBranch(totalSlides - 1);
+        }
+      };
+
+      // Sync active dot on native touch scroll / swipe without moving the page window
+      let isScrolling = null;
+      track.addEventListener('scroll', () => {
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+          if (window.innerWidth >= 1024) return;
+          const slides = track.querySelectorAll('.branch-slide');
           const trackRect = track.getBoundingClientRect();
           const trackCenter = trackRect.left + trackRect.width / 2;
 
