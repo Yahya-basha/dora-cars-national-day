@@ -13,6 +13,11 @@
   <meta property="og:url" content="https://offers.doracars.com">
   <meta property="og:type" content="website">
 
+  <!-- Cache Control (Ensures instant updates on mobile devices) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/company-logo.png">
 
@@ -126,6 +131,12 @@
     }
 
     /* Clean horizontal scroll for mobile carousels */
+    .bundles-scroll-track {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x proximity;
+      touch-action: pan-y pinch-zoom pan-x;
+    }
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -396,11 +407,11 @@
       <div class="relative">
         <div 
           id="bundlesTrack"
-          class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-3 pt-1 px-1 -mx-1"
+          class="bundles-scroll-track flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 overflow-x-auto md:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
         >
           
           <!-- BUNDLE 1: بكج الفلاتر الأصلي (196 بدل 250) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-emerald-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800">أصلي وكالة 🛡️</span>
@@ -450,7 +461,7 @@
           </div>
 
           <!-- BUNDLE 2: بكج الفلاتر الكوري (96 بدل 150) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-amber-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-amber-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800">سعر رمزي 96 🇸🇦</span>
@@ -500,7 +511,7 @@
           </div>
 
           <!-- BUNDLE 3: بكج الفحمات الأصلي (250 بدل 350) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-sky-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-sky-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800">أصلي وكالة 🛡️</span>
@@ -550,7 +561,7 @@
           </div>
 
           <!-- BUNDLE 4: بكج الفحمات الكوري (165 بدل 250) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-800">جودة كورية ممتازة 🇰🇷</span>
