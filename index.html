@@ -66,29 +66,51 @@
       text-wrap: balance;
     }
 
-    /* 3D 96 Badge Styling */
-    .badge-3d-wrap {
+    /* 3D 96 Graphic Emblem Styling */
+    .emblem-96-wrapper {
       perspective: 1000px;
+    }
+
+    .emblem-96-card {
+      transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
       transform-style: preserve-3d;
     }
 
-    .badge-3d-box {
-      transition: transform 0.15s ease-out, box-shadow 0.3s ease;
-      transform-style: preserve-3d;
-      background: linear-gradient(135deg, #004D25 0%, #006C35 50%, #02381B 100%);
-      box-shadow: 
-        0 20px 35px -10px rgba(0, 108, 53, 0.45),
-        0 0 0 1px rgba(251, 191, 36, 0.3),
-        inset 0 2px 4px rgba(255, 255, 255, 0.3),
-        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-    }
-
-    .number-96-3d {
+    .number-96-graphic {
       font-family: 'Outfit', sans-serif;
-      background: linear-gradient(180deg, #FFFFFF 0%, #FDE68A 35%, #F59E0B 70%, #B45309 100%);
+      background: linear-gradient(
+        180deg,
+        #FFFFFF 0%,
+        #FFF6D6 15%,
+        #FDE047 35%,
+        #F59E0B 65%,
+        #D97706 85%,
+        #92400E 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7)) 
+              drop-shadow(0 0 22px rgba(245, 158, 11, 0.6));
+      letter-spacing: -2px;
+    }
+
+    .emblem-shine-rotator {
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgba(245, 158, 11, 0.3) 60deg,
+        transparent 120deg,
+        rgba(16, 185, 129, 0.3) 180deg,
+        transparent 240deg,
+        rgba(245, 158, 11, 0.3) 300deg,
+        transparent 360deg
+      );
+      animation: rotateEmblemShine 10s linear infinite;
+    }
+
+    @keyframes rotateEmblemShine {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     /* Custom Scrollbar */
@@ -242,22 +264,55 @@
     <!-- Centered Content Container -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center flex flex-col items-center space-y-6 sm:space-y-7">
       
-      <!-- 3D 96 Interactive Badge -->
-      <div class="badge-3d-wrap inline-block mx-auto" id="badge3dContainer">
+      <!-- ─── 3D 96 GRAPHIC EMBLEM (STANDALONE, HIGH-END & INTERACTIVE) ─── -->
+      <div class="emblem-96-wrapper inline-block mx-auto mb-1" id="badge3dContainer">
         <div 
           id="badge3dBox"
           onclick="triggerBadgeCelebration()"
-          class="badge-3d-box p-3 sm:p-3.5 rounded-2xl border border-amber-400/40 bg-slate-950/80 backdrop-blur-md flex items-center gap-3.5 cursor-pointer select-none shadow-2xl hover:border-amber-300 transition"
-          title="انقر للاحتفال باليوم الوطني 96!"
+          class="emblem-96-card group relative cursor-pointer select-none"
+          title="انقر للاحتفال باليوم الوطني 96 🇸🇦"
         >
-          <div class="flex flex-col items-center justify-center bg-slate-900/90 border border-amber-400/40 px-3.5 py-1 rounded-xl shadow-inner">
-            <span class="number-96-3d text-3xl sm:text-4xl font-black leading-none">96</span>
-            <span class="text-[8px] text-amber-300 font-bold uppercase tracking-wider">عاماً من المجد</span>
-          </div>
-          <div class="text-right space-y-0.5">
-            <div class="text-xs sm:text-sm font-black text-amber-300">عِزّنا بطبعنا | اليوم الوطني السعودي 🇸🇦</div>
-            <div class="text-sm sm:text-base font-black text-white">
-              خصومات تصل إلى <span class="text-amber-400 font-numbers font-black text-lg">25%</span>
+          <!-- Outer Pulsing Glow Halo -->
+          <div class="absolute -inset-4 bg-gradient-to-r from-amber-400/35 via-emerald-500/40 to-amber-400/35 rounded-full blur-2xl opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 animate-pulse pointer-events-none"></div>
+
+          <!-- Main Emblem Circle Shield -->
+          <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-[3px] bg-gradient-to-tr from-amber-300 via-emerald-500 to-amber-400 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(245,158,11,0.4)]">
+            
+            <!-- Inner Deep Onyx / Emerald Glass Background -->
+            <div class="w-full h-full rounded-full bg-gradient-to-b from-slate-950 via-[#012d16] to-slate-950 p-2 flex flex-col items-center justify-center relative overflow-hidden border border-amber-400/40 shadow-inner">
+              
+              <!-- Rotating Conic Glow Background -->
+              <div class="emblem-shine-rotator absolute -inset-full opacity-35 group-hover:opacity-65 transition duration-500 pointer-events-none"></div>
+
+              <!-- Light Sweep Sheen Effect -->
+              <div class="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -rotate-45 pointer-events-none group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+
+              <!-- Saudi Swords & Palm Watermark / Stars -->
+              <div class="flex items-center gap-1 text-[10px] text-amber-300/80 font-bold relative z-10 pointer-events-none">
+                <span>✦</span>
+                <span>🇸🇦</span>
+                <span>✦</span>
+              </div>
+
+              <!-- 3D Luxury 96 Typography -->
+              <div class="relative z-10 flex items-center justify-center py-0.5 transform group-hover:scale-110 transition-transform duration-300">
+                <span class="number-96-graphic text-5xl sm:text-6xl font-black leading-none tracking-tight font-numbers select-none">
+                  96
+                </span>
+              </div>
+
+              <!-- Golden Ribbon: عاماً من المجد -->
+              <div class="relative z-10 mt-1 px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-500/25 via-amber-400/35 to-amber-500/25 border border-amber-400/60 shadow-sm">
+                <span class="text-[9px] sm:text-[10px] font-black text-amber-300 tracking-wider block whitespace-nowrap">
+                  عاماً من المجد
+                </span>
+              </div>
+
+              <!-- Interactive Click Hint on Hover -->
+              <div class="absolute bottom-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] text-emerald-300 font-black tracking-wide">
+                ✨ انقر هنا
+              </div>
+
             </div>
           </div>
         </div>
@@ -1182,22 +1237,22 @@
     let selectedBranch = 'hyundai';
     let selectedEngine = 'بنزين ⛽';
 
-    // 3D Parallax Tilt for 96 Badge
+    // 3D Parallax Tilt for 96 Emblem
     const badgeBox = document.getElementById('badge3dBox');
     const badgeContainer = document.getElementById('badge3dContainer');
 
     if (badgeContainer && badgeBox) {
       badgeContainer.addEventListener('mousemove', (e) => {
-        const rect = badgeBox.getBoundingClientRect();
+        const rect = badgeContainer.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -14;
-        const rotateY = ((x - centerX) / centerX) * 14;
+        const rotateX = ((y - centerY) / centerY) * -16;
+        const rotateY = ((x - centerX) / centerX) * 16;
 
-        badgeBox.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.04, 1.04, 1.04)`;
+        badgeBox.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.06, 1.06, 1.06)`;
       });
 
       badgeContainer.addEventListener('mouseleave', () => {
