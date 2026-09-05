@@ -1340,7 +1340,7 @@
     // Direct WhatsApp Callout
     function openDirectWhatsApp(type) {
       const branch = BRANCH_PHONES[type] || BRANCH_PHONES.store;
-      const msg = `🇸🇦 مرحباً درة السيارة (${branch.name})\nنهتم بأدق تفاصيل سيارتك | أود الاستفسار عن عروض اليوم الوطني 96 لقطع غيار السيارات والاستفادة من شحن مجاني لكود [${COUPON_CODE}].\n\n📌 مصدر الطلب: ${utmSource} (${utmCampaign})`;
+      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها. شكراً لكم!`;
       window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
@@ -1377,15 +1377,11 @@
     // Bundle WhatsApp Order
     function orderBundleWhatsApp(bundleTitle, price) {
       const branch = BRANCH_PHONES.store;
-      const msg = `🇸🇦 *طلب باقة اليوم الوطني 96: [${bundleTitle}]* 🇸🇦
-----------------------------------------
-🏷️ *السعر بعد الخصم:* ${price} ر.س
-🚚 *كود الشحن المجاني:* ${COUPON_CODE}
+      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة
+أرغب في طلب: [${bundleTitle}] بسعر ${price} ر.س.
 
-أرغب في التأكد من مطابقة هذه الباقة لسيارتي، يرجى إفادتي بالتوافق وتجهيز الطلب.
-🚗 موديل السيارة ورقم الهيكل: (مرفق)
-
-📊 المصدر: ${utmSource} (${utmCampaign})`;
+يرجى التأكد من مطابقة هذه الباقة لسيارتي وتجهيز الطلب.
+🚗 رقم الهيكل / الاستمارة: (مرفق في المحادثة)`;
 
       triggerBadgeCelebration();
       window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`, '_blank');
@@ -1405,17 +1401,15 @@
       const branch = BRANCH_PHONES[selectedBranch] || BRANCH_PHONES.hyundai;
 
       const formattedMsg = 
-`🇸🇦 *طلب تسعير ومطابقة هيكل (عروض اليوم الوطني 96)*
-----------------------------------------
-🏬 *الفرع الموجه له:* ${branch.name}
-🚚 *كود الشحن المجاني:* ${COUPON_CODE}
+`السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})
+أود الاستفسار وطلب تسعير ومطابقة قطع الغيار لسيارتي:
 
 🚗 *بيانات السيارة:*
 • الشركة: ${carMake}
 • الموديل: ${carModel}
 • سنة الصنع: ${modelYear}
 • نوع المحرك: ${selectedEngine}
-• رقم الهيكل (VIN): ${vinNumber || 'سيتم إرسال صورة الاستمارة'}
+• رقم الهيكل (VIN): ${vinNumber || 'مرفق صورة الاستمارة'}
 
 🔧 *القطع المطلوبة:*
 ${partsNeeded}
@@ -1424,9 +1418,7 @@ ${partsNeeded}
 • الاسم: ${customerName}
 • رقم الجوال: ${customerPhone}
 
-📊 *مصدر الإعلان:* ${utmSource} | ${utmCampaign}
-----------------------------------------
-يرجى إفادتي بالتسعير وتطبيق خصم اليوم الوطني 96. شكراً لكم!`;
+يرجى إفادتي بالتسعير والتوافر. شكراً لكم!`;
 
       triggerBadgeCelebration();
       window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`, '_blank');
