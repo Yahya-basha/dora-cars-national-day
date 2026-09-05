@@ -1399,12 +1399,14 @@
       const customerPhone = document.getElementById('customerPhone').value || 'مرفق بالمحادثة';
 
       const branch = BRANCH_PHONES[selectedBranch] || BRANCH_PHONES.hyundai;
+      const carInfo = carModel ? `${carMake} - ${carModel} (${modelYear})` : `${carMake} (${modelYear})`;
 
       const formattedMsg = 
 `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})
 أود الاستفسار وطلب تسعير ومطابقة قطع الغيار لسيارتي:
 
 🚗 *بيانات السيارة:*
+• نوع السيارة والموديل: ${carInfo}
 • نوع المحرك: ${selectedEngine}
 • رقم الهيكل (VIN): ${vinNumber || 'مرفق صورة الاستمارة'}
 
