@@ -1061,27 +1061,7 @@
             ></textarea>
           </div>
 
-          <!-- Name & Phone -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-            <div class="space-y-1">
-              <label class="text-xs font-bold text-slate-300">الاسم الكريم (اختياري)</label>
-              <input
-                type="text"
-                id="customerName"
-                placeholder="الاسم"
-                class="w-full h-10 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white focus:outline-none focus:border-emerald-400"
-              >
-            </div>
-            <div class="space-y-1">
-              <label class="text-xs font-bold text-slate-300">رقم الجوال (اختياري)</label>
-              <input
-                type="text"
-                id="customerPhone"
-                placeholder="05xxxxxxxx"
-                class="w-full h-10 rounded-xl bg-slate-900 border border-slate-700 px-3 text-xs text-white font-numbers focus:outline-none focus:border-emerald-400"
-              >
-            </div>
-          </div>
+
 
           <!-- Submit Button -->
           <button
@@ -1395,8 +1375,6 @@
       const modelYear = document.getElementById('modelYear').value;
       const vinNumber = document.getElementById('vinNumber').value.toUpperCase();
       const partsNeeded = document.getElementById('partsNeeded').value;
-      const customerName = document.getElementById('customerName').value || 'عميل مميز';
-      const customerPhone = document.getElementById('customerPhone').value || 'مرفق بالمحادثة';
 
       const branch = BRANCH_PHONES[selectedBranch] || BRANCH_PHONES.hyundai;
       const carInfo = carModel ? `${carMake} - ${carModel} (${modelYear})` : `${carMake} (${modelYear})`;
@@ -1412,10 +1390,6 @@
 
 🔧 *القطع المطلوبة:*
 ${partsNeeded}
-
-👤 *بيانات العميل:*
-• الاسم: ${customerName}
-• رقم الجوال: ${customerPhone}
 
 يرجى إفادتي بالتسعير والتوافر. شكراً لكم!`;
 
