@@ -147,69 +147,63 @@
 </head>
 <body class="selection:bg-emerald-600 selection:text-white min-h-screen flex flex-col justify-between">
 
-  <!-- ─── 1. TOP ANNOUNCEMENT BAR (CLEAN & PUNCHY) ────────────────────────── -->
-  <div class="bg-gradient-to-r from-[#00381B] via-[#006C35] to-[#00381B] border-b border-emerald-400/30 px-3 py-2 text-center text-xs sm:text-sm font-bold text-white flex items-center justify-center gap-3 sm:gap-6 flex-wrap sticky top-0 z-50 shadow-md">
-    <div class="flex items-center gap-2">
-      <span class="bg-amber-400 text-slate-950 text-[10px] sm:text-xs font-black px-2 py-0.5 rounded-md">
+  <!-- ─── 1. TOP ANNOUNCEMENT BAR (CLEAN & SLIM) ────────────────────────── -->
+  <div class="bg-gradient-to-r from-[#00381B] via-[#006C35] to-[#00381B] border-b border-emerald-400/30 px-3 py-1 sm:py-1.5 text-center text-[11px] sm:text-xs font-bold text-white flex items-center justify-center gap-2 sm:gap-4 sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center gap-1.5">
+      <span class="bg-amber-400 text-slate-950 text-[9px] sm:text-[10px] font-black px-1.5 py-0.5 rounded">
         🇸🇦 عروض 96
       </span>
-      <span>خصومات تصل إلى <span class="text-amber-300 font-black font-numbers">25%</span> وشحن مجاني:</span>
+      <span>خصومات حتى <strong class="text-amber-300 font-numbers">25%</strong> وشحن مجاني:</span>
     </div>
     <button
       onclick="copyCouponCode()"
-      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black transition active:scale-95 shadow"
+      class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] sm:text-xs font-black transition active:scale-95 shadow"
       title="انقر لنسخ كود الشحن المجاني"
     >
       <span>🚚 كود: <strong id="topCouponText" class="font-numbers">KSA96</strong></span>
-      <span id="copyTopBtnLabel" class="text-[10px] bg-slate-950/20 px-1.5 py-0.5 rounded font-mono">نسخ</span>
+      <span id="copyTopBtnLabel" class="text-[9px] bg-slate-950/20 px-1 py-0.2 rounded font-mono">نسخ</span>
     </button>
   </div>
 
   <!-- ─── 2. RE-ENGINEERED LUXURY HEADER ──────────────────────────────────── -->
-  <header class="border-b border-slate-200 bg-white/95 backdrop-blur-md sticky top-[37px] z-40 shadow-sm py-3.5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between gap-4">
+  <header class="border-b border-slate-200 bg-white/95 backdrop-blur-md sticky top-[28px] sm:top-[33px] z-40 shadow-sm py-2 sm:py-3">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6">
+      <div class="flex items-center justify-between gap-2 sm:gap-4">
         
-        <!-- Left: Online Store Direct Link -->
-        <div>
+        <!-- Left: Brand Identity -->
+        <a href="https://www.doracars.com" class="flex items-center gap-2 group">
+          <img
+            src="images/company-logo.png"
+            alt="شركة درة السيارة لقطع غيار السيارات"
+            class="h-8 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+            onerror="this.src='company-logo.png'"
+          >
+          <div class="text-right">
+            <span class="font-heading font-black text-sm sm:text-lg text-slate-900 block leading-tight">
+              درة السيارة <span class="hidden xs:inline sm:inline">لقطع الغيار</span>
+            </span>
+            <span class="text-[10px] font-bold text-slate-500 hidden sm:block">
+              متخصصون في قطع غيار هيونداي وكيا
+            </span>
+          </div>
+        </a>
+
+        <!-- Right: Actions -->
+        <div class="flex items-center gap-2">
           <a
             href="https://www.doracars.com"
             target="_blank"
-            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-black shadow transition active:scale-95"
+            class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] sm:text-xs font-black shadow transition active:scale-95"
           >
             <span>🛒</span>
-            <span class="hidden sm:inline">المتجر الإلكتروني</span>
-            <span class="sm:hidden">المتجر</span>
+            <span>المتجر</span>
           </a>
-        </div>
-
-        <!-- Center: Company Identity & Core Authority -->
-        <div class="flex flex-col items-center text-center">
-          <a href="https://www.doracars.com" class="flex items-center gap-2 group">
-            <img
-              src="images/company-logo.png"
-              alt="شركة درة السيارة لقطع غيار السيارات"
-              class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
-              onerror="this.src='company-logo.png'"
-            >
-            <div class="text-right sm:text-center">
-              <span class="font-heading font-black text-lg sm:text-xl text-slate-900 block leading-tight">
-                شركة درة السيارة لقطع غيار السيارات
-              </span>
-            </div>
-          </a>
-          <div class="text-[11px] font-bold text-slate-500 mt-0.5">
-            متخصصون في قطع غيار هيونداي وكيا (بنزين وديزل)
-          </div>
-        </div>
-
-        <!-- Right: Instant VIN Quote Button -->
-        <div>
           <a
             href="#vin-quote"
-            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow transition active:scale-95"
+            class="inline-flex items-center gap-1 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[11px] sm:text-xs shadow transition active:scale-95"
           >
-            <span>⚡ تسعير VIN</span>
+            <span>⚡</span>
+            <span>تسعير VIN</span>
           </a>
         </div>
 
@@ -218,32 +212,26 @@
   </header>
 
   <!-- ─── 3. CLEAN SUPPORTED VEHICLES STRIP ─────────────────────────────────── -->
-  <div class="bg-slate-900 border-b border-slate-800 py-2.5 px-4 text-white">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-6 sm:gap-12 flex-wrap text-xs font-bold text-slate-300">
-      
-      <div class="flex items-center gap-2">
-        <img src="images/hyundai-logo.png" alt="هيونداي" class="h-4 w-auto object-contain">
-        <span>قطع غيار وكالة وكوري لجميع سيارات <strong class="text-white">هيونداي</strong></span>
+  <div class="bg-slate-900 border-b border-slate-800 py-1.5 sm:py-2 px-3 text-white">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 sm:gap-8 text-[11px] sm:text-xs font-bold text-slate-300">
+      <div class="flex items-center gap-1 sm:gap-1.5">
+        <img src="images/hyundai-logo.png" alt="هيونداي" class="h-3 sm:h-4 w-auto object-contain">
+        <span>هيونداي</span>
       </div>
-
-      <span class="hidden sm:inline text-slate-700">•</span>
-
-      <div class="flex items-center gap-2">
-        <img src="images/kia-logo.png" alt="كيا" class="h-4 w-auto object-contain">
-        <span>قطع غيار وكالة وكوري لجميع سيارات <strong class="text-white">كيا</strong></span>
+      <span class="text-slate-600">•</span>
+      <div class="flex items-center gap-1 sm:gap-1.5">
+        <img src="images/kia-logo.png" alt="كيا" class="h-3 sm:h-4 w-auto object-contain">
+        <span>كيا</span>
       </div>
-
-      <span class="hidden sm:inline text-slate-700">•</span>
-
-      <div class="text-amber-400 flex items-center gap-1 font-bold text-[11px]">
-        <span>⛽ بنزين + 🛢️ ديزل CRDi</span>
+      <span class="text-slate-600">•</span>
+      <div class="text-amber-400 font-bold flex items-center gap-1">
+        <span>⛽ بنزين + 🛢️ ديزل</span>
       </div>
-
     </div>
   </div>
 
   <!-- ─── 4. GRAND HERO SECTION (FULL-BLEED BACKGROUND & CENTERED CONTENT) ─── -->
-  <section class="relative min-h-[580px] sm:min-h-[660px] lg:min-h-[720px] flex items-center justify-center text-white overflow-hidden py-14 sm:py-20 border-b border-emerald-700/40">
+  <section class="relative min-h-[480px] sm:min-h-[640px] lg:min-h-[700px] flex items-center justify-center text-white overflow-hidden py-8 sm:py-16 border-b border-emerald-700/40">
     
     <!-- Full-Bleed Background Image with Fallback -->
     <div class="absolute inset-0 z-0">
@@ -254,18 +242,18 @@
         onerror="this.src='hero-cars-flag.png'"
       >
       <!-- Cinematic Multi-Layer Dark Overlays for Contrast and Ultra Readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/80"></div>
-      <div class="absolute inset-0 bg-[#002713]/40 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/65 to-slate-950/75"></div>
+      <div class="absolute inset-0 bg-[#002713]/30 mix-blend-multiply"></div>
     </div>
 
     <!-- Ambient Glows -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] h-[250px] sm:h-[350px] bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
     <!-- Centered Content Container -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center flex flex-col items-center space-y-6 sm:space-y-7">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center flex flex-col items-center space-y-4 sm:space-y-6">
       
       <!-- ─── 3D 96 GRAPHIC EMBLEM (STANDALONE, HIGH-END & INTERACTIVE) ─── -->
-      <div class="emblem-96-wrapper inline-block mx-auto mb-1" id="badge3dContainer">
+      <div class="emblem-96-wrapper inline-block mx-auto" id="badge3dContainer">
         <div 
           id="badge3dBox"
           onclick="triggerBadgeCelebration()"
@@ -273,13 +261,13 @@
           title="انقر للاحتفال باليوم الوطني 96 🇸🇦"
         >
           <!-- Outer Pulsing Glow Halo -->
-          <div class="absolute -inset-4 bg-gradient-to-r from-amber-400/35 via-emerald-500/40 to-amber-400/35 rounded-full blur-2xl opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 animate-pulse pointer-events-none"></div>
+          <div class="absolute -inset-2.5 sm:-inset-4 bg-gradient-to-r from-amber-400/35 via-emerald-500/40 to-amber-400/35 rounded-full blur-xl sm:blur-2xl opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 animate-pulse pointer-events-none"></div>
 
           <!-- Main Emblem Circle Shield -->
-          <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full p-[3px] bg-gradient-to-tr from-amber-300 via-emerald-500 to-amber-400 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(245,158,11,0.4)]">
+          <div class="relative w-24 h-24 sm:w-40 sm:h-40 rounded-full p-[2px] sm:p-[3px] bg-gradient-to-tr from-amber-300 via-emerald-500 to-amber-400 shadow-[0_15px_35px_rgba(0,0,0,0.8),0_0_25px_rgba(245,158,11,0.4)]">
             
             <!-- Inner Deep Onyx / Emerald Glass Background -->
-            <div class="w-full h-full rounded-full bg-gradient-to-b from-slate-950 via-[#012d16] to-slate-950 p-2 flex flex-col items-center justify-center relative overflow-hidden border border-amber-400/40 shadow-inner">
+            <div class="w-full h-full rounded-full bg-gradient-to-b from-slate-950 via-[#012d16] to-slate-950 p-1.5 sm:p-2 flex flex-col items-center justify-center relative overflow-hidden border border-amber-400/40 shadow-inner">
               
               <!-- Rotating Conic Glow Background -->
               <div class="emblem-shine-rotator absolute -inset-full opacity-35 group-hover:opacity-65 transition duration-500 pointer-events-none"></div>
@@ -288,29 +276,24 @@
               <div class="absolute -inset-full w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -rotate-45 pointer-events-none group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
 
               <!-- Saudi Swords & Palm Watermark / Stars -->
-              <div class="flex items-center gap-1 text-[10px] text-amber-300/80 font-bold relative z-10 pointer-events-none">
+              <div class="flex items-center gap-1 text-[8px] sm:text-[10px] text-amber-300/80 font-bold relative z-10 pointer-events-none">
                 <span>✦</span>
                 <span>🇸🇦</span>
                 <span>✦</span>
               </div>
 
               <!-- 3D Luxury 96 Typography -->
-              <div class="relative z-10 flex items-center justify-center py-0.5 transform group-hover:scale-110 transition-transform duration-300">
-                <span class="number-96-graphic text-5xl sm:text-6xl font-black leading-none tracking-tight font-numbers select-none">
+              <div class="relative z-10 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <span class="number-96-graphic text-3xl sm:text-6xl font-black leading-none tracking-tight font-numbers select-none">
                   96
                 </span>
               </div>
 
               <!-- Golden Ribbon: عاماً من المجد -->
-              <div class="relative z-10 mt-1 px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-500/25 via-amber-400/35 to-amber-500/25 border border-amber-400/60 shadow-sm">
-                <span class="text-[9px] sm:text-[10px] font-black text-amber-300 tracking-wider block whitespace-nowrap">
+              <div class="relative z-10 mt-0.5 sm:mt-1 px-2 sm:px-3 py-0.2 sm:py-0.5 rounded-full bg-gradient-to-r from-amber-500/25 via-amber-400/35 to-amber-500/25 border border-amber-400/60 shadow-sm">
+                <span class="text-[8px] sm:text-[10px] font-black text-amber-300 tracking-wider block whitespace-nowrap">
                   عاماً من المجد
                 </span>
-              </div>
-
-              <!-- Interactive Click Hint on Hover -->
-              <div class="absolute bottom-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] text-emerald-300 font-black tracking-wide">
-                ✨ انقر هنا
               </div>
 
             </div>
@@ -320,29 +303,29 @@
 
       <!-- Main Hero Headline -->
       <div>
-        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight text-white leading-tight sm:leading-snug drop-shadow-lg">
+        <h1 class="text-xl sm:text-3xl lg:text-5xl font-heading font-black tracking-tight text-white leading-tight sm:leading-snug drop-shadow-lg">
           <span class="block">عِزّنا بخدمتكم في درة السيارة..</span>
-          <span class="block mt-2 text-amber-400 font-black text-3xl sm:text-4xl lg:text-[50px]">
+          <span class="block mt-1 text-amber-400 font-black text-2xl sm:text-4xl lg:text-[50px]">
             أقوى عروض وباقات اليوم الوطني 96
           </span>
         </h1>
       </div>
 
       <!-- 2 Balanced Boxes: Coupon & Countdown -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full mx-auto pt-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-xl w-full mx-auto pt-1">
         
         <!-- Coupon Box -->
         <div 
           onclick="copyCouponCode()"
-          class="p-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-900 border border-emerald-400/40 hover:border-amber-400 shadow-2xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group text-right"
+          class="p-3 sm:p-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-900 border border-emerald-400/40 hover:border-amber-400 shadow-2xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group text-right"
         >
-          <div class="flex items-center gap-2.5">
-            <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
+          <div class="flex items-center gap-2 sm:gap-2.5">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-lg sm:text-xl group-hover:scale-110 transition shrink-0">
               🚚
             </div>
             <div>
               <div class="text-[10px] text-emerald-300 font-bold">شحن مجاني فوق 296 ر.س</div>
-              <div class="font-numbers font-black text-lg text-white tracking-wider" id="heroCouponCode">KSA96</div>
+              <div class="font-numbers font-black text-base sm:text-lg text-white tracking-wider" id="heroCouponCode">KSA96</div>
             </div>
           </div>
           <button 
@@ -355,28 +338,28 @@
         </div>
 
         <!-- Countdown Box -->
-        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md flex flex-col justify-center items-center gap-1.5">
-          <div class="text-[11px] text-amber-300 font-black flex items-center gap-1">
+        <div class="p-3 sm:p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md flex flex-col justify-center items-center gap-1 sm:gap-1.5">
+          <div class="text-[10px] sm:text-[11px] text-amber-300 font-black flex items-center gap-1">
             <span>⏱️ ينتهي العرض خلال:</span>
           </div>
-          <div class="flex items-center gap-1.5">
-            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-              <span class="font-numbers font-black text-lg text-amber-400" id="cdDays">00</span>
+          <div class="flex items-center gap-1 sm:gap-1.5">
+            <div class="flex flex-col items-center bg-slate-950 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-800 min-w-[36px] sm:min-w-[40px]">
+              <span class="font-numbers font-black text-base sm:text-lg text-amber-400" id="cdDays">00</span>
               <span class="text-[8px] text-slate-400">يوم</span>
             </div>
             <span class="text-amber-500 font-bold text-xs">:</span>
-            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-              <span class="font-numbers font-black text-lg text-amber-400" id="cdHours">00</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-800 min-w-[36px] sm:min-w-[40px]">
+              <span class="font-numbers font-black text-base sm:text-lg text-amber-400" id="cdHours">00</span>
               <span class="text-[8px] text-slate-400">ساعة</span>
             </div>
             <span class="text-amber-500 font-bold text-xs">:</span>
-            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-              <span class="font-numbers font-black text-lg text-amber-400" id="cdMins">00</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-800 min-w-[36px] sm:min-w-[40px]">
+              <span class="font-numbers font-black text-base sm:text-lg text-amber-400" id="cdMins">00</span>
               <span class="text-[8px] text-slate-400">دقيقة</span>
             </div>
             <span class="text-amber-500 font-bold text-xs">:</span>
-            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-              <span class="font-numbers font-black text-lg text-emerald-400" id="cdSecs">00</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-800 min-w-[36px] sm:min-w-[40px]">
+              <span class="font-numbers font-black text-base sm:text-lg text-emerald-400" id="cdSecs">00</span>
               <span class="text-[8px] text-slate-400">ثانية</span>
             </div>
           </div>
@@ -385,16 +368,16 @@
       </div>
 
       <!-- Hero Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-3.5 pt-1">
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 pt-1">
         <a
           href="#bundles-section"
-          class="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
+          class="px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-base shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
         >
           <span>🎁 تصفح باقات اليوم الوطني ➔</span>
         </a>
         <a
           href="#vin-quote"
-          class="px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-black text-sm sm:text-base border border-slate-600 shadow-xl backdrop-blur-md transition flex items-center gap-2"
+          class="px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-black text-xs sm:text-base border border-slate-600 shadow-xl backdrop-blur-md transition flex items-center gap-2"
         >
           <span>⚡ طلب تسعير برقم الهيكل (VIN)</span>
         </a>
@@ -1116,8 +1099,8 @@
     </div>
   </footer>
 
-  <!-- ─── FLOATING STORE WHATSAPP BUTTON (RIGHT CORNER) ─────────────────────── -->
-  <aside aria-label="واتساب المتجر" class="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50">
+  <!-- ─── FLOATING STORE WHATSAPP BUTTON (CLEAN & NON-INTRUSIVE) ─────────── -->
+  <aside aria-label="واتساب المتجر" class="fixed bottom-5 right-5 z-50">
     <button
       type="button"
       onclick="openDirectWhatsApp('store')"
@@ -1141,44 +1124,6 @@
       </span>
     </button>
   </aside>
-
-  <!-- ─── STICKY MOBILE CONVERSION BAR ─────────────────────────────────────── -->
-  <div class="fixed bottom-0 inset-x-0 z-50 bg-white/95 border-t border-slate-200 p-2 sm:hidden backdrop-blur-xl shadow-2xl">
-    <div class="grid grid-cols-4 gap-1.5 text-center">
-      <button
-        onclick="openDirectWhatsApp('hyundai')"
-        class="flex flex-col items-center justify-center p-2 rounded-lg bg-sky-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
-      >
-        <span class="text-base mb-0.5">🚗</span>
-        <span>فرع هيونداي</span>
-      </button>
-
-      <button
-        onclick="openDirectWhatsApp('kia')"
-        class="flex flex-col items-center justify-center p-2 rounded-lg bg-purple-600 text-white text-[10px] font-bold active:scale-95 transition shadow-sm"
-      >
-        <span class="text-base mb-0.5">🚙</span>
-        <span>فرع كيا</span>
-      </button>
-
-      <a
-        href="https://www.doracars.com"
-        target="_blank"
-        class="flex flex-col items-center justify-center p-2 rounded-lg bg-emerald-700 text-white text-[10px] font-black active:scale-95 transition shadow-sm"
-      >
-        <span class="text-base mb-0.5">🛒</span>
-        <span>المتجر أونلاين</span>
-      </a>
-
-      <a
-        href="#vin-quote"
-        class="flex flex-col items-center justify-center p-2 rounded-lg bg-amber-400 text-slate-950 text-[10px] font-black active:scale-95 transition shadow-sm"
-      >
-        <span class="text-base mb-0.5">⚡</span>
-        <span>تسعير VIN</span>
-      </a>
-    </div>
-  </div>
 
   <!-- ─── JAVASCRIPT LOGIC ─────────────────────────────────────────────────── -->
   <script>
