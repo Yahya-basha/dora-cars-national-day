@@ -719,34 +719,38 @@
         <!-- CARD 1: HYUNDAI BRANCH -->
         <div 
           id="hyundai-branch"
-          class="rounded-2xl border-2 border-sky-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group"
+          class="rounded-2xl border-2 border-sky-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group h-full"
         >
           <div class="space-y-4">
-            <div class="flex items-start justify-between gap-3">
+            <!-- Header Row -->
+            <div class="flex items-start justify-between gap-3 min-h-[82px]">
               <div>
-                <span class="inline-block px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800 text-xs font-bold mb-1.5">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800 text-[11px] font-bold mb-1.5">
                   🚗 مبيعات هيونداي
                 </span>
-                <h3 class="text-xl font-heading font-black text-slate-900">
+                <h3 class="text-lg sm:text-xl font-heading font-black text-slate-900 leading-snug">
                   فرع هيونداي بريدة (صناعية الرواف)
                 </h3>
-                <p class="text-xs text-slate-500 mt-0.5">
+                <p class="text-xs text-slate-500 mt-1 font-medium">
                   القصيم - بريدة - صناعية الرواف
                 </p>
               </div>
-              <div class="w-16 h-10 flex items-center justify-end shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <img src="images/hyundai-logo.png" alt="هيونداي" class="max-h-full max-w-full object-contain filter drop-shadow">
+              <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                <img src="images/hyundai-logo.png" alt="هيونداي" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
               </div>
             </div>
 
-            <!-- Phone & Time -->
-            <div class="p-3 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-between">
+            <!-- Phone & Dynamic Status Box -->
+            <div class="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-3 min-h-[64px]">
               <div>
-                <div class="text-[10px] text-slate-500">هاتف / واتساب الفرع:</div>
-                <div class="font-numbers font-black text-base text-sky-800">0530051360</div>
+                <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                <a href="tel:0530051360" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-sky-800 tracking-wide hover:underline block">
+                  0530051360
+                </a>
               </div>
-              <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold">
-                مفتوح الآن 🟢
+              <span id="hyundaiStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>مفتوح الآن</span>
               </span>
             </div>
           </div>
@@ -763,15 +767,15 @@
               <a
                 href="https://maps.app.goo.gl/Erq3RNUB7v3R34rA8"
                 target="_blank"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition"
+                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
               >
-                📍 الخريطة
+                <span>📍 الخريطة</span>
               </a>
               <a
                 href="tel:0530051360"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition"
+                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
               >
-                📞 اتصال
+                <span>📞 اتصال</span>
               </a>
             </div>
           </div>
@@ -780,34 +784,38 @@
         <!-- CARD 2: KIA BRANCH -->
         <div 
           id="kia-branch"
-          class="rounded-2xl border-2 border-purple-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group"
+          class="rounded-2xl border-2 border-purple-200 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group h-full"
         >
           <div class="space-y-4">
-            <div class="flex items-start justify-between gap-3">
+            <!-- Header Row -->
+            <div class="flex items-start justify-between gap-3 min-h-[82px]">
               <div>
-                <span class="inline-block px-2.5 py-0.5 rounded-md bg-purple-100 text-purple-800 text-xs font-bold mb-1.5">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-purple-100 text-purple-800 text-[11px] font-bold mb-1.5">
                   🚙 مبيعات كيا
                 </span>
-                <h3 class="text-xl font-heading font-black text-slate-900">
+                <h3 class="text-lg sm:text-xl font-heading font-black text-slate-900 leading-snug">
                   فرع كيا بريدة (صناعية السليم)
                 </h3>
-                <p class="text-xs text-slate-500 mt-0.5">
+                <p class="text-xs text-slate-500 mt-1 font-medium">
                   القصيم - بريدة - صناعية السليم
                 </p>
               </div>
-              <div class="w-16 h-10 flex items-center justify-end shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <img src="images/kia-logo.png" alt="كيا" class="max-h-full max-w-full object-contain filter drop-shadow">
+              <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                <img src="images/kia-logo.png" alt="كيا" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
               </div>
             </div>
 
-            <!-- Phone & Time -->
-            <div class="p-3 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-between">
+            <!-- Phone & Dynamic Status Box -->
+            <div class="p-3.5 rounded-xl bg-purple-50/80 border border-purple-200 flex items-center justify-between gap-3 min-h-[64px]">
               <div>
-                <div class="text-[10px] text-slate-500">هاتف / واتساب الفرع:</div>
-                <div class="font-numbers font-black text-base text-purple-800">0539454377</div>
+                <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                <a href="tel:0539454377" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-purple-800 tracking-wide hover:underline block">
+                  0539454377
+                </a>
               </div>
-              <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold">
-                مفتوح الآن 🟢
+              <span id="kiaStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>مفتوح الآن</span>
               </span>
             </div>
           </div>
@@ -824,15 +832,15 @@
               <a
                 href="https://maps.app.goo.gl/2d3juqPeYEEmSgmP7"
                 target="_blank"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition"
+                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
               >
-                📍 الخريطة
+                <span>📍 الخريطة</span>
               </a>
               <a
                 href="tel:0539454377"
-                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition"
+                class="py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1"
               >
-                📞 اتصال
+                <span>📞 اتصال</span>
               </a>
             </div>
           </div>
@@ -841,34 +849,38 @@
         <!-- CARD 3: ONLINE STORE -->
         <div 
           id="online-store"
-          class="rounded-2xl border-2 border-emerald-300 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group"
+          class="rounded-2xl border-2 border-emerald-300 bg-white p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group h-full"
         >
           <div class="space-y-4">
-            <div class="flex items-start justify-between gap-3">
+            <!-- Header Row -->
+            <div class="flex items-start justify-between gap-3 min-h-[82px]">
               <div>
-                <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-xs font-bold mb-1.5">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-bold mb-1.5">
                   🛒 شحن لجميع مدن المملكة
                 </span>
-                <h3 class="text-xl font-heading font-black text-slate-900">
+                <h3 class="text-lg sm:text-xl font-heading font-black text-slate-900 leading-snug">
                   متجر درة السيارة الإلكتروني
                 </h3>
-                <p class="text-xs text-slate-500 mt-0.5">
+                <p class="text-xs text-slate-500 mt-1 font-medium">
                   توصيل سريع لباب منزلك مع كود KSA96
                 </p>
               </div>
-              <div class="w-12 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-xl shrink-0 shadow">
+              <div class="w-14 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                 🛒
               </div>
             </div>
 
             <!-- Phone & Time -->
-            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
+            <div class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-3 min-h-[64px]">
               <div>
-                <div class="text-[10px] text-slate-500">واتساب المتجر المباشر:</div>
-                <div class="font-numbers font-black text-base text-emerald-800">0538834212</div>
+                <div class="text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
+                <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-emerald-800 tracking-wide hover:underline block">
+                  0538834212
+                </a>
               </div>
-              <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold">
-                24/7 أونلاين
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>متاح 24/7 أونلاين</span>
               </span>
             </div>
           </div>
@@ -1276,6 +1288,44 @@
         });
       }
     }
+
+    // Dynamic Branch Opening Hours (8:00 AM - 9:00 PM KSA Time)
+    function updateBranchStatus() {
+      try {
+        const now = new Date();
+        const ksaFormatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Riyadh',
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: false
+        });
+        const parts = ksaFormatter.format(now).split(':');
+        const hour = parseInt(parts[0], 10);
+        const minute = parseInt(parts[1], 10);
+        const currentMinutes = hour * 60 + minute;
+
+        // Open: 8:00 AM (480 mins) to 9:00 PM (1260 mins)
+        const openMinutes = 8 * 60;   // 08:00 AM
+        const closeMinutes = 21 * 60; // 09:00 PM
+
+        const isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+
+        const badges = document.querySelectorAll('.branch-status-badge');
+        badges.forEach(badge => {
+          if (isOpen) {
+            badge.className = 'branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0';
+            badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span>مفتوح الآن</span>';
+          } else {
+            badge.className = 'branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-500/15 border border-rose-500/30 text-rose-700 text-xs font-black shadow-sm shrink-0';
+            badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-rose-500"></span><span>مغلق الآن (يفتح 8 ص)</span>';
+          }
+        });
+      } catch (err) {
+        console.error('Error calculating branch status:', err);
+      }
+    }
+    updateBranchStatus();
+    setInterval(updateBranchStatus, 30000);
 
     // Countdown Timer
     function updateCountdown() {
