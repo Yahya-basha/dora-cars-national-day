@@ -145,6 +145,30 @@
       scrollbar-width: none;
     }
 
+    /* Luxury Book Page Fold & Stack Effect on Mobile */
+    @media (max-width: 1023px) {
+      .book-page-fold {
+        position: relative;
+        overflow: visible;
+        box-shadow: -4px 5px 12px -2px rgba(15, 23, 42, 0.08), -6px 6px 0px 0px rgba(226, 232, 240, 0.8) !important;
+      }
+
+      /* Folded corner dog-ear curl on top-left */
+      .page-curl-corner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: linear-gradient(135deg, #f8fafc 45%, #cbd5e1 52%, #94a3b8 58%, #e2e8f0 100%);
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 6px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+        z-index: 20;
+        pointer-events: none;
+      }
+    }
+
     /* Strict Payment Logo Constraints */
     .payment-logo-img {
       max-height: 28px !important;
@@ -407,11 +431,12 @@
       <div class="relative">
         <div 
           id="bundlesTrack"
-          class="bundles-scroll-track flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 overflow-x-auto md:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
+          class="bundles-scroll-track flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 overflow-x-auto md:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
         >
           
           <!-- BUNDLE 1: بكج الفلاتر الأصلي (196 بدل 250) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
+          <div class="bundle-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] md:w-auto md:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
+            <div class="page-curl-corner md:hidden"></div>
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800">أصلي وكالة 🛡️</span>
@@ -461,7 +486,8 @@
           </div>
 
           <!-- BUNDLE 2: بكج الفلاتر الكوري (96 بدل 150) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-amber-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
+          <div class="bundle-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] md:w-auto md:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-amber-300 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
+            <div class="page-curl-corner md:hidden"></div>
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800">سعر رمزي 96 🇸🇦</span>
@@ -511,7 +537,8 @@
           </div>
 
           <!-- BUNDLE 3: بكج الفحمات الأصلي (250 بدل 350) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-sky-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
+          <div class="bundle-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] md:w-auto md:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-sky-300 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
+            <div class="page-curl-corner md:hidden"></div>
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800">أصلي وكالة 🛡️</span>
@@ -561,7 +588,8 @@
           </div>
 
           <!-- BUNDLE 4: بكج الفحمات الكوري (165 بدل 250) -->
-          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
+          <div class="bundle-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] md:w-auto md:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-slate-300 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
+            <div class="page-curl-corner md:hidden"></div>
             <div class="space-y-3.5">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-800">جودة كورية ممتازة 🇰🇷</span>
@@ -612,44 +640,19 @@
 
         </div>
 
-        <!-- Mobile Navigation Controls & Interactive Indicators -->
-        <div class="flex md:hidden items-center justify-between mt-3.5 px-2">
-          <!-- Prev Button (Right in RTL) -->
-          <button
-            type="button"
-            onclick="prevBundle()"
-            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
-            aria-label="السابق"
-            title="السابق"
-          >
-            <span class="text-sm font-black">➔</span>
-          </button>
-
-          <!-- Interactive Dots Indicator -->
-          <div class="flex items-center gap-1.5" id="bundlesDots">
-            <button type="button" onclick="goToBundle(0)" class="bundle-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300" aria-label="الباقة 1"></button>
-            <button type="button" onclick="goToBundle(1)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 2"></button>
-            <button type="button" onclick="goToBundle(2)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 3"></button>
-            <button type="button" onclick="goToBundle(3)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 4"></button>
-          </div>
-
-          <!-- Next Button (Left in RTL) -->
-          <button
-            type="button"
-            onclick="nextBundle()"
-            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
-            aria-label="التالي"
-            title="التالي"
-          >
-            <span class="text-sm font-black">⬅</span>
-          </button>
+        <!-- Mobile Page Indicators (Swipe Only) -->
+        <div class="flex md:hidden items-center justify-center gap-1.5 mt-3.5" id="bundlesDots">
+          <span class="bundle-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300"></span>
+          <span class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300"></span>
+          <span class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300"></span>
+          <span class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300"></span>
         </div>
 
         <!-- Mobile Touch / Swipe Helper Hint -->
         <div class="text-center md:hidden mt-2 text-[11px] text-slate-500 flex items-center justify-center gap-1 font-medium">
+          <span>📖</span>
+          <span>اسحب لتقليب وتصفح باقي باقات اليوم الوطني</span>
           <span>👈</span>
-          <span>اسحب لليمين واليسار لتصفح كافة باقات اليوم الوطني</span>
-          <span>👉</span>
         </div>
       </div>
     </div>
@@ -741,34 +744,38 @@
       <div class="relative">
         <div 
           id="branchesTrack"
-          class="bundles-scroll-track flex lg:grid lg:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto lg:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
+          class="bundles-scroll-track flex lg:grid lg:grid-cols-3 gap-3.5 sm:gap-6 overflow-x-auto lg:overflow-visible no-scrollbar pb-3 pt-1 px-1 -mx-1"
         >
           
           <!-- CARD 1: HYUNDAI BRANCH -->
           <div 
             id="hyundai-branch"
-            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-sky-200 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group h-full"
+            class="branch-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] lg:w-auto lg:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-sky-200 bg-white p-4 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group h-full"
           >
-            <div class="space-y-4">
+            <div class="page-curl-corner lg:hidden"></div>
+            <div class="space-y-3.5">
               <!-- Header Row -->
-              <div class="flex items-center justify-between gap-3">
-                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                  فرع هيونداي
-                </h3>
-                <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-lg sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                    فرع هيونداي
+                  </h3>
+                  <span class="lg:hidden text-[10px] font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded-full">📖 1 من 3</span>
+                </div>
+                <div class="w-12 h-10 sm:w-14 sm:h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                   <img src="images/hyundai-logo.png" alt="هيونداي" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
                 </div>
               </div>
 
               <!-- Phone & Dynamic Status Box -->
-              <div class="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-3 min-h-[64px]">
+              <div class="p-3 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-2 min-h-[58px]">
                 <div>
-                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
-                  <a href="tel:0530051360" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-sky-800 tracking-wide hover:underline block">
+                  <div class="text-[10px] sm:text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                  <a href="tel:0530051360" dir="ltr" class="font-numbers font-black text-sm sm:text-lg text-sky-800 tracking-wide hover:underline block">
                     0530051360
                   </a>
                 </div>
-                <span id="hyundaiStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span id="hyundaiStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-[11px] sm:text-xs font-black shadow-sm shrink-0">
                   <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>مفتوح الآن</span>
                 </span>
@@ -776,7 +783,7 @@
             </div>
 
             <!-- Actions -->
-            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+            <div class="pt-3.5 mt-3.5 border-t border-slate-100 space-y-2">
               <button
                 onclick="openDirectWhatsApp('hyundai')"
                 class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
@@ -804,28 +811,32 @@
           <!-- CARD 2: KIA BRANCH -->
           <div 
             id="kia-branch"
-            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-purple-200 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group h-full"
+            class="branch-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] lg:w-auto lg:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-purple-200 bg-white p-4 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-purple-500 transition-all duration-300 relative group h-full"
           >
-            <div class="space-y-4">
+            <div class="page-curl-corner lg:hidden"></div>
+            <div class="space-y-3.5">
               <!-- Header Row -->
-              <div class="flex items-center justify-between gap-3">
-                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                  فرع كيا
-                </h3>
-                <div class="w-14 h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-lg sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                    فرع كيا
+                  </h3>
+                  <span class="lg:hidden text-[10px] font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded-full">📖 2 من 3</span>
+                </div>
+                <div class="w-12 h-10 sm:w-14 sm:h-12 rounded-xl bg-slate-50 border border-slate-200/70 p-1.5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                   <img src="images/kia-logo.png" alt="كيا" class="max-h-full max-w-full object-contain filter drop-shadow-sm">
                 </div>
               </div>
 
               <!-- Phone & Dynamic Status Box -->
-              <div class="p-3.5 rounded-xl bg-purple-50/80 border border-purple-200 flex items-center justify-between gap-3 min-h-[64px]">
+              <div class="p-3 rounded-xl bg-purple-50/80 border border-purple-200 flex items-center justify-between gap-2 min-h-[58px]">
                 <div>
-                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
-                  <a href="tel:0539454377" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-purple-800 tracking-wide hover:underline block">
+                  <div class="text-[10px] sm:text-[11px] text-slate-500 font-bold mb-0.5">هاتف / واتساب الفرع:</div>
+                  <a href="tel:0539454377" dir="ltr" class="font-numbers font-black text-sm sm:text-lg text-purple-800 tracking-wide hover:underline block">
                     0539454377
                   </a>
                 </div>
-                <span id="kiaStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span id="kiaStatusBadge" class="branch-status-badge inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-[11px] sm:text-xs font-black shadow-sm shrink-0">
                   <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>مفتوح الآن</span>
                 </span>
@@ -833,7 +844,7 @@
             </div>
 
             <!-- Actions -->
-            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+            <div class="pt-3.5 mt-3.5 border-t border-slate-100 space-y-2">
               <button
                 onclick="openDirectWhatsApp('kia')"
                 class="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5"
@@ -861,28 +872,32 @@
           <!-- CARD 3: ONLINE STORE -->
           <div 
             id="online-store"
-            class="branch-slide min-w-[85vw] sm:min-w-[340px] lg:min-w-0 flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group h-full"
+            class="branch-slide book-page-fold w-[74vw] max-w-[290px] sm:w-[320px] lg:w-auto lg:max-w-none flex-shrink-0 snap-start rounded-2xl border-2 border-emerald-300 bg-white p-4 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group h-full"
           >
-            <div class="space-y-4">
+            <div class="page-curl-corner lg:hidden"></div>
+            <div class="space-y-3.5">
               <!-- Header Row -->
-              <div class="flex items-center justify-between gap-3">
-                <h3 class="text-xl sm:text-2xl font-heading font-black text-slate-900 leading-tight">
-                  المتجر الإلكتروني
-                </h3>
-                <div class="w-14 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <h3 class="text-lg sm:text-2xl font-heading font-black text-slate-900 leading-tight">
+                    المتجر الإلكتروني
+                  </h3>
+                  <span class="lg:hidden text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">📖 3 من 3</span>
+                </div>
+                <div class="w-12 h-10 sm:w-14 sm:h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-sm">
                   🛒
                 </div>
               </div>
 
               <!-- Phone & Time -->
-              <div class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-3 min-h-[64px]">
+              <div class="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-2 min-h-[58px]">
                 <div>
-                  <div class="text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
-                  <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-base sm:text-lg text-emerald-800 tracking-wide hover:underline block">
+                  <div class="text-[10px] sm:text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
+                  <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-sm sm:text-lg text-emerald-800 tracking-wide hover:underline block">
                     0538834212
                   </a>
                 </div>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-xs font-black shadow-sm shrink-0">
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 text-[11px] sm:text-xs font-black shadow-sm shrink-0">
                   <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span>متاح 24/7 أونلاين</span>
                 </span>
@@ -890,7 +905,7 @@
             </div>
 
             <!-- Actions -->
-            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+            <div class="pt-3.5 mt-3.5 border-t border-slate-100 space-y-2">
               <a
                 href="https://www.doracars.com"
                 target="_blank"
@@ -909,43 +924,18 @@
 
         </div>
 
-        <!-- Mobile Navigation Controls & Interactive Page Indicators (3 Pages) -->
-        <div class="flex lg:hidden items-center justify-between mt-3.5 px-2">
-          <!-- Prev Button (Right in RTL) -->
-          <button
-            type="button"
-            onclick="prevBranch()"
-            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-sky-50 active:scale-95 transition"
-            aria-label="الفرع السابق"
-            title="الفرع السابق"
-          >
-            <span class="text-sm font-black">➔</span>
-          </button>
-
-          <!-- Interactive Dots Indicator -->
-          <div class="flex items-center gap-1.5" id="branchesDots">
-            <button type="button" onclick="goToBranch(0)" class="branch-dot w-6 h-2 rounded-full bg-sky-600 transition-all duration-300" aria-label="فرع هيونداي"></button>
-            <button type="button" onclick="goToBranch(1)" class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="فرع كيا"></button>
-            <button type="button" onclick="goToBranch(2)" class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="المتجر الإلكتروني"></button>
-          </div>
-
-          <!-- Next Button (Left in RTL) -->
-          <button
-            type="button"
-            onclick="nextBranch()"
-            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-sky-50 active:scale-95 transition"
-            aria-label="الفرع التالي"
-            title="الفرع التالي"
-          >
-            <span class="text-sm font-black">⬅</span>
-          </button>
+        <!-- Mobile Page Indicators (Swipe Only) -->
+        <div class="flex lg:hidden items-center justify-center gap-1.5 mt-3.5" id="branchesDots">
+          <span class="branch-dot w-6 h-2 rounded-full bg-sky-600 transition-all duration-300"></span>
+          <span class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300"></span>
+          <span class="branch-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300"></span>
         </div>
 
         <!-- Mobile Swipe Helper Hint -->
         <div class="text-center lg:hidden mt-2 text-[11px] text-slate-500 flex items-center justify-center gap-1 font-medium">
+          <span>📖</span>
+          <span>اسحب لتقليب والتنقل بين الفروع والمتجر</span>
           <span>👈</span>
-          <span>اسحب لليمين واليسار للتنقل بين الفروع والمتجر</span>
-          <span>👉</span>
         </div>
       </div>
 
