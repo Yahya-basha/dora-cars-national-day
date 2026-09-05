@@ -125,6 +125,15 @@
       border-radius: 4px;
     }
 
+    /* Clean horizontal scroll for mobile carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Strict Payment Logo Constraints */
     .payment-logo-img {
       max-height: 28px !important;
@@ -383,209 +392,250 @@
         </h2>
       </div>
 
-      <!-- 4 Bundles Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        
-        <!-- BUNDLE 1: بكج الفلاتر الأصلي (196 بدل 250) -->
-        <div class="rounded-2xl border-2 border-emerald-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
-          <div class="space-y-3.5">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800">أصلي وكالة 🛡️</span>
-              <span class="text-xs font-black px-2 py-0.5 rounded-md bg-emerald-700 text-white shadow">وفر 54 ر.س</span>
-            </div>
-            
-            <div>
-              <h3 class="font-heading font-black text-base text-slate-900">بكج الفلاتر الأصلي المعتمد</h3>
-              <div class="text-[11px] text-emerald-700 font-bold mt-0.5">قطع غيار أصلية 100% لسيارات هيونداي وكيا</div>
-            </div>
-
-            <!-- Pricing Box -->
-            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
-                <div class="text-2xl font-black font-numbers text-emerald-800">196 <span class="text-xs font-sans font-bold">ر.س</span></div>
+      <!-- 4 Bundles Slider Container (Horizontal Carousel on Mobile, Grid on Desktop) -->
+      <div class="relative">
+        <div 
+          id="bundlesTrack"
+          class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth no-scrollbar pb-3 pt-1 px-1 -mx-1"
+        >
+          
+          <!-- BUNDLE 1: بكج الفلاتر الأصلي (196 بدل 250) -->
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-emerald-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-emerald-600 transition-all duration-300 relative group">
+            <div class="space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800">أصلي وكالة 🛡️</span>
+                <span class="text-xs font-black px-2 py-0.5 rounded-md bg-emerald-700 text-white shadow">وفر 54 ر.س</span>
               </div>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-700 text-white font-bold">
-                خصم اليوم الوطني
-              </span>
+              
+              <div>
+                <h3 class="font-heading font-black text-base text-slate-900">بكج الفلاتر الأصلي المعتمد</h3>
+                <div class="text-[11px] text-emerald-700 font-bold mt-0.5">قطع غيار أصلية 100% لسيارات هيونداي وكيا</div>
+              </div>
+
+              <!-- Pricing Box -->
+              <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
+                  <div class="text-2xl font-black font-numbers text-emerald-800">196 <span class="text-xs font-sans font-bold">ر.س</span></div>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-700 text-white font-bold">
+                  خصم اليوم الوطني
+                </span>
+              </div>
+
+              <!-- 3 Core Items -->
+              <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر زيت محرك أصلي وكالة</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر مكيف نانو أصلي وكالة</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر هواء محرك أصلي وكالة</li>
+              </ul>
             </div>
 
-            <!-- 3 Core Items -->
-            <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر زيت محرك أصلي وكالة</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر مكيف نانو أصلي وكالة</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر هواء محرك أصلي وكالة</li>
-            </ul>
+            <!-- Direct Order Action -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="orderBundleWhatsApp('بكج الفلاتر الأصلي (فلتر زيت + مكيف + هواء أصلي)', '196')"
+                class="w-full h-10 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
+              >
+                <span>💬 اطلب الباقة وتأكد من التوافق</span>
+              </button>
+              <a
+                href="https://www.doracars.com"
+                target="_blank"
+                class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              >
+                طلب عبر المتجر الإلكتروني ➔
+              </a>
+            </div>
           </div>
 
-          <!-- Direct Order Action -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="orderBundleWhatsApp('بكج الفلاتر الأصلي (فلتر زيت + مكيف + هواء أصلي)', '196')"
-              class="w-full h-10 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
-            >
-              <span>💬 اطلب الباقة وتأكد من التوافق</span>
-            </button>
-            <a
-              href="https://www.doracars.com"
-              target="_blank"
-              class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
-            >
-              طلب عبر المتجر الإلكتروني ➔
-            </a>
+          <!-- BUNDLE 2: بكج الفلاتر الكوري (96 بدل 150) -->
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-amber-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
+            <div class="space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800">سعر رمزي 96 🇸🇦</span>
+                <span class="text-xs font-black px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 shadow">وفر 54 ر.س</span>
+              </div>
+              
+              <div>
+                <h3 class="font-heading font-black text-base text-slate-900">بكج الفلاتر الكوري الاقتصادي</h3>
+                <div class="text-[11px] text-amber-800 font-bold mt-0.5">صناعة كورية عالية الجودة (هيونداي وكيا)</div>
+              </div>
+
+              <!-- Pricing Box -->
+              <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 line-through font-numbers">150 ر.س</div>
+                  <div class="text-2xl font-black font-numbers text-amber-800">96 <span class="text-xs font-sans font-bold">ر.س</span></div>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-amber-600 text-white font-bold">
+                  خصم اليوم الوطني
+                </span>
+              </div>
+
+              <!-- 3 Core Items -->
+              <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر زيت كوري الصنع عالي الجودة</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر مكيف كوري منقي للهواء</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ فلتر هواء كوري مطابق للمواصفات</li>
+              </ul>
+            </div>
+
+            <!-- Direct Order Action -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="orderBundleWhatsApp('بكج الفلاتر الكوري (فلتر زيت + مكيف + هواء كوري)', '96')"
+                class="w-full h-10 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
+              >
+                <span>💬 اطلب الباقة وتأكد من التوافق</span>
+              </button>
+              <a
+                href="https://www.doracars.com"
+                target="_blank"
+                class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              >
+                طلب عبر المتجر الإلكتروني ➔
+              </a>
+            </div>
           </div>
+
+          <!-- BUNDLE 3: بكج الفحمات الأصلي (250 بدل 350) -->
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-sky-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
+            <div class="space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800">أصلي وكالة 🛡️</span>
+                <span class="text-xs font-black px-2 py-0.5 rounded-md bg-sky-700 text-white shadow">وفر 100 ر.س</span>
+              </div>
+              
+              <div>
+                <h3 class="font-heading font-black text-base text-slate-900">بكج الفحمات الأصلي (أمامي وخلفي)</h3>
+                <div class="text-[11px] text-sky-700 font-bold mt-0.5">فحمات أصلية لسيارات هيونداي وكيا</div>
+              </div>
+
+              <!-- Pricing Box -->
+              <div class="p-3 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 line-through font-numbers">350 ر.س</div>
+                  <div class="text-2xl font-black font-numbers text-sky-800">250 <span class="text-xs font-sans font-bold">ر.س</span></div>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-sky-700 text-white font-bold">
+                  خصم اليوم الوطني
+                </span>
+              </div>
+
+              <!-- 3 Core Items -->
+              <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
+                <li class="flex items-center gap-1.5 font-bold">✓ طقم أقمشة وفحمات فرامل أمامية أصلية</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ طقم أقمشة وفحمات فرامل خلفية أصلية</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ أعلى درجات الأمان والسلامة للفرامل</li>
+              </ul>
+            </div>
+
+            <!-- Direct Order Action -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="orderBundleWhatsApp('بكج الفحمات الأصلي (أمامي + خلفي أصلي)', '250')"
+                class="w-full h-10 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
+              >
+                <span>💬 اطلب الباقة وتأكد من التوافق</span>
+              </button>
+              <a
+                href="https://www.doracars.com"
+                target="_blank"
+                class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              >
+                طلب عبر المتجر الإلكتروني ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- BUNDLE 4: بكج الفحمات الكوري (165 بدل 250) -->
+          <div class="bundle-slide min-w-[85vw] sm:min-w-[330px] md:min-w-0 flex-shrink-0 snap-center rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
+            <div class="space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-800">جودة كورية ممتازة 🇰🇷</span>
+                <span class="text-xs font-black px-2 py-0.5 rounded-md bg-slate-800 text-white shadow">وفر 85 ر.س</span>
+              </div>
+              
+              <div>
+                <h3 class="font-heading font-black text-base text-slate-900">بكج الفحمات الكوري (أمامي وخلفي)</h3>
+                <div class="text-[11px] text-slate-600 font-bold mt-0.5">فحمات كورية لسيارات هيونداي وكيا</div>
+              </div>
+
+              <!-- Pricing Box -->
+              <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
+                  <div class="text-2xl font-black font-numbers text-slate-900">165 <span class="text-xs font-sans font-bold">ر.س</span></div>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-white font-bold">
+                  خصم اليوم الوطني
+                </span>
+              </div>
+
+              <!-- 3 Core Items -->
+              <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
+                <li class="flex items-center gap-1.5 font-bold">✓ طقم فحمات فرامل أمامية كوري الصنع</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ طقم فحمات فرامل خلفية كوري الصنع</li>
+                <li class="flex items-center gap-1.5 font-bold">✓ أداء فرملة ناعم وهادئ بدون أصوات</li>
+              </ul>
+            </div>
+
+            <!-- Direct Order Action -->
+            <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
+              <button
+                onclick="orderBundleWhatsApp('بكج الفحمات الكوري (أمامي + خلفي كوري)', '165')"
+                class="w-full h-10 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
+              >
+                <span>💬 اطلب الباقة وتأكد من التوافق</span>
+              </button>
+              <a
+                href="https://www.doracars.com"
+                target="_blank"
+                class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
+              >
+                طلب عبر المتجر الإلكتروني ➔
+              </a>
+            </div>
+          </div>
+
         </div>
 
-        <!-- BUNDLE 2: بكج الفلاتر الكوري (96 بدل 150) -->
-        <div class="rounded-2xl border-2 border-amber-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-amber-500 transition-all duration-300 relative group">
-          <div class="space-y-3.5">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800">سعر رمزي 96 🇸🇦</span>
-              <span class="text-xs font-black px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 shadow">وفر 54 ر.س</span>
-            </div>
-            
-            <div>
-              <h3 class="font-heading font-black text-base text-slate-900">بكج الفلاتر الكوري الاقتصادي</h3>
-              <div class="text-[11px] text-amber-800 font-bold mt-0.5">صناعة كورية عالية الجودة (هيونداي وكيا)</div>
-            </div>
+        <!-- Mobile Navigation Controls & Interactive Indicators -->
+        <div class="flex md:hidden items-center justify-between mt-3.5 px-2">
+          <!-- Right Arrow (In RTL moves to next bundle) -->
+          <button
+            onclick="nextBundle()"
+            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
+            aria-label="التالي"
+          >
+            <span class="text-sm font-black">➔</span>
+          </button>
 
-            <!-- Pricing Box -->
-            <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 line-through font-numbers">150 ر.س</div>
-                <div class="text-2xl font-black font-numbers text-amber-800">96 <span class="text-xs font-sans font-bold">ر.س</span></div>
-              </div>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-amber-600 text-white font-bold">
-                خصم اليوم الوطني
-              </span>
-            </div>
-
-            <!-- 3 Core Items -->
-            <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر زيت كوري الصنع عالي الجودة</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر مكيف كوري منقي للهواء</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ فلتر هواء كوري مطابق للمواصفات</li>
-            </ul>
+          <!-- Interactive Dots Indicator -->
+          <div class="flex items-center gap-1.5" id="bundlesDots">
+            <button onclick="goToBundle(0)" class="bundle-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300" aria-label="الباقة 1"></button>
+            <button onclick="goToBundle(1)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 2"></button>
+            <button onclick="goToBundle(2)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 3"></button>
+            <button onclick="goToBundle(3)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 4"></button>
           </div>
 
-          <!-- Direct Order Action -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="orderBundleWhatsApp('بكج الفلاتر الكوري (فلتر زيت + مكيف + هواء كوري)', '96')"
-              class="w-full h-10 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
-            >
-              <span>💬 اطلب الباقة وتأكد من التوافق</span>
-            </button>
-            <a
-              href="https://www.doracars.com"
-              target="_blank"
-              class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
-            >
-              طلب عبر المتجر الإلكتروني ➔
-            </a>
-          </div>
+          <!-- Left Arrow (In RTL moves to previous bundle) -->
+          <button
+            onclick="prevBundle()"
+            class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
+            aria-label="السابق"
+          >
+            <span class="text-sm font-black">⬅</span>
+          </button>
         </div>
 
-        <!-- BUNDLE 3: بكج الفحمات الأصلي (250 بدل 350) -->
-        <div class="rounded-2xl border-2 border-sky-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-sky-500 transition-all duration-300 relative group">
-          <div class="space-y-3.5">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800">أصلي وكالة 🛡️</span>
-              <span class="text-xs font-black px-2 py-0.5 rounded-md bg-sky-700 text-white shadow">وفر 100 ر.س</span>
-            </div>
-            
-            <div>
-              <h3 class="font-heading font-black text-base text-slate-900">بكج الفحمات الأصلي (أمامي وخلفي)</h3>
-              <div class="text-[11px] text-sky-700 font-bold mt-0.5">فحمات أصلية لسيارات هيونداي وكيا</div>
-            </div>
-
-            <!-- Pricing Box -->
-            <div class="p-3 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 line-through font-numbers">350 ر.س</div>
-                <div class="text-2xl font-black font-numbers text-sky-800">250 <span class="text-xs font-sans font-bold">ر.س</span></div>
-              </div>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-sky-700 text-white font-bold">
-                خصم اليوم الوطني
-              </span>
-            </div>
-
-            <!-- 3 Core Items -->
-            <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
-              <li class="flex items-center gap-1.5 font-bold">✓ طقم أقمشة وفحمات فرامل أمامية أصلية</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ طقم أقمشة وفحمات فرامل خلفية أصلية</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ أعلى درجات الأمان والسلامة للفرامل</li>
-            </ul>
-          </div>
-
-          <!-- Direct Order Action -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="orderBundleWhatsApp('بكج الفحمات الأصلي (أمامي + خلفي أصلي)', '250')"
-              class="w-full h-10 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
-            >
-              <span>💬 اطلب الباقة وتأكد من التوافق</span>
-            </button>
-            <a
-              href="https://www.doracars.com"
-              target="_blank"
-              class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
-            >
-              طلب عبر المتجر الإلكتروني ➔
-            </a>
-          </div>
+        <!-- Mobile Touch / Swipe Helper Hint -->
+        <div class="text-center md:hidden mt-2 text-[11px] text-slate-500 flex items-center justify-center gap-1 font-medium">
+          <span>👈</span>
+          <span>اسحب لليمين واليسار لتصفح كافة باقات اليوم الوطني</span>
+          <span>👉</span>
         </div>
-
-        <!-- BUNDLE 4: بكج الفحمات الكوري (165 بدل 250) -->
-        <div class="rounded-2xl border-2 border-slate-300 bg-white p-5 flex flex-col justify-between shadow-lg hover:shadow-xl hover:border-slate-500 transition-all duration-300 relative group">
-          <div class="space-y-3.5">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-800">جودة كورية ممتازة 🇰🇷</span>
-              <span class="text-xs font-black px-2 py-0.5 rounded-md bg-slate-800 text-white shadow">وفر 85 ر.س</span>
-            </div>
-            
-            <div>
-              <h3 class="font-heading font-black text-base text-slate-900">بكج الفحمات الكوري (أمامي وخلفي)</h3>
-              <div class="text-[11px] text-slate-600 font-bold mt-0.5">فحمات كورية لسيارات هيونداي وكيا</div>
-            </div>
-
-            <!-- Pricing Box -->
-            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 line-through font-numbers">250 ر.س</div>
-                <div class="text-2xl font-black font-numbers text-slate-900">165 <span class="text-xs font-sans font-bold">ر.س</span></div>
-              </div>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-white font-bold">
-                خصم اليوم الوطني
-              </span>
-            </div>
-
-            <!-- 3 Core Items -->
-            <ul class="space-y-1.5 text-xs text-slate-700 pt-0.5">
-              <li class="flex items-center gap-1.5 font-bold">✓ طقم فحمات فرامل أمامية كوري الصنع</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ طقم فحمات فرامل خلفية كوري الصنع</li>
-              <li class="flex items-center gap-1.5 font-bold">✓ أداء فرملة ناعم وهادئ بدون أصوات</li>
-            </ul>
-          </div>
-
-          <!-- Direct Order Action -->
-          <div class="pt-4 mt-4 border-t border-slate-100 space-y-2">
-            <button
-              onclick="orderBundleWhatsApp('بكج الفحمات الكوري (أمامي + خلفي كوري)', '165')"
-              class="w-full h-10 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition"
-            >
-              <span>💬 اطلب الباقة وتأكد من التوافق</span>
-            </button>
-            <a
-              href="https://www.doracars.com"
-              target="_blank"
-              class="block w-full py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] text-center transition"
-            >
-              طلب عبر المتجر الإلكتروني ➔
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1316,6 +1366,115 @@ ${partsNeeded}
       triggerBadgeCelebration();
       window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`, '_blank');
     }
+
+    // ─── BUNDLES CAROUSEL FOR MOBILE (Auto-Play & Touch Swipe) ───────────────────
+    (function initBundlesCarousel() {
+      const track = document.getElementById('bundlesTrack');
+      const dots = document.querySelectorAll('.bundle-dot');
+      if (!track || !dots.length) return;
+
+      let currentIndex = 0;
+      let autoPlayTimer = null;
+      let isUserInteracting = false;
+      let resumeTimeout = null;
+      const totalSlides = 4;
+
+      function updateDots(index) {
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('w-6', 'bg-emerald-600');
+            dot.classList.remove('w-2', 'bg-slate-300');
+          } else {
+            dot.classList.remove('w-6', 'bg-emerald-600');
+            dot.classList.add('w-2', 'bg-slate-300');
+          }
+        });
+      }
+
+      window.goToBundle = function(index) {
+        if (window.innerWidth >= 768) return;
+        currentIndex = (index + totalSlides) % totalSlides;
+        const slides = track.querySelectorAll('.bundle-slide');
+        if (slides[currentIndex]) {
+          slides[currentIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+          });
+        }
+        updateDots(currentIndex);
+      };
+
+      window.nextBundle = function() {
+        pauseAutoPlay();
+        goToBundle(currentIndex + 1);
+        resumeAutoPlayWithDelay();
+      };
+
+      window.prevBundle = function() {
+        pauseAutoPlay();
+        goToBundle(currentIndex - 1);
+        resumeAutoPlayWithDelay();
+      };
+
+      function startAutoPlay() {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(() => {
+          if (window.innerWidth < 768 && !isUserInteracting) {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            goToBundle(currentIndex);
+          }
+        }, 3800);
+      }
+
+      function pauseAutoPlay() {
+        isUserInteracting = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+      }
+
+      function resumeAutoPlayWithDelay() {
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+          isUserInteracting = false;
+        }, 6000);
+      }
+
+      // Sync active dot on native scroll / swipe
+      let isScrolling = null;
+      track.addEventListener('scroll', () => {
+        pauseAutoPlay();
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+          if (window.innerWidth >= 768) return;
+          const slides = track.querySelectorAll('.bundle-slide');
+          const trackRect = track.getBoundingClientRect();
+          const trackCenter = trackRect.left + trackRect.width / 2;
+
+          let closestIdx = 0;
+          let minDistance = Infinity;
+
+          slides.forEach((slide, idx) => {
+            const slideRect = slide.getBoundingClientRect();
+            const slideCenter = slideRect.left + slideRect.width / 2;
+            const dist = Math.abs(trackCenter - slideCenter);
+            if (dist < minDistance) {
+              minDistance = dist;
+              closestIdx = idx;
+            }
+          });
+
+          currentIndex = closestIdx;
+          updateDots(currentIndex);
+          resumeAutoPlayWithDelay();
+        }, 80);
+      }, { passive: true });
+
+      // Touch listeners on track
+      track.addEventListener('touchstart', pauseAutoPlay, { passive: true });
+      track.addEventListener('touchend', resumeAutoPlayWithDelay, { passive: true });
+
+      startAutoPlay();
+    })();
   </script>
 
 </body>
