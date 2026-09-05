@@ -220,140 +220,136 @@
     </div>
   </div>
 
-  <!-- ─── 4. GRAND HERO SECTION (CLEAN & BOLD) ─────────────────────────────── -->
-  <section class="relative bg-gradient-to-b from-slate-900 via-[#00381B] to-[#002713] text-white overflow-hidden py-10 sm:py-16 border-b border-emerald-700/40">
+  <!-- ─── 4. GRAND HERO SECTION (FULL-BLEED BACKGROUND & CENTERED CONTENT) ─── -->
+  <section class="relative min-h-[580px] sm:min-h-[660px] lg:min-h-[720px] flex items-center justify-center text-white overflow-hidden py-14 sm:py-20 border-b border-emerald-700/40">
     
+    <!-- Full-Bleed Background Image with Fallback -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="images/hero-cars-flag.png" 
+        alt="درة السيارة - قطع غيار هيونداي وكيا عروض اليوم الوطني 96" 
+        class="w-full h-full object-cover object-center"
+        onerror="this.src='hero-cars-flag.png'"
+      >
+      <!-- Cinematic Multi-Layer Dark Overlays for Contrast and Ultra Readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/80"></div>
+      <div class="absolute inset-0 bg-[#002713]/40 mix-blend-multiply"></div>
+    </div>
+
     <!-- Ambient Glows -->
-    <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-10 w-[400px] h-[400px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <!-- Centered Content Container -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center flex flex-col items-center space-y-6 sm:space-y-7">
+      
+      <!-- 3D 96 Interactive Badge -->
+      <div class="badge-3d-wrap inline-block mx-auto" id="badge3dContainer">
+        <div 
+          id="badge3dBox"
+          onclick="triggerBadgeCelebration()"
+          class="badge-3d-box p-3 sm:p-3.5 rounded-2xl border border-amber-400/40 bg-slate-950/80 backdrop-blur-md flex items-center gap-3.5 cursor-pointer select-none shadow-2xl hover:border-amber-300 transition"
+          title="انقر للاحتفال باليوم الوطني 96!"
+        >
+          <div class="flex flex-col items-center justify-center bg-slate-900/90 border border-amber-400/40 px-3.5 py-1 rounded-xl shadow-inner">
+            <span class="number-96-3d text-3xl sm:text-4xl font-black leading-none">96</span>
+            <span class="text-[8px] text-amber-300 font-bold uppercase tracking-wider">عاماً من المجد</span>
+          </div>
+          <div class="text-right space-y-0.5">
+            <div class="text-xs sm:text-sm font-black text-amber-300">عِزّنا بطبعنا | اليوم الوطني السعودي 🇸🇦</div>
+            <div class="text-sm sm:text-base font-black text-white">
+              خصومات تصل إلى <span class="text-amber-400 font-numbers font-black text-lg">25%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Hero Headline -->
+      <div class="space-y-2">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight text-white leading-tight sm:leading-snug drop-shadow-lg">
+          <span class="block">عِزّنا بخدمتكم في درة السيارة..</span>
+          <span class="block mt-2 text-amber-400 font-black text-3xl sm:text-4xl lg:text-[50px]">
+            أقوى عروض وباقات اليوم الوطني 96
+          </span>
+        </h1>
         
-        <!-- Content Column (7 cols) -->
-        <div class="lg:col-span-7 space-y-5 text-right">
-          
-          <!-- 3D 96 Interactive Badge -->
-          <div class="badge-3d-wrap inline-block" id="badge3dContainer">
-            <div 
-              id="badge3dBox"
-              onclick="triggerBadgeCelebration()"
-              class="badge-3d-box p-3 sm:p-3.5 rounded-2xl border border-amber-400/40 flex items-center gap-3.5 cursor-pointer select-none"
-              title="انقر للاحتفال باليوم الوطني 96!"
-            >
-              <div class="flex flex-col items-center justify-center bg-slate-950/70 border border-amber-400/30 px-3.5 py-1 rounded-xl shadow-inner">
-                <span class="number-96-3d text-3xl sm:text-4xl font-black leading-none">96</span>
-                <span class="text-[8px] text-amber-300 font-bold uppercase tracking-wider">عاماً من المجد</span>
-              </div>
-              <div class="text-right space-y-0.5">
-                <div class="text-xs sm:text-sm font-black text-amber-300">عِزّنا بطبعنا | اليوم الوطني السعودي 🇸🇦</div>
-                <div class="text-sm sm:text-base font-black text-white">
-                  خصومات تصل إلى <span class="text-amber-400 font-numbers font-black text-lg">25%</span>
-                </div>
-              </div>
+        <!-- Crisp Subtitle -->
+        <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto pt-1 font-medium drop-shadow">
+          نوفر باقات فلاتر وفحمات أصلية وكورية مع مطابقة فورية ومجانية برقم الهيكل (VIN) وضمان الجودة 100%.
+        </p>
+      </div>
+
+      <!-- 2 Balanced Boxes: Coupon & Countdown -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full mx-auto pt-1">
+        
+        <!-- Coupon Box -->
+        <div 
+          onclick="copyCouponCode()"
+          class="p-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-900 border border-emerald-400/40 hover:border-amber-400 shadow-2xl backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group text-right"
+        >
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
+              🚚
+            </div>
+            <div>
+              <div class="text-[10px] text-emerald-300 font-bold">شحن مجاني فوق 296 ر.س</div>
+              <div class="font-numbers font-black text-lg text-white tracking-wider" id="heroCouponCode">KSA96</div>
             </div>
           </div>
-
-          <!-- Main Hero Headline -->
-          <h1 class="text-2xl sm:text-3xl lg:text-[40px] font-heading font-black tracking-tight text-white leading-snug">
-            <span class="block">عِزّنا بخدمتكم في درة السيارة..</span>
-            <span class="block mt-1.5 text-amber-400 font-black">
-              أقوى عروض وباقات اليوم الوطني 96
-            </span>
-          </h1>
-
-          <!-- Crisp 1-Line Subtitle -->
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
-            نوفر باقات فلاتر وفحمات أصلية وكورية مع مطابقة فورية ومجانية برقم الهيكل (VIN) وضمان الجودة 100%.
-          </p>
-
-          <!-- 2 Balanced Boxes: Coupon & Countdown -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-xl pt-1">
-            
-            <!-- Coupon Box -->
-            <div 
-              onclick="copyCouponCode()"
-              class="p-3.5 rounded-xl bg-slate-900/90 border border-emerald-400/40 hover:border-amber-400 shadow-lg backdrop-blur-md flex items-center justify-between gap-3 cursor-pointer transition group"
-            >
-              <div class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl group-hover:scale-110 transition shrink-0">
-                  🚚
-                </div>
-                <div>
-                  <div class="text-[10px] text-emerald-300 font-bold">شحن مجاني فوق 296 ر.س</div>
-                  <div class="font-numbers font-black text-lg text-white tracking-wider" id="heroCouponCode">KSA96</div>
-                </div>
-              </div>
-              <button 
-                type="button" 
-                class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-xs font-black h-8 px-3 shadow"
-                id="heroCopyBtn"
-              >
-                نسخ
-              </button>
-            </div>
-
-            <!-- Countdown Box -->
-            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 shadow-lg backdrop-blur-md flex flex-col justify-center items-center gap-1.5">
-              <div class="text-[11px] text-amber-300 font-black flex items-center gap-1">
-                <span>⏱️ ينتهي العرض خلال:</span>
-              </div>
-              <div class="flex items-center gap-1.5">
-                <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-                  <span class="font-numbers font-black text-lg text-amber-400" id="cdDays">00</span>
-                  <span class="text-[8px] text-slate-400">يوم</span>
-                </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-                  <span class="font-numbers font-black text-lg text-amber-400" id="cdHours">00</span>
-                  <span class="text-[8px] text-slate-400">ساعة</span>
-                </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-                  <span class="font-numbers font-black text-lg text-amber-400" id="cdMins">00</span>
-                  <span class="text-[8px] text-slate-400">دقيقة</span>
-                </div>
-                <span class="text-amber-500 font-bold text-xs">:</span>
-                <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
-                  <span class="font-numbers font-black text-lg text-emerald-400" id="cdSecs">00</span>
-                  <span class="text-[8px] text-slate-400">ثانية</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Hero Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a
-              href="#bundles-section"
-              class="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
-            >
-              <span>🎁 تصفح باقات اليوم الوطني ➔</span>
-            </a>
-            <a
-              href="#vin-quote"
-              class="px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-black text-xs sm:text-sm border border-slate-600 transition flex items-center gap-2"
-            >
-              <span>⚡ طلب تسعير برقم الهيكل (VIN)</span>
-            </a>
-          </div>
-
+          <button 
+            type="button" 
+            class="bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-lg text-xs font-black h-8 px-3 shadow"
+            id="heroCopyBtn"
+          >
+            نسخ
+          </button>
         </div>
 
-        <!-- Visual Cars Flag Column (5 cols) -->
-        <div class="lg:col-span-5 relative flex items-center justify-center">
-          <div class="relative w-full max-w-md">
-            <img
-              src="images/hero-cars-flag.png"
-              alt="قطع غيار هيونداي وكيا عروض اليوم الوطني"
-              class="w-full h-auto object-contain drop-shadow-2xl rounded-2xl"
-              onerror="this.src='hero-cars-flag.png'"
-            >
+        <!-- Countdown Box -->
+        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md flex flex-col justify-center items-center gap-1.5">
+          <div class="text-[11px] text-amber-300 font-black flex items-center gap-1">
+            <span>⏱️ ينتهي العرض خلال:</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
+              <span class="font-numbers font-black text-lg text-amber-400" id="cdDays">00</span>
+              <span class="text-[8px] text-slate-400">يوم</span>
+            </div>
+            <span class="text-amber-500 font-bold text-xs">:</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
+              <span class="font-numbers font-black text-lg text-amber-400" id="cdHours">00</span>
+              <span class="text-[8px] text-slate-400">ساعة</span>
+            </div>
+            <span class="text-amber-500 font-bold text-xs">:</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
+              <span class="font-numbers font-black text-lg text-amber-400" id="cdMins">00</span>
+              <span class="text-[8px] text-slate-400">دقيقة</span>
+            </div>
+            <span class="text-amber-500 font-bold text-xs">:</span>
+            <div class="flex flex-col items-center bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800 min-w-[40px]">
+              <span class="font-numbers font-black text-lg text-emerald-400" id="cdSecs">00</span>
+              <span class="text-[8px] text-slate-400">ثانية</span>
+            </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Hero Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3.5 pt-1">
+        <a
+          href="#bundles-section"
+          class="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-2xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2"
+        >
+          <span>🎁 تصفح باقات اليوم الوطني ➔</span>
+        </a>
+        <a
+          href="#vin-quote"
+          class="px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-black text-sm sm:text-base border border-slate-600 shadow-xl backdrop-blur-md transition flex items-center gap-2"
+        >
+          <span>⚡ طلب تسعير برقم الهيكل (VIN)</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
