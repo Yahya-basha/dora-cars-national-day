@@ -603,28 +603,32 @@
 
         <!-- Mobile Navigation Controls & Interactive Indicators -->
         <div class="flex md:hidden items-center justify-between mt-3.5 px-2">
-          <!-- Right Arrow (In RTL moves to next bundle) -->
+          <!-- Prev Button (Right in RTL) -->
           <button
-            onclick="nextBundle()"
+            type="button"
+            onclick="prevBundle()"
             class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
-            aria-label="التالي"
+            aria-label="السابق"
+            title="السابق"
           >
             <span class="text-sm font-black">➔</span>
           </button>
 
           <!-- Interactive Dots Indicator -->
           <div class="flex items-center gap-1.5" id="bundlesDots">
-            <button onclick="goToBundle(0)" class="bundle-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300" aria-label="الباقة 1"></button>
-            <button onclick="goToBundle(1)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 2"></button>
-            <button onclick="goToBundle(2)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 3"></button>
-            <button onclick="goToBundle(3)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 4"></button>
+            <button type="button" onclick="goToBundle(0)" class="bundle-dot w-6 h-2 rounded-full bg-emerald-600 transition-all duration-300" aria-label="الباقة 1"></button>
+            <button type="button" onclick="goToBundle(1)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 2"></button>
+            <button type="button" onclick="goToBundle(2)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 3"></button>
+            <button type="button" onclick="goToBundle(3)" class="bundle-dot w-2 h-2 rounded-full bg-slate-300 transition-all duration-300" aria-label="الباقة 4"></button>
           </div>
 
-          <!-- Left Arrow (In RTL moves to previous bundle) -->
+          <!-- Next Button (Left in RTL) -->
           <button
-            onclick="prevBundle()"
+            type="button"
+            onclick="nextBundle()"
             class="w-9 h-9 rounded-full bg-white border border-slate-200 shadow flex items-center justify-center text-slate-700 hover:bg-emerald-50 active:scale-95 transition"
-            aria-label="السابق"
+            aria-label="التالي"
+            title="التالي"
           >
             <span class="text-sm font-black">⬅</span>
           </button>
@@ -1367,16 +1371,13 @@ ${partsNeeded}
       window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`, '_blank');
     }
 
-    // ─── BUNDLES CAROUSEL FOR MOBILE (Auto-Play & Touch Swipe) ───────────────────
+    // ─── BUNDLES CAROUSEL FOR MOBILE (Client-Driven Touch & Controls) ───────────────
     (function initBundlesCarousel() {
       const track = document.getElementById('bundlesTrack');
       const dots = document.querySelectorAll('.bundle-dot');
       if (!track || !dots.length) return;
 
       let currentIndex = 0;
-      let autoPlayTimer = null;
-      let isUserInteracting = false;
-      let resumeTimeout = null;
       const totalSlides = 4;
 
       function updateDots(index) {
@@ -1393,56 +1394,40 @@ ${partsNeeded}
 
       window.goToBundle = function(index) {
         if (window.innerWidth >= 768) return;
-        currentIndex = (index + totalSlides) % totalSlides;
+        currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
         const slides = track.querySelectorAll('.bundle-slide');
-        if (slides[currentIndex]) {
-          slides[currentIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center'
+        const target = slides[currentIndex];
+        if (target) {
+          const trackRect = track.getBoundingClientRect();
+          const targetRect = target.getBoundingClientRect();
+          const deltaX = (targetRect.left + targetRect.width / 2) - (trackRect.left + trackRect.width / 2);
+          track.scrollBy({
+            left: deltaX,
+            behavior: 'smooth'
           });
         }
         updateDots(currentIndex);
       };
 
       window.nextBundle = function() {
-        pauseAutoPlay();
-        goToBundle(currentIndex + 1);
-        resumeAutoPlayWithDelay();
+        if (currentIndex < totalSlides - 1) {
+          goToBundle(currentIndex + 1);
+        } else {
+          goToBundle(0);
+        }
       };
 
       window.prevBundle = function() {
-        pauseAutoPlay();
-        goToBundle(currentIndex - 1);
-        resumeAutoPlayWithDelay();
+        if (currentIndex > 0) {
+          goToBundle(currentIndex - 1);
+        } else {
+          goToBundle(totalSlides - 1);
+        }
       };
 
-      function startAutoPlay() {
-        if (autoPlayTimer) clearInterval(autoPlayTimer);
-        autoPlayTimer = setInterval(() => {
-          if (window.innerWidth < 768 && !isUserInteracting) {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            goToBundle(currentIndex);
-          }
-        }, 3800);
-      }
-
-      function pauseAutoPlay() {
-        isUserInteracting = true;
-        if (resumeTimeout) clearTimeout(resumeTimeout);
-      }
-
-      function resumeAutoPlayWithDelay() {
-        if (resumeTimeout) clearTimeout(resumeTimeout);
-        resumeTimeout = setTimeout(() => {
-          isUserInteracting = false;
-        }, 6000);
-      }
-
-      // Sync active dot on native scroll / swipe
+      // Sync active dot on native touch scroll / swipe without moving the page window
       let isScrolling = null;
       track.addEventListener('scroll', () => {
-        pauseAutoPlay();
         clearTimeout(isScrolling);
         isScrolling = setTimeout(() => {
           if (window.innerWidth >= 768) return;
@@ -1465,15 +1450,8 @@ ${partsNeeded}
 
           currentIndex = closestIdx;
           updateDots(currentIndex);
-          resumeAutoPlayWithDelay();
-        }, 80);
+        }, 50);
       }, { passive: true });
-
-      // Touch listeners on track
-      track.addEventListener('touchstart', pauseAutoPlay, { passive: true });
-      track.addEventListener('touchend', resumeAutoPlayWithDelay, { passive: true });
-
-      startAutoPlay();
     })();
   </script>
 
