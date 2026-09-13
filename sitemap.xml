@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://offers.doracars.com/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/hero-cars-flag.png</image:loc>
+      <image:title>عروض اليوم الوطني 96 لقطع غيار هيونداي وكيا | شركة درة السيارة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/bundle-1-brakes.png</image:loc>
+      <image:title>بكج الفحمات أمامي وخلفي كوري</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/bundle-2-diesel-small.png</image:loc>
+      <image:title>بكج فلاتر الديزل مكينة صغيرة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/bundle-3-diesel-large.png</image:loc>
+      <image:title>بكج فلاتر الديزل مكينة كبيرة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/bundle-4-petrol.png</image:loc>
+      <image:title>بكج فلاتر سيارات بنزين أصلي</image:title>
+    </image:image>
+  </url>
+</urlset>
