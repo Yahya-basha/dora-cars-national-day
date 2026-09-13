@@ -1383,7 +1383,8 @@
   <!-- ─── JAVASCRIPT LOGIC ─────────────────────────────────────────────────── -->
   <script>
     const COUPON_CODE = 'DORA96';
-    const END_DATE = new Date('2026-09-24T23:59:59').getTime();
+    // Calibrated for Saudi National Day 96 (ends 23 September 2026 23:59:59 KSA Time)
+    const END_DATE = new Date('2026-09-23T23:59:59+03:00').getTime();
 
     // Read UTM tags for campaign attribution
     const urlParams = new URLSearchParams(window.location.search);
@@ -1399,6 +1400,16 @@
 
     let selectedBranch = 'hyundai';
     let selectedEngine = 'بنزين ⛽';
+
+    // Safe External Link Launcher for In-App Browsers (Snapchat, TikTok, Meta Ads webview)
+    function safeOpenUrl(url) {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = url;
+      } else {
+        window.open(url, '_blank');
+      }
+    }
 
     // 3D Parallax Tilt for 96 Emblem
     const badgeBox = document.getElementById('badge3dBox');
@@ -1483,10 +1494,15 @@
     updateBranchStatus();
     setInterval(updateBranchStatus, 30000);
 
-    // Countdown Timer
+    // Countdown Timer (Calibrated to KSA Time)
     function updateCountdown() {
       const now = new Date().getTime();
       const distance = END_DATE - now;
+
+      const elD = document.getElementById('cdDays');
+      const elH = document.getElementById('cdHours');
+      const elM = document.getElementById('cdMins');
+      const elS = document.getElementById('cdSecs');
 
       if (distance > 0) {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -1494,34 +1510,67 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
-        document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('cdMins').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('cdSecs').textContent = String(seconds).padStart(2, '0');
+        if (elD) elD.textContent = String(days).padStart(2, '0');
+        if (elH) elH.textContent = String(hours).padStart(2, '0');
+        if (elM) elM.textContent = String(minutes).padStart(2, '0');
+        if (elS) elS.textContent = String(seconds).padStart(2, '0');
+      } else {
+        if (elD) elD.textContent = '00';
+        if (elH) elH.textContent = '00';
+        if (elM) elM.textContent = '00';
+        if (elS) elS.textContent = '00';
       }
     }
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 1-Click Coupon Copier
+    // 1-Click Coupon Copier with In-App Webview Fallback
     function copyCouponCode() {
-      navigator.clipboard.writeText(COUPON_CODE);
-      triggerBadgeCelebration();
-      const btn = document.getElementById('heroCopyBtn');
-      const topLabel = document.getElementById('copyTopBtnLabel');
-      if (btn) btn.textContent = 'تم النسخ ✓';
-      if (topLabel) topLabel.textContent = 'تم النسخ ✓';
-      setTimeout(() => {
-        if (btn) btn.textContent = 'نسخ';
-        if (topLabel) topLabel.textContent = 'نسخ';
-      }, 2500);
+      function onCopied() {
+        triggerBadgeCelebration();
+        const btn = document.getElementById('heroCopyBtn');
+        const topLabel = document.getElementById('copyTopBtnLabel');
+        if (btn) btn.textContent = 'تم النسخ ✓';
+        if (topLabel) topLabel.textContent = 'تم النسخ ✓';
+        setTimeout(() => {
+          if (btn) btn.textContent = 'نسخ';
+          if (topLabel) topLabel.textContent = 'نسخ';
+        }, 2500);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(COUPON_CODE).then(onCopied).catch(() => {
+          fallbackCopy(onCopied);
+        });
+      } else {
+        fallbackCopy(onCopied);
+      }
+    }
+
+    function fallbackCopy(callback) {
+      const textArea = document.createElement('textarea');
+      textArea.value = COUPON_CODE;
+      textArea.style.position = 'fixed';
+      textArea.style.top = '0';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        if (callback) callback();
+      } catch (err) {
+        console.error('Copy fallback failed:', err);
+      }
+      document.body.removeChild(textArea);
     }
 
     // Direct WhatsApp Callout
     function openDirectWhatsApp(type) {
       const branch = BRANCH_PHONES[type] || BRANCH_PHONES.store;
-      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها. شكراً لكم!`;
-      window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`, '_blank');
+      const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
+      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها ضمن عروض اليوم الوطني 96.${refText}\nشكراً لكم!`;
+      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`);
     }
 
     // Branch Form Selector
@@ -1557,14 +1606,15 @@
     // Bundle WhatsApp Order
     function orderBundleWhatsApp(bundleTitle, price) {
       const branch = BRANCH_PHONES.store;
+      const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
       const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة
-أرغب في طلب: [${bundleTitle}] بسعر ${price} ر.س.
+أرغب في طلب: [${bundleTitle}] بسعر ${price} ر.س ضمن عروض اليوم الوطني 96.
 
 يرجى التأكد من مطابقة هذه الباقة لسيارتي وتجهيز الطلب.
-🚗 رقم الهيكل / الاستمارة: (مرفق في المحادثة)`;
+🚗 رقم الهيكل / الاستمارة: (مرفق في المحادثة)${refText}`;
 
       triggerBadgeCelebration();
-      window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`, '_blank');
+      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`);
     }
 
     // Form Submit Handler
@@ -1578,23 +1628,25 @@
 
       const branch = BRANCH_PHONES[selectedBranch] || BRANCH_PHONES.hyundai;
       const carInfo = carModel ? `${carMake} - ${carModel} (${modelYear})` : `${carMake} (${modelYear})`;
+      const refText = utmSource !== 'Direct' ? `\n• مصدر الطلب: ${utmSource}` : '';
 
       const formattedMsg = 
 `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})
-أود الاستفسار وطلب تسعير ومطابقة قطع الغيار لسيارتي:
+أود الاستفسار وطلب تسعير ومطابقة قطع الغيار لسيارتي ضمن عروض اليوم الوطني 96:
 
 🚗 *بيانات السيارة:*
 • نوع السيارة والموديل: ${carInfo}
 • نوع المحرك: ${selectedEngine}
 • رقم الهيكل (VIN): ${vinNumber || 'مرفق صورة الاستمارة'}
+${refText}
 
 🔧 *القطع المطلوبة:*
 ${partsNeeded}
 
-يرجى إفادتي بالتسعير والتوافر. شكراً لكم!`;
+يرجى إفادتي بالتسعير والتوافر مع خصم اليوم الوطني. شكراً لكم!`;
 
       triggerBadgeCelebration();
-      window.open(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`, '_blank');
+      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`);
     }
 
     // ─── BUNDLES CAROUSEL FOR MOBILE (Client-Driven Touch & Controls) ───────────────
