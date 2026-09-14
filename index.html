@@ -1141,7 +1141,7 @@
               <div class="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-2 min-h-[58px]">
                 <div>
                   <div class="text-[10px] sm:text-[11px] text-slate-500 font-bold mb-0.5">واتساب المتجر المباشر:</div>
-                  <a href="https://wa.me/966538834212" target="_blank" dir="ltr" class="font-numbers font-black text-sm sm:text-lg text-emerald-800 tracking-wide hover:underline block">
+                  <a href="https://wa.me/966538834212" onclick="openDirectWhatsApp('store'); return false;" dir="ltr" class="font-numbers font-black text-sm sm:text-lg text-emerald-800 tracking-wide hover:underline block">
                     0538834212
                   </a>
                 </div>
@@ -1165,7 +1165,7 @@
                 onclick="openDirectWhatsApp('store')"
                 class="w-full py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold text-center border border-slate-200 transition flex items-center justify-center gap-1.5"
               >
-                <span>💬 واتساب المتجر (0538834212)</span>
+                <span>💬 تواصل واتساب مع خدمة العملاء والطلب</span>
               </button>
             </div>
           </div>
@@ -1632,12 +1632,60 @@
       document.body.removeChild(textArea);
     }
 
+    // Dynamic WhatsApp Support Schedule (KSA Timezone)
+    // من بعد الساعة 9 مساءً (21:00) إلى ثاني يوم 12 ظهراً (12:00) -> 0539454377
+    // من بعد الساعة 12 ظهراً (12:00) إلى 9 مساءً (21:00) -> 0538834212 (المتجر)
+    function getScheduledWhatsAppNumber() {
+      try {
+        const now = new Date();
+        const ksaFormatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Riyadh',
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: false
+        });
+        const parts = ksaFormatter.format(now).split(':');
+        const hour = parseInt(parts[0], 10) % 24;
+
+        if (hour >= 21 || hour < 12) {
+          return {
+            phone: '966539454377',
+            raw: '0539454377',
+            name: 'خدمة العملاء وعروض اليوم الوطني'
+          };
+        } else {
+          return {
+            phone: '966538834212',
+            raw: '0538834212',
+            name: 'المتجر الإلكتروني'
+          };
+        }
+      } catch (err) {
+        console.error('Schedule calculation error:', err);
+        return {
+          phone: '966538834212',
+          raw: '0538834212',
+          name: 'المتجر الإلكتروني'
+        };
+      }
+    }
+
     // Direct WhatsApp Callout
     function openDirectWhatsApp(type) {
-      const branch = BRANCH_PHONES[type] || BRANCH_PHONES.store;
+      let targetPhone;
+      let branchName;
+      if (type === 'store') {
+        const scheduled = getScheduledWhatsAppNumber();
+        targetPhone = scheduled.phone;
+        branchName = scheduled.name;
+      } else {
+        const branch = BRANCH_PHONES[type] || BRANCH_PHONES.store;
+        targetPhone = branch.phone;
+        branchName = branch.name;
+      }
       const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
-      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها ضمن عروض اليوم الوطني 96.${refText}\nشكراً لكم!`;
-      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`);
+      const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branchName})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها ضمن عروض اليوم الوطني 96.${refText}\nشكراً لكم!`;
+      safeOpenUrl(`https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`);
     }
 
     // Branch Form Selector
@@ -1670,9 +1718,9 @@
       }
     }
 
-    // Bundle WhatsApp Order
+    // Bundle WhatsApp Order with Dynamic Schedule
     function orderBundleWhatsApp(bundleTitle, price) {
-      const branch = BRANCH_PHONES.store;
+      const scheduled = getScheduledWhatsAppNumber();
       const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
       const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة
 أرغب في طلب: [${bundleTitle}] بسعر ${price} ر.س ضمن عروض اليوم الوطني 96.
@@ -1681,7 +1729,7 @@
 🚗 رقم الهيكل / الاستمارة: (مرفق في المحادثة)${refText}`;
 
       triggerBadgeCelebration();
-      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(msg)}`);
+      safeOpenUrl(`https://wa.me/${scheduled.phone}?text=${encodeURIComponent(msg)}`);
     }
 
     // Form Submit Handler
@@ -1694,6 +1742,10 @@
       const partsNeeded = document.getElementById('partsNeeded').value;
 
       const branch = BRANCH_PHONES[selectedBranch] || BRANCH_PHONES.hyundai;
+      let targetPhone = branch.phone;
+      if (selectedBranch === 'store') {
+        targetPhone = getScheduledWhatsAppNumber().phone;
+      }
       const carInfo = carModel ? `${carMake} - ${carModel} (${modelYear})` : `${carMake} (${modelYear})`;
       const refText = utmSource !== 'Direct' ? `\n• مصدر الطلب: ${utmSource}` : '';
 
@@ -1713,7 +1765,7 @@ ${partsNeeded}
 يرجى إفادتي بالتسعير والتوافر مع خصم اليوم الوطني. شكراً لكم!`;
 
       triggerBadgeCelebration();
-      safeOpenUrl(`https://wa.me/${branch.phone}?text=${encodeURIComponent(formattedMsg)}`);
+      safeOpenUrl(`https://wa.me/${targetPhone}?text=${encodeURIComponent(formattedMsg)}`);
     }
 
     // ─── BUNDLES CAROUSEL FOR MOBILE (Client-Driven Touch & Controls) ───────────────
