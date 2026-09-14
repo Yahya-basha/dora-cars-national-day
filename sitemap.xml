@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://offers.doracars.com/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -25,6 +25,10 @@
     <image:image>
       <image:loc>https://offers.doracars.com/images/bundle-4-petrol.png</image:loc>
       <image:title>بكج فلاتر سيارات بنزين أصلي</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://offers.doracars.com/images/bundle-5-tucson-sportage.png</image:loc>
+      <image:title>بكج فلاتر الديزل مكينة كبيرة (توسان - سبورتاج) أصلي</image:title>
     </image:image>
   </url>
 </urlset>
