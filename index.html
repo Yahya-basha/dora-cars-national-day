@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MKVX7XNK');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- Primary SEO Meta Tags -->
   <title>عروض اليوم الوطني 96 لقطع غيار هيونداي وكيا | شركة درة السيارة</title>
   <meta name="title" content="عروض اليوم الوطني 96 لقطع غيار هيونداي وكيا | شركة درة السيارة">
@@ -376,8 +385,11 @@
       display: inline-block;
     }
   </style>
-</head>
 <body class="selection:bg-emerald-600 selection:text-white min-h-screen flex flex-col justify-between">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKVX7XNK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ─── 1. TOP ANNOUNCEMENT BAR (CLEAN & SLIM) ────────────────────────── -->
   <div class="bg-gradient-to-r from-[#00381B] via-[#006C35] to-[#00381B] border-b border-emerald-400/30 px-3 py-1 sm:py-1.5 text-center text-[11px] sm:text-xs font-bold text-white flex items-center justify-center gap-2 sm:gap-4 sticky top-0 z-50 shadow-sm">
@@ -646,6 +658,7 @@
               <a
                 href="https://doracars.com/xARjzZK"
                 target="_blank"
+                onclick="trackBundleStore('بكج الفحمات', '96', 'https://doracars.com/xARjzZK')"
                 class="w-full h-10 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
               >
                 <span>🛒 اطلب عبر المتجر</span>
@@ -701,6 +714,7 @@
               <a
                 href="https://doracars.com/vArVNVZ"
                 target="_blank"
+                onclick="trackBundleStore('بكج فلاتر الديزل (مكينة صغيرة)', '236', 'https://doracars.com/vArVNVZ')"
                 class="w-full h-10 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
               >
                 <span>🛒 اطلب عبر المتجر</span>
@@ -756,6 +770,7 @@
               <a
                 href="https://doracars.com/EXqmyjY"
                 target="_blank"
+                onclick="trackBundleStore('بكج فلاتر الديزل (مكينة كبيرة) - أزيرا وكادينزا', '366', 'https://doracars.com/EXqmyjY')"
                 class="w-full h-10 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
               >
                 <span>🛒 اطلب عبر المتجر</span>
@@ -811,6 +826,7 @@
               <a
                 href="https://doracars.com/ZYOXRvO"
                 target="_blank"
+                onclick="trackBundleStore('بكج فلاتر بنزين', '196', 'https://doracars.com/ZYOXRvO')"
                 class="w-full h-10 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
               >
                 <span>🛒 اطلب عبر المتجر</span>
@@ -866,6 +882,7 @@
               <a
                 href="https://doracars.com/wAOyOzN"
                 target="_blank"
+                onclick="trackBundleStore('بكج فلاتر الديزل (مكينة كبيرة) - توسان وسبورتاج', '256', 'https://doracars.com/wAOyOzN')"
                 class="w-full h-10 rounded-xl bg-indigo-700 hover:bg-indigo-800 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
               >
                 <span>🛒 اطلب عبر المتجر</span>
@@ -1591,10 +1608,16 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 1-Click Coupon Copier with In-App Webview Fallback
+    // 1-Click Coupon Copier with In-App Webview Fallback & GTM Event
     function copyCouponCode() {
       function onCopied() {
         triggerBadgeCelebration();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'copy_coupon',
+          coupon_code: COUPON_CODE,
+          campaign_source: utmSource
+        });
         const btn = document.getElementById('heroCopyBtn');
         const topLabel = document.getElementById('copyTopBtnLabel');
         if (btn) btn.textContent = 'تم النسخ ✓';
@@ -1612,6 +1635,19 @@
       } else {
         fallbackCopy(onCopied);
       }
+    }
+
+    // GTM Tracker for Store Bundle Orders
+    function trackBundleStore(title, price, url) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'order_bundle_store',
+        bundle_name: title,
+        value: Number(price),
+        currency: 'SAR',
+        destination_url: url,
+        campaign_source: utmSource
+      });
     }
 
     function fallbackCopy(callback) {
@@ -1670,7 +1706,7 @@
       }
     }
 
-    // Direct WhatsApp Callout
+    // Direct WhatsApp Callout & GTM Event
     function openDirectWhatsApp(type) {
       let targetPhone;
       let branchName;
@@ -1683,6 +1719,17 @@
         targetPhone = branch.phone;
         branchName = branch.name;
       }
+
+      // Push GTM Event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'contact_whatsapp',
+        contact_type: type,
+        target_phone: targetPhone,
+        branch_name: branchName,
+        campaign_source: utmSource
+      });
+
       const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
       const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branchName})\nأود الاستفسار عن توفر وتسعير قطع الغيار لسيارتي ومطابقتها ضمن عروض اليوم الوطني 96.${refText}\nشكراً لكم!`;
       safeOpenUrl(`https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`);
@@ -1718,9 +1765,21 @@
       }
     }
 
-    // Bundle WhatsApp Order with Dynamic Schedule
+    // Bundle WhatsApp Order with Dynamic Schedule & GTM Event
     function orderBundleWhatsApp(bundleTitle, price) {
       const scheduled = getScheduledWhatsAppNumber();
+
+      // Push GTM Event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'order_bundle_whatsapp',
+        bundle_name: bundleTitle,
+        value: Number(price),
+        currency: 'SAR',
+        target_phone: scheduled.phone,
+        campaign_source: utmSource
+      });
+
       const refText = utmSource !== 'Direct' ? `\n(مصدر الإعلان: ${utmSource})` : '';
       const msg = `السلام عليكم ورحمة الله، مرحباً درة السيارة
 أرغب في طلب: [${bundleTitle}] بسعر ${price} ر.س ضمن عروض اليوم الوطني 96.
@@ -1732,7 +1791,7 @@
       safeOpenUrl(`https://wa.me/${scheduled.phone}?text=${encodeURIComponent(msg)}`);
     }
 
-    // Form Submit Handler
+    // Form Submit Handler & GTM Event
     function handleVinFormSubmit(e) {
       e.preventDefault();
       const carMake = document.getElementById('carMake').value;
@@ -1748,6 +1807,18 @@
       }
       const carInfo = carModel ? `${carMake} - ${carModel} (${modelYear})` : `${carMake} (${modelYear})`;
       const refText = utmSource !== 'Direct' ? `\n• مصدر الطلب: ${utmSource}` : '';
+
+      // Push GTM Lead Event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'submit_vin_lead',
+        car_make: carMake,
+        car_model: carModel,
+        model_year: modelYear,
+        engine_type: selectedEngine,
+        target_branch: selectedBranch,
+        campaign_source: utmSource
+      });
 
       const formattedMsg = 
 `السلام عليكم ورحمة الله، مرحباً درة السيارة (${branch.name})
@@ -1767,6 +1838,28 @@ ${partsNeeded}
       triggerBadgeCelebration();
       safeOpenUrl(`https://wa.me/${targetPhone}?text=${encodeURIComponent(formattedMsg)}`);
     }
+
+    // Automatic Scroll Depth Tracking for GTM (25%, 50%, 75%, 90%)
+    (function initScrollDepthTracking() {
+      const milestones = [25, 50, 75, 90];
+      const reached = {};
+      window.addEventListener('scroll', () => {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+        const scrollPercent = Math.round((window.scrollY / docHeight) * 100);
+        milestones.forEach(m => {
+          if (scrollPercent >= m && !reached[m]) {
+            reached[m] = true;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'scroll_depth',
+              depth_percent: m,
+              campaign_source: utmSource
+            });
+          }
+        });
+      }, { passive: true });
+    })();
 
     // ─── BUNDLES CAROUSEL FOR MOBILE (Client-Driven Touch & Controls) ───────────────
     (function initBundlesCarousel() {
